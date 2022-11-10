@@ -8,6 +8,6 @@ intro_image_hide_on_mobile: true
 show_call_box: true
 ---
 
-# We Transform Small Businesses to Digital.
+# Reshaping Your Business to Meet the Digital Age
 
 We help small businesses to adopt digital technology to increase profitability and effeciency. 
