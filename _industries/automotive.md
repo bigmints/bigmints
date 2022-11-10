@@ -1,5 +1,5 @@
 ---
-title: "Booking management solutions for automotive industry"
+title: "Automotive"
 date: 2022-11-19T10:47:58+10:00
 weight: 1
 ---

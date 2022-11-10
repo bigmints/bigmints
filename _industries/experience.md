@@ -1,5 +1,5 @@
 ---
-title: "Booking management solutions for experience providers"
+title: "Experience Providers"
 date: 2018-11-19T10:47:58+10:00
 weight: 1
 ---

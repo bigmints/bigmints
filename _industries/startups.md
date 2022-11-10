@@ -1,5 +1,5 @@
 ---
-title: "Consultation and no-code MVP building for startups"
+title: "Startups"
 date: 2018-11-19T10:47:58+10:00
 weight: 1
 ---

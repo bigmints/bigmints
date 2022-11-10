@@ -1,5 +1,5 @@
 ---
-title: "Booking management solutions for wellness industry"
+title: "Wellness"
 date: 2018-11-19T10:47:58+10:00
 weight: 1
 ---
