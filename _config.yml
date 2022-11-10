@@ -30,8 +30,8 @@ defaults:
     values:
       layout: "industry"
   - scope:
-    path: ""
-    type: "services"
+      path: ""
+      type: "services"
     values:
       layout: "service"
   - scope:
