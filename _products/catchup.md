@@ -8,4 +8,6 @@ weight: 2
 promoted: true
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur vitae nunc sed. Tortor at risus viverra adipiscing at in.
+![Catchup](/images/products/catchup-banner.png)
+
+Chat with your guests before and after the event. Answer their questions and share information they need. 

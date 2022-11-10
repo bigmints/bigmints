@@ -8,6 +8,8 @@ weight: 1
 promoted: true
 ---
 
+![Bapp](/images/products/bapp-banner.png)
+
 Bapp helps businesses to get and manage bookings from customers via digital channels.
 
 Integrate Bapp booking service to your brand websites, social media pages and digital campaigns to get instant bookings.
