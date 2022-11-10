@@ -8,6 +8,6 @@ intro_image_hide_on_mobile: true
 show_call_box: true
 ---
 
-# Digital Transformation for small businesses.
+# We Transform Small Businesses to Digital.
 
 We help small businesses to adopt digital technology to increase profitability and effeciency. 
