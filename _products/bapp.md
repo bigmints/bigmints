@@ -1,8 +1,9 @@
 ---
 title: "Bapp - Book Appointments"
 date: 2018-11-19T10:47:58+10:00
-image: "images/team/nonsap-visuals-kMJp7620W6U-unsplash.jpg"
-linkedinurl: ""
+image: "images/products/bapp.png"
+jobtitle: "Book and manage appointments"
+linkedinurl: "https://www.bappnow.com"
 weight: 1
 promoted: true
 ---
