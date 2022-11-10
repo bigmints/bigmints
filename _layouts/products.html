@@ -30,10 +30,10 @@ bodyClass: "page-products"
                 </div>
                 {% endif %}
                 <div class="team-meta">
-                    <h2 class="team-name"><a href="{{ team.url | relative_url }}">{{ product.title }}</a></h2>
+                    <h2 class="team-name"><a href="{{ product.url | relative_url }}">{{ product.title }}</a></h2>
                     <p class="team-description">{{ product.jobtitle }}</p>
                     {% if product.linkedinurl %}
-                    <a target="_blank" href="{{ team.linkedinurl }}" rel="noreferrer">LinkedIn</a>
+                    <a target="_blank" href="{{ product.linkedinurl }}" rel="noreferrer">LinkedIn</a>
                     {% endif %}
                 </div>
                 <div class="team-content">{{ product.content | truncate: 120 }}</div>
