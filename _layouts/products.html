@@ -42,7 +42,7 @@ bodyClass: "page-products"
         {% endfor %}
     </div>
     <div class="row pt-6 pb-6">
-        {% assign product = site.products | where: "promoted", empty | sort: "weight" %}
+        {% assign products = site.products | where: "promoted", empty | sort: "weight" %}
         {% for product in products %}
         <div class="col-12 col-md-4 mb-3">
             <div class="team team-summary">
