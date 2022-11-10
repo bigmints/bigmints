@@ -5,6 +5,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
   overflow: hidden;
+  background-size: cover;
   @include media-breakpoint-up(md) {
     padding-top: 140px;
     padding-bottom: 140px;
