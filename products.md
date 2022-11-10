@@ -1,6 +1,6 @@
 ---
 title: Products
-layout: teams
+layout: products
 description: Product
 permalink: "/products/"
 intro_image_absolute: true
