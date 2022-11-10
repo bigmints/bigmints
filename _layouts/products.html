@@ -36,7 +36,7 @@ bodyClass: "page-teams"
                     <a target="_blank" href="{{ product.linkedinurl }}" rel="noreferrer">LinkedIn</a>
                     {% endif %}
                 </div>
-                <div class="team-content">{{ product.content | truncate: 100 }}</div>
+                <div class="team-content">{{ product.content | truncate: 80 }}</div>
             </div>
         </div>
         {% endfor %}
