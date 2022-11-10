@@ -1,13 +1,13 @@
 ---
-title: Jekyll Serif Theme
+title: Digital Transformation for small businesses.
 layout: home
-description: Jekyll Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+description: At Bigmints we help small businesses to adopt digital technology to increase profitability and effeciency. 
 intro_image: "images/illustrations/pointing.svg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: true
 show_call_box: true
 ---
 
-# Serif - A Jekyll Business Theme.
+# Digital Transformation for small businesses.
 
-Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+We help small businesses to adopt digital technology to increase profitability and effeciency. 
