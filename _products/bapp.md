@@ -8,6 +8,8 @@ weight: 1
 promoted: true
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+# Bapp helps businesses to get and manage bookings from customers via digital channels
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Integrate Bapp booking service to your brand websites, social media pages and digital campaigns to get instant bookings.
+
+For more information please visit [Bapp's home page](https://www.bappnow.com)
