@@ -17,11 +17,19 @@ collections:
   services:
     output: true
     sort_by: weight
+  industries:
+    output: true
+    sort_by: weight
   team:
     output: true
 
 defaults:
   - scope:
+      path: ""
+      type: "industries"
+    values:
+      layout: "industry"
+   - scope:
       path: ""
       type: "services"
     values:
