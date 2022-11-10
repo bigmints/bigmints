@@ -32,11 +32,11 @@ bodyClass: "page-teams"
                 <div class="team-meta">
                     <h2 class="team-name"><a href="{{ product.url | relative_url }}">{{ product.title }}</a></h2>
                     <p class="team-description">{{ product.jobtitle }}</p>
-                    {% if product.linkedinurl %}
+                    <!-- {% if product.linkedinurl %}
                     <a target="_blank" href="{{ product.linkedinurl }}" rel="noreferrer">LinkedIn</a>
-                    {% endif %}
+                    {% endif %} -->
                 </div>
-                <div class="team-content">{{ product.content | truncate: 80 }}</div>
+               
             </div>
         </div>
         {% endfor %}
