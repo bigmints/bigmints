@@ -25,7 +25,7 @@ bodyClass: "page-industries"
       <div class="service service-summary">
         <div class="service-content">
           <h2 class="service-title">
-            <a href="{{ service.url | relative_url }}">{{ industry.title }}</a>
+            <a href="{{ industry.url | relative_url }}">{{ industry.title }}</a>
           </h2>
           <p>{{ industry.content | markdownify | strip_html | truncate: 100 }}</p>
         </div>
