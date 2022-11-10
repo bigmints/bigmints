@@ -8,6 +8,6 @@ weight: 2
 promoted: true
 ---
 
-![Catchup](/images/products/catchup-banner.png)
+![Catchup](images/products/catchup-banner.png)
 
 Chat with your guests before and after the event. Answer their questions and share information they need. 
