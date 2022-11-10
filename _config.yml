@@ -29,9 +29,9 @@ defaults:
       type: "industries"
     values:
       layout: "industry"
-   - scope:
-      path: ""
-      type: "services"
+  - scope:
+    path: ""
+    type: "services"
     values:
       layout: "service"
   - scope:
