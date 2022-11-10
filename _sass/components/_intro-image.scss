@@ -13,17 +13,17 @@
   @include media-breakpoint-up(md) {
     position: absolute;
     bottom: -50px;
-    left: -50px;
+    left: 0px;
     width: 430px;
   }
   @include media-breakpoint-up(lg) {
     bottom: -60px;
-    left: -60px;
+    left: 0px;
     height: 530px;
   }
   @include media-breakpoint-up(xl) {
     bottom: -100px;
-    left: -70px;
+    left: 0px;
     width: 530px;
   }
 }
