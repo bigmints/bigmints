@@ -1,0 +1,10 @@
+<div class="call">
+    {% if include.show_button %}
+      <div class="call-box-bottom">
+        {% if site.data.contact.title %}
+        <h3>{{ site.data.contact.title }}</h3>
+      {% endif %}
+        <a href="{{ site.data.contact.contact_button_link }}" class="button">Contact Us</a>
+      </div>
+    {% endif %}
+</div>

@@ -11,5 +11,15 @@ bodyClass: "page-basic"
                 <div class="content">{{content}}</div>
             </div>
         </div>
+        <div class="col-12 col-md-4">
+            <div class="service service-single">
+                {% if page.show_call_box_title %}
+                    {% include call_with_title.html show_button=true %}
+                {% else page.show_call_box %}
+                    {% include call.html show_button=true %}
+                {% endif %}
+      
+            </div>
+        </div>
     </div>
 </div>
