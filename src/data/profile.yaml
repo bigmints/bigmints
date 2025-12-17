@@ -1,0 +1,153 @@
+name: Pretheesh Thomas
+role: Architecture, Experience & AI Leader | Associate Creative Director
+location: Dubai, UAE
+bio: Multi-disciplinary leader bridging Architecture, Experience Design, and AI to deliver transformative digital solutions.
+avatar: /profile.png
+email: pretheeshmt@gmail.com
+phone: +971-56-973-7344
+
+socials:
+  - platform: GitHub
+    url: https://github.com/bigmints
+    icon: github
+  - platform: LinkedIn
+    url: https://ae.linkedin.com/in/pretheeshmt
+    icon: linkedin
+  - platform: Email
+    url: mailto:pretheeshmt@gmail.com
+    icon: mail
+
+resume:
+  summary:
+    - Multi-disciplinary leader bridging Architecture, Experience Design, and AI to deliver transformative digital solutions.
+    - Expert in product architecture, design systems, and AI-driven experiences with a strong foundation in full-stack development and cloud platforms.
+    - Leading enterprise-level digital transformation across telecommunications, financial services, travel & hospitality, and emerging technology sectors.
+    - Passionate about building scalable, intelligent systems that institutionalize user experience best practices and leverage AI capabilities.
+  
+  experience:
+    - id: exp1
+      role: Associate Creative Director - Experience
+      company: Publicis Sapient
+      period: 2024 – Present
+      description:
+        - Leading experience design strategy and creative direction for enterprise-level digital transformation projects.
+        - Overseeing UX research, service design, and experience governance for major clients.
+        - Collaborating with product, tech, and business teams to deliver innovative, human-centered solutions.
+        - Enhancing design system adoption and AI-powered UX improvements.
+    
+    - id: exp2
+      role: Experience Design Manager
+      company: Publicis Sapient
+      period: 2018 – 2023
+      description:
+        - Led end-to-end UX strategy & governance for large-scale digital transformation projects.
+        - Managed UX research, customer journey mapping, and design system implementation.
+        - "Worked with enterprise clients: Omantel, DCT Abu Dhabi, Dubai Properties, TECOM Group, Miral, Heathrow Airports, Neom, UBS Asset Management, Nissan."
+        - "Industries: Retail, Telecom, Travel & Hospitality, Financial Services, Public Sector."
+    
+    - id: exp3
+      role: Lead UX Architect
+      company: Accelya
+      period: 2015 – 2018
+      description:
+        - Led UX transformation for airline cargo & logistics and loyalty programs.
+        - Defined enterprise UX strategy and introduced UX processes at an organizational level.
+        - Managed end-to-end UX for enterprise applications, including complex workflows.
+    
+    - id: exp4
+      role: Digital Art Director
+      company: GMASCO
+      period: "2015"
+      description:
+        - Led digital branding & campaign management for automotive, retail, and digital advertising.
+    
+    - id: exp5
+      role: UX Architect
+      company: Accelya
+      period: 2014 – 2015
+      description:
+        - Designed enterprise UX solutions for airline & aviation, travel & tourism, and loyalty programs.
+    
+    - id: exp6
+      role: UX Specialist
+      company: The Emirates Group
+      period: 2011 – 2014
+      description:
+        - Designed customer-facing web and mobile applications for airline and travel services.
+    
+    - id: exp7
+      role: UX Designer
+      company: Read LLC
+      period: 2008 – 2011
+      description:
+        - Designed asset management, retail, and GPS tracking applications.
+    
+    - id: exp8
+      role: Web Designer
+      company: The Word Among Us
+      period: 2006 – 2008
+      description:
+        - Managed web design, publishing, and marketing for digital and print media.
+  
+  skills:
+    - category: Strategy & Leadership
+      items:
+        - Experience Strategy
+        - Creative Direction
+        - Digital Transformation
+        - UX Governance
+        - Design Operations
+        - Agile Methodologies
+        - Stakeholder Engagement
+        - Team Leadership
+    
+    - category: Design & Research
+      items:
+        - Service Design
+        - Customer Journey Mapping
+        - Design Systems
+        - Prototyping
+        - Wireframing
+        - High-fidelity UI
+        - Usability Testing
+        - Heuristic Evaluation
+        - A/B Testing
+        - Accessibility (WCAG 2.0 AA)
+    
+    - category: Technical Skills
+      items:
+        - HTML
+        - CSS
+        - JavaScript
+        - React
+        - Angular
+        - TypeScript
+        - Tailwind CSS
+        - Dart/Flutter
+        - Android Native
+        - iOS Native
+    
+    - category: Tools & Platforms
+      items:
+        - Figma
+        - Sketch
+        - Adobe XD
+        - Hotjar
+        - Google Analytics
+        - Crazy Egg
+        - AWS
+        - Firebase
+        - Strapi
+        - Contentful
+    
+    - category: AI & Emerging Tech
+      items:
+        - Generative AI
+        - Large Language Models (LLMs)
+        - OpenAI
+        - AI-driven UX
+  
+  education:
+    - degree: Bachelors in Business Management / Computer Applications
+      institution: Bharathiar University, Coimbatore, India
+      period: 2003 – 2006

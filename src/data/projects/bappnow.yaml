@@ -1,0 +1,13 @@
+id: bappnow
+title: BappNow
+description: A rapid application deployment ecosystem enabling businesses to launch white-label mobile and web solutions instantly. Bridges the gap between no-code simplicity and scalable enterprise architecture.
+category: Product
+tags:
+  - SaaS
+  - Low-Code
+  - Mobile Architecture
+  - Scalability
+imageUrl: /bapp-cover.jpg
+link: https://bappnow.com
+featured: true
+date: "2023"

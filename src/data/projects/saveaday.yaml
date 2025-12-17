@@ -1,0 +1,13 @@
+id: saveaday
+title: SaveADay
+description: Context-aware autonomous agents designed to reclaim cognitive bandwidth. Integrates with calendar and communication layers to automate complex scheduling and routine productivity tasks.
+category: Product
+tags:
+  - Autonomous Agents
+  - Productivity
+  - Automation
+  - NLP
+imageUrl: /saveaday-cover.jpg
+link: https://www.saveaday.ai/
+featured: true
+date: "2024"

@@ -1,0 +1,45 @@
+id: xtara
+title: Xtara
+description: An AI-powered career guidance platform that helps students discover their perfect career path through personalized assessments, step-by-step learning plans, and location-based recommendations. Serves students, parents, schools, and enterprises with smart career mapping and development support.
+category: Product
+tags:
+  - Career Guidance
+  - AI Assessment
+  - EdTech
+  - Mobile App
+  - Learning Pathways
+imageUrl: /xtara-cover.jpg
+logoUrl: /xtara-logo.png
+link: https://www.xtara.ai/
+featured: true
+date: "2024"
+role: Product Strategy & UX Lead
+platform: iOS & Android
+
+overview:
+  - Xtara is an AI-powered career guidance platform designed to help students navigate career confusion and discover their true calling. The platform combines personalized assessments, interest-based suggestions, and real college or course options—all in one comprehensive mobile application.
+  - Built to serve multiple stakeholders, Xtara provides tailored experiences for students exploring career paths, parents seeking to guide their children with confidence, schools needing scalable career counseling, and enterprises looking to upskill their workforce with smart learning and development.
+  - The platform uses AI to analyze interests, personality traits, and subject strengths to recommend suitable career paths, generate step-by-step learning plans, and match students with appropriate colleges and courses. With support for Indian curriculums (CBSE, ICSE, state boards) and integration with job market trends, Xtara bridges the gap between education and career readiness.
+
+objectives:
+  - Help students discover careers aligned with their interests, personality, and strengths
+  - Provide parents with clear insights to guide their children's career decisions
+  - Enable schools to deliver scalable, personalized career counseling to every student
+  - Support enterprises in mapping employee growth paths and skill development
+  - Eliminate career confusion through structured assessments and data-driven recommendations
+
+keyFeatures:
+  - "Career Fit Assessment: AI-powered assessments that discover careers based on interests, personality traits, and subject strengths with personalized recommendations."
+  - "Step-by-Step Learning Plans: Detailed roadmaps showing what to study, where to go, and how long it takes to become job-ready in chosen career paths."
+  - "College & Course Matching: Smart matching system that connects students with the right study paths and institutions based on their goals and location."
+  - "Parent Dashboard: Insights on job market trends, growth sectors, salary ranges, and student progress monitoring to support informed guidance."
+  - "School Management: Auto-generate career reports for every student, track progress by class or grade, and support stream and subject choice decisions."
+  - "Curriculum Alignment: Built specifically for Indian education system with support for CBSE, ICSE, and state board curriculums."
+  - "Enterprise L&D: AI-powered career mapping for employees, integrated learning pathways, and retention-focused career development support."
+  - "Location-Based Recommendations: Career and education suggestions tailored to local job markets and available institutions."
+
+outcomes:
+  - Trusted by 2000+ customers worldwide including students, parents, schools, and enterprises
+  - Available on both iOS and Android platforms for maximum accessibility
+  - Comprehensive coverage of Indian education system and career landscape
+  - Scalable solution serving individual students to entire school systems

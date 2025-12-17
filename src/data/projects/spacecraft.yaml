@@ -1,0 +1,39 @@
+id: spacecraft
+title: Spacecraft
+description: An intelligent AI workspace that unifies web browsing, design files, and documentation in one place. Features browser-native flow builder, image tools, Figma QA, knowledgebase, data connectors, and bring-your-own-LLM—all powered by Spacekit components and blueprints. Chat with models, build flows, analyze designs, and search your knowledge without switching tabs.
+category: AI
+tags:
+  - AI Workspace
+  - Flow Builder
+  - Figma Integration
+  - Knowledge Base
+  - Browser Native
+imageUrl: /spacecraft-cover.jpg
+logoUrl: /spacecraft-logo.png
+link: https://spacecraft.ai
+featured: true
+date: "2024"
+role: Product Architect & Lead Designer
+platform: Desktop (Electron)
+
+overview:
+  - Spacecraft is an intelligent AI workspace that brings together web browsing, design assets, and documentation into a unified environment. Built on the principle that context switching kills productivity, Spacecraft eliminates the need to juggle multiple tools and browser tabs.
+  - The platform features a browser-native flow builder, advanced image tools, Figma QA capabilities, a powerful knowledgebase, flexible data connectors, and bring-your-own-LLM support—all powered by Spacekit components and widget blueprints.
+  - Users can chat with AI models, build automated workflows, analyze design files, and search across their entire knowledge base without ever leaving the workspace. The modular architecture ensures that prompts become interactive dashboards, data sources connect seamlessly, and AI summarizes everything automatically.
+
+objectives:
+  - Create a unified workspace that eliminates context switching between tools
+  - Enable users to connect their own data sources and LLM providers
+  - Build a modular system using reusable Spacekit components and blueprints
+  - Provide browser-native capabilities with AI assistance built-in
+  - Support both technical and non-technical users with no-code automation
+
+keyFeatures:
+  - "Intelligent Workspace: Turn prompts into interactive dashboards with cards, charts, and visualizations. Connect data sources, web search, and knowledge bases in one place."
+  - "Browser with AI: Browse the web with built-in AI assistance, automatic summarization, web crawling, and content extraction for research and analysis."
+  - "Flow Builder: Create automated workflows without coding using visual flow builder. Connect data sources, APIs, and AI models with simple drag-and-drop."
+  - "Knowledge Base: Build searchable knowledge bases from files, links, docs, and tickets. Query across all connected data sources in one place."
+  - "Figma Integration: Design QA and inspection tools for Figma files. Analyze designs, extract assets, and validate implementations directly in the workspace."
+  - "Bring Your Own LLM: Connect OpenAI, Anthropic, local models, or custom APIs. Switch between providers without losing context or workspace structure."
+  - "Data Connectors: Link databases, APIs, cloud storage, and local files with simple configuration. Your data stays where it is—Spacecraft just connects to it."
+  - "Spacekit Components: Compose complex workspaces from reusable card, chart, and layout blueprints. Style everything with theme tokens to keep on-brand."
