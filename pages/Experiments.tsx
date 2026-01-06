@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { SiteConfig, ProjectCategory } from '../types';
 import ProjectCard from '../components/ProjectCard';
 import SEO from '../components/SEO';
-interface WorkProps {
+interface ExperimentsProps {
   config: SiteConfig | null;
 }
 
-const Work: React.FC<WorkProps> = ({ config }) => {
+const Experiments: React.FC<ExperimentsProps> = ({ config }) => {
   const [filter, setFilter] = useState<ProjectCategory | 'All'>('All');
 
 
@@ -21,12 +21,12 @@ const Work: React.FC<WorkProps> = ({ config }) => {
   return (
     <div className="animate-in fade-in duration-500">
       <SEO
-        title="Work"
+        title="Experiments"
         description="A collection of products shipped, case studies written, and AI models tinkered with by Pretheesh Thomas."
-        url="/work"
+        url="/experiments"
       />
       <div className="mb-16 max-w-2xl">
-        <h1 className="text-5xl font-bold text-zinc-900 dark:text-white mb-6 tracking-tight">Work</h1>
+        <h1 className="text-5xl font-bold text-zinc-900 dark:text-white mb-6 tracking-tight">Experiments</h1>
         <p className="text-xl text-zinc-500 dark:text-zinc-400 font-light leading-relaxed">
           A collection of products shipped, case studies written, and AI models tinkered with.
         </p>
@@ -64,4 +64,4 @@ const Work: React.FC<WorkProps> = ({ config }) => {
   );
 };
 
-export default Work;
+export default Experiments;

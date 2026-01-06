@@ -47,12 +47,12 @@ const Home: React.FC<HomeProps> = ({ config }) => {
                 </div>
             </section>
 
-            {/* Selected Work */}
+            {/* Selected Experiments */}
             <section>
                 <div className="flex items-center justify-between mb-12">
-                    <h2 className="text-3xl font-bold text-zinc-900 dark:text-white tracking-tight">Selected Work</h2>
-                    <Link to="/work" className="hidden md:inline-flex items-center px-4 py-2 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-200 rounded-full text-xs font-semibold transition-colors">
-                        View all work <ChevronRight size={14} className="ml-1" />
+                    <h2 className="text-3xl font-bold text-zinc-900 dark:text-white tracking-tight">Selected Experiments</h2>
+                    <Link to="/experiments" className="hidden md:inline-flex items-center px-4 py-2 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-200 rounded-full text-xs font-semibold transition-colors">
+                        View all experiments <ChevronRight size={14} className="ml-1" />
                     </Link>
                 </div>
 
@@ -64,7 +64,7 @@ const Home: React.FC<HomeProps> = ({ config }) => {
                         return (
                             <Link
                                 key={project.id}
-                                to={`/work/${project.id}`}
+                                to={`/experiments/${project.id}`}
                                 className={`group relative flex flex-col justify-end overflow-hidden rounded-3xl h-[450px] ${colSpan} bg-zinc-100 dark:bg-zinc-900`}
                             >
                                 <img
@@ -97,8 +97,8 @@ const Home: React.FC<HomeProps> = ({ config }) => {
                 </div>
 
                 <div className="mt-8 md:hidden text-center">
-                    <Link to="/work" className="inline-flex items-center px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-black rounded-full text-sm font-bold shadow-lg">
-                        View all projects
+                    <Link to="/experiments" className="inline-flex items-center px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-black rounded-full text-sm font-bold shadow-lg">
+                        View all experiments
                     </Link>
                 </div>
             </section>

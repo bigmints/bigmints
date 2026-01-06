@@ -1,0 +1,39 @@
+id: zcret
+title: zcret
+description: A local-first, zero-knowledge secure secret manager. Store logins, cards, and notes with pure privacy. No database, no server—secrets are shared via secure URL hashes.
+category: Product
+tags:
+  - Security
+  - Zero Knowledge
+  - Local First
+  - PWA
+imageUrl: /zcret-cover.png
+logoUrl: https://zcret.saveaday.ai/icon-192x192.png
+link: https://zcret.saveaday.ai/
+featured: true
+date: "2024"
+role: UX Architect & Developer
+platform: Web & PWA
+
+overview:
+  - "zcret (pronounced 'secret') is a privacy-first secret manager that eliminates the need for central databases or user accounts. It uses a zero-knowledge architecture where all encryption happens locally on your device."
+  - "One of its most innovative features is its sharing mechanism: it uses URL hashes to pass encrypted data between users, ensuring that no data ever touches a temporary server or clipboard history."
+  - "Designed as a Progressive Web App (PWA), it works offline and feels like a native app on both mobile and desktop."
+
+objectives:
+  - "Create a completely decentralized secret management tool"
+  - "Implement zero-knowledge encryption in a browser environment"
+  - "Design a frictionless sharing experience without account requirements"
+  - "Provide AI-driven security analysis for passwords"
+
+keyFeatures:
+  - "Multi-Category Storage: Specialized fields for Logins, Contacts, WiFi, Cards, and Notes."
+  - "URL Hash Sharing: Share secrets without a middleman using secure, one-time hashes."
+  - "AI Security Analyst: Uses Gemini to analyze password strength and provide feedback."
+  - "Zero-Knowledge: All data is encrypted with AES-256 locally; no backend ever sees your keys."
+  - "Offline Ready: PWA support ensures your vault is always accessible even without internet."
+
+outcomes:
+  - "Launched a secure alternative to cloud-based password managers"
+  - "Developed a novel 'serverless' sharing protocol"
+  - "Achieved high performance with local-first data architecture"

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import Work from './pages/Work';
+import Experiments from './pages/Experiments';
 import ProjectDetail from './pages/ProjectDetail';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
@@ -47,8 +47,8 @@ const App: React.FC = () => {
         <Layout config={config}>
           <Routes>
             <Route path="/" element={<Home config={config} />} />
-            <Route path="/work" element={<Work config={config} />} />
-            <Route path="/work/:id" element={<ProjectDetail config={config} />} />
+            <Route path="/experiments" element={<Experiments config={config} />} />
+            <Route path="/experiments/:id" element={<ProjectDetail config={config} />} />
             <Route path="/blog" element={<Blog config={config} />} />
             <Route path="/blog/:slug" element={<BlogPost config={config} />} />
             <Route path="/photography" element={<Photography config={config} />} />

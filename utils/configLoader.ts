@@ -6,6 +6,9 @@ import spacecraftYAML from '/src/data/projects/spacecraft.yaml?raw';
 import xtaraYAML from '/src/data/projects/xtara.yaml?raw';
 import saveadayYAML from '/src/data/projects/saveaday.yaml?raw';
 import bappnowYAML from '/src/data/projects/bappnow.yaml?raw';
+import sonicYAML from '/src/data/projects/sonic.yaml?raw';
+import zcretYAML from '/src/data/projects/zcret.yaml?raw';
+import pulseYAML from '/src/data/projects/pulse.yaml?raw';
 
 // Import blog post metadata
 import futureOfInterfacesYAML from '/src/data/posts/future-of-interfaces.yaml?raw';
@@ -61,6 +64,9 @@ export async function loadConfig(): Promise<SiteConfig> {
       yaml.load(xtaraYAML),
       yaml.load(saveadayYAML),
       yaml.load(bappnowYAML),
+      yaml.load(sonicYAML),
+      yaml.load(zcretYAML),
+      yaml.load(pulseYAML),
     ];
 
     // Load all blog post files

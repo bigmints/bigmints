@@ -10,11 +10,13 @@ interface ProjectDetailProps {
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ config }) => {
   const { id } = useParams<{ id: string }>();
   const [project, setProject] = useState<Project | null>(null);
+  const [logoError, setLogoError] = useState(false);
 
   useEffect(() => {
     if (config && id) {
       const found = config.projects.find(p => p.id === id);
       setProject(found || null);
+      setLogoError(false); // Reset error state when project changes
     }
   }, [config, id]);
 
@@ -24,12 +26,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ config }) => {
     return (
       <div className="py-20 text-center">
         <h2 className="text-2xl font-bold text-zinc-900 dark:text-white">Project not found</h2>
-        <Link to="/work" className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white mt-4 inline-block">Back to work</Link>
+        <Link to="/experiments" className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white mt-4 inline-block">Back to experiments</Link>
       </div>
     );
   }
-
-
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -37,10 +37,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ config }) => {
         title={project.title}
         description={project.description}
         image={project.imageUrl}
-        url={`/work/${project.id}`}
+        url={`/experiments/${project.id}`}
       />
-      <Link to="/work" className="inline-flex items-center text-sm font-medium text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors mb-8 group">
-        <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to all projects
+      <Link to="/experiments" className="inline-flex items-center text-sm font-medium text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors mb-8 group">
+        <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to all experiments
       </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
@@ -48,10 +48,15 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ config }) => {
         {/* Left Col: Header & Meta */}
         <div className="lg:col-span-5 flex flex-col justify-between">
           <div>
-            {/* Logo if exists */}
-            {project.logoUrl && (
+            {/* Logo if exists and not broken */}
+            {project.logoUrl && !logoError && (
               <div className="mb-8 w-20 h-20 bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 rounded-2xl flex items-center justify-center p-4">
-                <img src={project.logoUrl} alt="Logo" className="w-full h-full object-contain opacity-80" />
+                <img
+                  src={project.logoUrl}
+                  alt="Logo"
+                  className="w-full h-full object-contain opacity-80"
+                  onError={() => setLogoError(true)}
+                />
               </div>
             )}
 

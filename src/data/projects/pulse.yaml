@@ -1,0 +1,39 @@
+id: pulse
+title: Pulse
+description: Your personalized daily intelligence feed. Curates essential stories using generative AI to keep you informed without the noise. Features a unique slideshow format for rapid consumption.
+category: AI
+tags:
+  - AI News
+  - Information Design
+  - LLM Curation
+  - Intelligence
+imageUrl: /pulse-cover.jpg
+logoUrl: https://pulse.saveaday.ai/logo.png
+link: https://pulse.saveaday.ai/
+featured: true
+date: "2024"
+role: Product Director & Technologist
+platform: Web & PWA
+
+overview:
+  - "Pulse is a next-generation intelligence feed that replaces traditional news aggregators. It uses a proprietary AI layer to summarize complex news cycles into digestible 'Daily Editions'."
+  - "The interface is built for 'Lean-Back' consumption, featuring a slideshow-inspired interaction model that allows users to swipe through the most important stories of the day."
+  - "It handles the cognitive load of information gathering, filtering through thousands of sources to deliver only what's essential."
+
+objectives:
+  - "Solve the 'Information Overload' problem for busy professionals"
+  - "Create a cinematic information consumption experience"
+  - "Automate the news curation pipeline using Large Language Models"
+  - "Build a high-performance PWA for daily use"
+
+keyFeatures:
+  - "AI Curation: Autonomous agents that scan, filter, and summarize global news events."
+  - "Daily Editions: Curated bundles of stories delivered in a consistent, timed format."
+  - "Slideshow Experience: A high-fidelity, gestural interface for focused reading."
+  - "Curate Mode: Personal tools to add specific articles and customize your intelligence stream."
+  - "Read Tracking: Intelligent unread states and progress monitoring across editions."
+
+outcomes:
+  - "Developed a unique 'News-as-a-Slideshow' interaction paradigm"
+  - "Scaled automated curation to process hundreds of sources daily"
+  - "Built a loyal user base of professionals seeking focused intelligence"

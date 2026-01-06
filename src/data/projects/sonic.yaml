@@ -1,0 +1,39 @@
+id: sonic
+title: SonicVision 4K
+description: A professional-grade audio visualizer that uses AI to generate stunning 4K backgrounds and exports synchronized MP4 videos of your music. Features multiple geometry styles like Phyllotaxis, Psy-Mandala, and Fractal DNA.
+category: AI
+tags:
+  - Audio Visualizer
+  - Generative AI
+  - Web Audio API
+  - Canvas 2D/3D
+imageUrl: /sonic-cover.png
+logoUrl: https://sonic.bigmints.com/logo.png
+link: https://sonic.bigmints.com/
+featured: true
+date: "2025"
+role: Architecture & Lead Design
+platform: Web (Vite)
+
+overview:
+  - "SonicVision 4K is a high-performance audio visualization engine designed for musicians and visual artists. It bridges the gap between sound and vision by rendering complex mathematical geometries in real-time."
+  - "The platform leverages Gemini AI to generate contextual 4K backgrounds that react to the mood and frequency of the uploaded audio."
+  - "With a built-in master export system, users can render their sessions directly into high-fidelity MP4 videos, making it a powerful tool for social media content creation and live performances."
+
+objectives:
+  - "Deliver a low-latency, high-frame-rate visualizer in the browser"
+  - "Integrate AI for dynamic, non-repetitive background generation"
+  - "Provide professional-grade export capabilities without a dedicated GPU server"
+  - "Create a modular style system with Foreground and Environment modulation"
+
+keyFeatures:
+  - "Core Object Geometry: 10+ mathematical styles including Phyllotaxis Spiral, Psy-Mandala, and Sonic Bloom."
+  - "Environment Flux: 5+ reactive backgrounds from Hyper Tunnels to Nebula Clouds."
+  - "Master Export: Direct-to-MP4 video encoder that works entirely in the browser."
+  - "AI Powered: Uses Gemini to synthesize backgrounds that match the audio signature."
+  - "HUD System: Customizable text overlays and timer HUDs for professional production."
+
+outcomes:
+  - "Successfully deployed a cross-platform visualizer used for music promotions"
+  - "Optimized browser-based video encoding for 4K resolutions"
+  - "Created a unique design system for high-fidelity audio tools"
