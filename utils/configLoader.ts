@@ -11,8 +11,9 @@ import zcretYAML from '/src/data/projects/zcret.yaml?raw';
 import pulseYAML from '/src/data/projects/pulse.yaml?raw';
 
 // Import blog post metadata
-import futureOfInterfacesYAML from '/src/data/posts/future-of-interfaces.yaml?raw';
-import buildingSustainableSoftwareYAML from '/src/data/posts/building-sustainable-software.yaml?raw';
+import whenInnovationTurnsIntoObsessionYAML from '/src/data/posts/when-innovation-turns-into-obsession.yaml?raw';
+import llmDrivenDataVisualizationsYAML from '/src/data/posts/llm-driven-data-visualizations.yaml?raw';
+import isAIBuiltForEveryoneYAML from '/src/data/posts/is-ai-built-for-everyone.yaml?raw';
 
 /**
  * Extracts the first paragraph from a markdown file to use as excerpt
@@ -69,10 +70,10 @@ export async function loadConfig(): Promise<SiteConfig> {
       yaml.load(pulseYAML),
     ];
 
-    // Load all blog post files
     const postYamls = [
-      yaml.load(futureOfInterfacesYAML),
-      yaml.load(buildingSustainableSoftwareYAML),
+      yaml.load(whenInnovationTurnsIntoObsessionYAML),
+      yaml.load(llmDrivenDataVisualizationsYAML),
+      yaml.load(isAIBuiltForEveryoneYAML),
     ];
 
     // Extract excerpts from markdown files if not provided

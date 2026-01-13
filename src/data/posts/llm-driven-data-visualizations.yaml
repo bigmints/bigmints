@@ -1,0 +1,11 @@
+slug: llm-driven-data-visualizations
+title: Realizations from building LLM-driven data visualization systems
+excerpt: How am I building data visualizations using LLMs? Over the past months, I’ve been immersed in building a concept that visualizes business and operational data.
+date: Jan 13, 2026
+readingTime: 4 min read
+tags:
+  - AI
+  - Data Visualization
+  - LLM
+coverImage: https://picsum.photos/seed/dataviz/1200/600
+contentFile: posts/llm-driven-data-visualizations/index.md

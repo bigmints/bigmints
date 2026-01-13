@@ -92,27 +92,28 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ config }) => {
               </div>
             </div>
 
-            {/* THE ONLY PLACE FOR EXTERNAL LINKS */}
-            <div className="pt-4">
-              <a
-                href={project.link || project.caseStudyLink}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 bg-zinc-900 hover:bg-black dark:bg-white dark:text-black dark:hover:bg-zinc-200 text-white rounded-xl font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-              >
-                Visit Project <ExternalLink size={18} className="ml-2" />
-              </a>
-              {project.caseStudyLink && project.link !== project.caseStudyLink && (
+            {(project.link || project.caseStudyLink) && (
+              <div className="pt-4">
                 <a
-                  href={project.caseStudyLink}
+                  href={project.link || project.caseStudyLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="block mt-4 md:inline-block md:mt-0 md:ml-4 text-center px-6 py-4 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white font-medium transition-colors"
+                  className="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 bg-zinc-900 hover:bg-black dark:bg-white dark:text-black dark:hover:bg-zinc-200 text-white rounded-xl font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 >
-                  Read Case Study
+                  Visit Project <ExternalLink size={18} className="ml-2" />
                 </a>
-              )}
-            </div>
+                {project.caseStudyLink && project.link !== project.caseStudyLink && (
+                  <a
+                    href={project.caseStudyLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block mt-4 md:inline-block md:mt-0 md:ml-4 text-center px-6 py-4 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white font-medium transition-colors"
+                  >
+                    Read Case Study
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         </div>
 

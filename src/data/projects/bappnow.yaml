@@ -1,13 +1,12 @@
 id: bappnow
-title: BappNow
-description: A rapid application deployment ecosystem enabling businesses to launch white-label mobile and web solutions instantly. Bridges the gap between no-code simplicity and scalable enterprise architecture.
+title: Bapp
+description: Helping small businesses build their online presence, showcase services, and manage bookings—all in one easy app. Built with a focus on data privacy and customer engagement.
 category: Product
 tags:
-  - SaaS
-  - Low-Code
-  - Mobile Architecture
-  - Scalability
+  - Small Business
+  - Booking Management
+  - Online Presence
+  - Privacy-First
 imageUrl: /bapp-cover.jpg
-link: https://bappnow.com
 featured: true
 date: "2023"
