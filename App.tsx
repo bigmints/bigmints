@@ -472,6 +472,15 @@ function CompanyPage() {
                 AI, IoT, digital twins and thoughtful product design support
                 that work. Their value is in what they help someone do.
               </p>
+              <p>
+                Our brands are {brands.map((brand, index) => (
+                  <React.Fragment key={brand.id}>
+                    {index > 0 && (index === brands.length - 1 ? " and " : ", ")}
+                    <a href={`/brands/${brand.id}/`}>{brand.name}</a>
+                  </React.Fragment>
+                ))}.
+                {" "}Our work in IoT and digital twins includes prototypes and product research.
+              </p>
               <a className="text-link" href="/products/">
                 Meet our products <Arrow />
               </a>
@@ -633,6 +642,7 @@ function Detail({ path }: { path: string }) {
               : "The difference we aim to make."}
           </h2>
           <div>
+            {brand && <p>{brand.summary}</p>}
             <p className="large-copy">{item.detail}</p>
             <ul className="feature-list">
               {(brand ? brand.features : capability!.points).map(
@@ -717,6 +727,7 @@ function Footer() {
           <a href="/company/">Company</a>
           <a href="/innovation/">Innovation</a>
           <a href="/contact/">Contact</a>
+          <a href="/llms.txt">Company &amp; product index</a>
         </nav>
         <a href="/products/">
           Explore our brands <Arrow />

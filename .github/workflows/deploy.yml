@@ -32,6 +32,8 @@ jobs:
       
       - name: Build
         run: npm run build
+      - name: Verify search and agent discovery
+        run: npm run check:seo
       
       - name: Setup Pages
         uses: actions/configure-pages@v4

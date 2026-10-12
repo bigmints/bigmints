@@ -56,6 +56,16 @@ Public brand destinations come from owner-provided URLs or project sources. Thei
 
 ## Multipage verification
 
+Run `npm run build && npm run check:seo` before publishing. The SEO check also runs in the deployment workflow and checks metadata uniqueness, canonical URLs, rendered headings, brand ownership references, internal page/asset links, sitemap coverage, the noindex 404 and agent-reference consistency.
+
+Search titles include each product's category; visible product summaries identify its purpose and relationship to Bigmints. Organization, Brand, WebSite, page, ItemList and breadcrumb entities use stable canonical IDs. IoT and digital twins remain explicitly described as prototypes and product research.
+
+`/llms.txt` is a concise public company/product index linked in the footer. `/llms-full.txt` includes the corresponding public descriptions, features and source URLs. Both are generated from `src/company/content.ts` on every build; edit that source instead of generated files. These are optional reference files for agents, not an indexing or ranking guarantee. Do not add private product details or contact addresses to them.
+
+The existing wildcard robots policy permits crawlers; no separate AI-training policy change was made. Google says the same SEO fundamentals apply to AI search and no special AI text file or schema is required: [Google AI search guidance](https://developers.google.com/search/docs/appearance/ai-features).
+
+For indexing measurement, the site owner can submit `https://www.bigmints.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools, inspect the home/company/product URLs and monitor impressions, queries and indexed pages. Console ownership and sitemap submission have not been verified from this repository. Do not invent verification tokens or report submissions without confirmation from those services.
+
 The production build generates fifteen pages plus a noindex 404. The completed output was checked for unique titles, one H1 per page, canonical URLs, valid structured breadcrumbs, internal links and anchors, sitemap coverage and no visible contact email. Browser checks covered top-level navigation, direct product-page loading, mobile navigation, contact presentation and the earlier `#brands` bookmark.
 
 ## Brand identity

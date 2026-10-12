@@ -3,7 +3,7 @@ export const company = {
   url: "https://www.bigmints.com",
   title: "Bigmints — Technology Product Company | AI, IoT & Digital Twins",
   description:
-    "Bigmints FZE LLC is a technology product company. We create and grow our own brands, making work easier and helping people create and connect through AI, IoT and digital innovation.",
+    "Bigmints FZE LLC is the technology product company behind Saveaday, Youbot, Starcraft, PicoRunner, Fikr and Kachu. Products for work, ideas and everyday life.",
   contact: "mailto:me@bigmints.com?subject=Bigmints%20company%20enquiry",
 };
 export const brands = [
@@ -11,6 +11,8 @@ export const brands = [
     id: "saveaday",
     logo: "/brand/products/saveaday.svg",
     name: "Saveaday",
+    searchLabel: "Customer & Booking Management",
+    summary: "Saveaday is a Bigmints business platform for managing customer enquiries, bookings and follow-ups in one place.",
     category: "Business, connected",
     color: "peach",
     url: "https://www.saveaday.ai/",
@@ -29,6 +31,8 @@ export const brands = [
     id: "youbot",
     logo: "/brand/products/youbot.svg",
     name: "Youbot",
+    searchLabel: "Self-hosted AI Concierge",
+    summary: "Youbot is a self-hosted AI concierge by Bigmints that helps visitors find answers and connects them with you when needed.",
     category: "AI, on your terms",
     color: "mint",
     url: "https://youbot.live",
@@ -47,6 +51,8 @@ export const brands = [
     id: "starcraft",
     logo: "/brand/products/starcraft.svg",
     name: "Starcraft",
+    searchLabel: "AI Design Workspace",
+    summary: "Starcraft is a Bigmints AI design workspace for turning ideas into working previews and refining them with visual feedback.",
     category: "Design meets intelligence",
     color: "lavender",
     url: "https://starcraft.design",
@@ -65,6 +71,8 @@ export const brands = [
     id: "picorunner",
     logo: "/brand/products/picorunner.svg",
     name: "PicoRunner",
+    searchLabel: "Local App Launcher for Mac",
+    summary: "PicoRunner is a Bigmints app for Mac that brings discovery, installation, launching and updates for supported local web apps into one place.",
     category: "Local software, made simple",
     color: "blue",
     url: "https://picorunner.com",
@@ -83,6 +91,8 @@ export const brands = [
     id: "fikr",
     logo: "/brand/products/fikr.svg",
     name: "Fikr",
+    searchLabel: "Notes & Ideas Workspace",
+    summary: "Fikr is a Bigmints workspace for capturing thoughts, connecting notes and developing ideas across Fikr Go, Studio and Cowork.",
     category: "A space for your thinking",
     color: "sand",
     url: "https://fikr.one",
@@ -101,6 +111,8 @@ export const brands = [
     id: "kachu",
     logo: "/brand/products/kachu.png",
     name: "Kachu",
+    searchLabel: "Gatherings & Shared Memories",
+    summary: "Kachu is a Bigmints app for planning gatherings, sharing updates and keeping photos and memories together with the people involved.",
     category: "Real life, together",
     color: "pink",
     url: "https://kachu.app/",
@@ -241,13 +253,13 @@ export function getPage(path: string) {
         : null,
     schemaType: page?.schemaType || "WebPage",
     title: brand
-      ? `${brand.name} — ${brand.headline} | Bigmints`
+      ? `${brand.name} — ${brand.searchLabel} | Bigmints`
       : capability
         ? `${capability.name} | Bigmints FZE LLC`
         : page?.title ||
           (path === "/" ? company.title : "Page not found | Bigmints"),
     description:
-      brand?.description ||
+      brand?.summary ||
       capability?.description ||
       page?.description ||
       company.description,
