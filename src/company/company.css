@@ -1160,6 +1160,24 @@ p {
   font-family: "DM Sans", sans-serif;
   font-weight: 600;
 }
+.header .wordmark {
+  font-size: 26px;
+  letter-spacing: -1.2px;
+}
+.header .brand-mark {
+  width: 32px;
+  height: 32px;
+  margin-right: 9px;
+}
+@media (max-width: 760px) {
+  .header .wordmark {
+    font-size: 24px;
+  }
+  .header .brand-mark {
+    width: 30px;
+    height: 30px;
+  }
+}
 .navigation {
   font-size: 13px;
 }
