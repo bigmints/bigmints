@@ -1764,6 +1764,7 @@ p {
   margin-top: 4px;
 }
 .home-hero-heading > p {
+  color: #4a4a4a;
   max-width: 460px;
   margin: 30px auto 25px;
   font-size: 16px;
@@ -1776,6 +1777,9 @@ p {
 }
 .home-brand-family {
   margin-top: 72px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
   border-top: 1px solid var(--line);
 }
 .home-family-caption {
@@ -1784,7 +1788,7 @@ p {
   align-items: center;
   gap: 20px;
   padding-top: 20px;
-  color: #707070;
+  color: #454545;
   font-size: 12px;
 }
 .home-family-caption a {
@@ -1900,6 +1904,7 @@ p {
 
 /* Color lives only in the hero; the animated artwork never intercepts links. */
 .home-hero {
+  max-width: none;
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -1907,19 +1912,23 @@ p {
 .hero-motion {
   position: absolute;
   z-index: -1;
-  inset: 0 0 165px;
+  inset: 0;
   overflow: hidden;
   pointer-events: none;
-  mask-image:
-    linear-gradient(to bottom, transparent, #000 13%, #000 73%, transparent),
-    linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
-  mask-composite: intersect;
+  background: linear-gradient(115deg, #f4eaff, #fff2ed 52%, #e6efff);
+}
+.hero-motion-parallax {
+  position: absolute;
+  inset: -40px;
+  transform: translate3d(var(--hero-pointer-x, 0px), var(--hero-pointer-y, 0px), 0);
+  transition: transform 850ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: transform;
 }
 .hero-motion::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 42%, #fff 5%, #ffffffb3 28%, #ffffff00 68%);
+  background: radial-gradient(ellipse at 50% 35%, #fffffff2 5%, #ffffffb3 28%, #ffffff00 68%);
 }
 .hero-motion-shape {
   position: absolute;
@@ -1948,7 +1957,7 @@ p {
 }
 .hero-motion-peach {
   left: 20%;
-  bottom: -56%;
+  bottom: -42%;
   width: 65%;
   height: 90%;
   opacity: 0.84;
@@ -1972,6 +1981,7 @@ p {
 }
 .hero-motion-control:hover { background: #fff; color: #171717; }
 .home-hero[data-motion="paused"] .hero-motion-shape { animation-play-state: paused; }
+.home-hero[data-motion="paused"] .hero-motion-parallax { transition: none; }
 @keyframes hero-color-drift {
   0% { transform: translate3d(-9%, -10%, 0) rotate(-35deg) scale(0.9); }
   50% { transform: translate3d(24%, 15%, 0) rotate(8deg) scale(1.12); }
@@ -1983,18 +1993,17 @@ p {
   100% { transform: translate3d(2%, 15%, 0) rotate(-44deg) scale(0.98); }
 }
 @media (max-width: 1000px) {
-  .hero-motion { bottom: 230px; }
   .hero-motion-control { bottom: 252px; }
 }
 @media (max-width: 600px) {
-  .hero-motion { bottom: 200px; }
   .hero-motion-shape { width: 75%; filter: blur(19px); opacity: 0.84; }
   .hero-motion-violet { left: -43%; }
   .hero-motion-blue { right: -43%; }
-  .hero-motion-peach { left: 10%; width: 90%; bottom: -63%; }
+  .hero-motion-peach { left: 10%; width: 90%; bottom: -48%; }
   .hero-motion-control { right: 12px; bottom: 205px; width: 30px; height: 30px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-motion-shape { animation: none; will-change: auto; }
+  .hero-motion-parallax { transform: none; transition: none; will-change: auto; }
   .hero-motion-control { display: none; }
 }

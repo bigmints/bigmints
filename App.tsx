@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, ArrowRight, Menu, X, Plus, Minus, Pause, Play } from "lucide-react";
 import { brands, company, expertise, getPage } from "./src/company/content";
 import "./src/company/company.css";
@@ -114,12 +114,48 @@ function Header({ path }: { path: string }) {
 }
 function Hero() {
   const [motionPaused, setMotionPaused] = useState(false);
+  const heroRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero) return;
+    const pointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const reset = () => {
+      hero.style.setProperty("--hero-pointer-x", "0px");
+      hero.style.setProperty("--hero-pointer-y", "0px");
+    };
+    reset();
+    if (motionPaused) return;
+    const move = (event: PointerEvent) => {
+      if (event.pointerType !== "mouse" || !pointer.matches || reducedMotion.matches) return;
+      const bounds = hero.getBoundingClientRect();
+      const x = Math.max(-1, Math.min(1, (event.clientX - bounds.left) / bounds.width * 2 - 1));
+      const y = Math.max(-1, Math.min(1, (event.clientY - bounds.top) / bounds.height * 2 - 1));
+      hero.style.setProperty("--hero-pointer-x", `${x * 38}px`);
+      hero.style.setProperty("--hero-pointer-y", `${y * 24}px`);
+    };
+    hero.addEventListener("pointermove", move);
+    hero.addEventListener("pointerleave", reset);
+    pointer.addEventListener("change", reset);
+    reducedMotion.addEventListener("change", reset);
+    window.addEventListener("blur", reset);
+    return () => {
+      hero.removeEventListener("pointermove", move);
+      hero.removeEventListener("pointerleave", reset);
+      pointer.removeEventListener("change", reset);
+      reducedMotion.removeEventListener("change", reset);
+      window.removeEventListener("blur", reset);
+      reset();
+    };
+  }, [motionPaused]);
   return (
-    <section className="home-hero wrap" data-motion={motionPaused ? "paused" : "playing"}>
+    <section ref={heroRef} className="home-hero wrap" data-motion={motionPaused ? "paused" : "playing"}>
       <div className="hero-motion" aria-hidden="true">
-        <span className="hero-motion-shape hero-motion-violet" />
-        <span className="hero-motion-shape hero-motion-blue" />
-        <span className="hero-motion-shape hero-motion-peach" />
+        <div className="hero-motion-parallax">
+          <span className="hero-motion-shape hero-motion-violet" />
+          <span className="hero-motion-shape hero-motion-blue" />
+          <span className="hero-motion-shape hero-motion-peach" />
+        </div>
       </div>
       <div className="home-hero-heading">
         <h1>
