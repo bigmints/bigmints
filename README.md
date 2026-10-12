@@ -23,7 +23,7 @@ The visual direction is black and white, with editorial serif headlines and rest
 
 The dedicated Contact page offers a company contact CTA that opens an email draft to the approved company address. The address is not displayed as page text; as with any mailto link, it remains discoverable in HTML. No contact form submission service or analytics has been added.
 
-Primary navigation uses `/products/`, `/company/`, `/innovation/` and `/contact/`. Each has its own content, active navigation state, canonical metadata and structured breadcrumbs. The homepage introduces selected products and the company rather than repeating all page content. Earlier company-preview bookmarks (`#brands`, `#company`, `#expertise`, `#contact`) redirect in the browser to their corresponding pages. The old personal-site hash router is no longer part of the active site. Brand pages use `/brands/{brand}/`; capability pages use `/expertise/{field}/`. Each URL has an actual HTML document and can be indexed without JavaScript. The personal blog and photography are retained in source and in the backup, but are not part of the company deployment. Historic personal hash URLs are not represented as company content; choose a future personal-site destination before adding any content-specific redirects.
+Primary navigation uses `/products/`, `/company/`, `/innovation/` and `/contact/`. Each has its own content, active navigation state, canonical metadata and structured breadcrumbs. The homepage leads with a centered sans-serif headline and italic serif accent, introduces all six identities in a compact brand strip, and presents their outcomes in a consistent product grid. Earlier company-preview bookmarks (`#brands`, `#company`, `#expertise`, `#contact`) redirect in the browser to their corresponding pages. The old personal-site hash router is no longer part of the active site. Brand pages use `/brands/{brand}/`; capability pages use `/expertise/{field}/`. Each URL has an actual HTML document and can be indexed without JavaScript. The personal blog and photography are retained in source and in the backup, but are not part of the company deployment. Historic personal hash URLs are not represented as company content; choose a future personal-site destination before adding any content-specific redirects.
 
 ## Personal website backup
 
@@ -74,7 +74,7 @@ The selected Bigmints mark is **Open frame**, direction 03 from the identity exp
 
 ### Product logos
 
-The site uses existing product artwork, stored locally in `src/company/public/brand/products/`. CSS presents the assets in monochrome without modifying the source artwork. Logos appear in product cards, featured outcomes, product detail pages, related products and contact links, and are included in Brand structured data.
+The site uses existing product artwork, stored locally in `src/company/public/brand/products/`. CSS presents the assets in monochrome without modifying the source artwork. Logos appear in product cards, the homepage brand strip, product detail pages, related products and contact links, and are included in Brand structured data.
 
 | Product | Asset source |
 | --- | --- |

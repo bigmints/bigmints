@@ -112,105 +112,49 @@ function Header({ path }: { path: string }) {
     </header>
   );
 }
-function OutcomeShowcase({ active }: { active: number }) {
-  const examples = [
-    {
-      brand: brands[0],
-      title: "More time for your business.",
-      context: "Customers. Bookings. Follow-ups.",
-      result: "Together, so you can stay on top of the day.",
-    },
-    {
-      brand: brands[2],
-      title: "Your idea, taking shape.",
-      context: "See it. Try it. Refine it.",
-      result:
-        "A working version gives you something real to move forward with.",
-    },
-    {
-      brand: brands[5],
-      title: "More of the moments that matter.",
-      context: "The plan. The people. The memories.",
-      result: "One place to bring the whole occasion together.",
-    },
-  ];
-  const example = examples[active];
-  return (
-    <aside
-      className="outcome-showcase"
-      aria-label="What our products help you do"
-    >
-      <div className="outcome-kicker">
-        <span>WHAT BETTER LOOKS LIKE</span>
-        <span>0{active + 1} / 03</span>
-      </div>
-      <a className="outcome-feature" href={`/brands/${example.brand.id}/`}>
-        <span className="outcome-brand">
-          <ProductIdentity brand={example.brand} />
-          <Arrow />
-        </span>
-        <h2>{example.title}</h2>
-        <div className="outcome-result">
-          <strong>{example.context}</strong>
-          <p>{example.result}</p>
-        </div>
-        <span className="outcome-explore">
-          Explore {example.brand.name}
-          <ArrowRight size={18} />
-        </span>
-      </a>
-      <div className="outcome-footnote">
-        ONE OF SIX BRANDS. ONE EVERYDAY DIFFERENCE.
-      </div>
-    </aside>
-  );
-}
 function Hero() {
-  const [active, setActive] = useState(0);
-  const notes = [
-    "Less to coordinate. More room to run your business.",
-    "Make an idea tangible, then make it better.",
-    "Bring people together and keep the moments that follow.",
-  ];
   return (
-    <section className="hero wrap">
-      <div className="hero-copy">
+    <section className="home-hero wrap">
+      <div className="home-hero-heading">
         <h1>
           Make work easier.
-          <br />
           <em>Make room for life.</em>
         </h1>
         <p>
-          From running a business to getting people together, our products make
-          everyday things a little easier.
+          Less busywork. More space for your business, your ideas
+          and the people who matter.
         </p>
         <a className="button dark" href="/products/">
-          Explore our brands <ArrowRight size={18} />
-        </a>
-        <a className="text-link" href="/innovation/">
-          See what changes <Arrow />
+          Find your next everyday essential <ArrowRight size={18} />
         </a>
       </div>
-      <OutcomeShowcase active={active} />
-      <div className="hero-bottom">
-        <span className="micro">MADE FOR WORK. MADE FOR LIFE.</span>
-        <div className="hero-selector" aria-label="Explore everyday outcomes">
-          {["Business", "Creation", "Everyday"].map((label, i) => (
-            <button
-              key={label}
-              aria-pressed={active === i}
-              onClick={() => setActive(i)}
-            >
-              {label}
-              <span>{active === i ? "↗" : "+"}</span>
-            </button>
-          ))}
+      <div className="home-brand-family">
+        <div className="home-family-caption">
+          <span>Six brands. Everyday possibilities.</span>
+          <a href="/company/">From Bigmints <Arrow /></a>
         </div>
-        <span className="hero-note" aria-live="polite">
-          {notes[active]}
-        </span>
+        <nav className="home-brand-strip" aria-label="Explore Bigmints products">
+          {brands.map((brand) => (
+            <a href={`/brands/${brand.id}/`} key={brand.id}>
+              <ProductIdentity brand={brand} />
+            </a>
+          ))}
+        </nav>
       </div>
     </section>
+  );
+}
+function HomeProductCard({ brand }: { brand: (typeof brands)[number] }) {
+  return (
+    <a className="home-product-card" href={`/brands/${brand.id}/`}>
+      <div className="home-product-heading">
+        <ProductIdentity brand={brand} />
+        <Arrow />
+      </div>
+      <h3>{brand.headline}</h3>
+      <p>{brand.description}</p>
+      <span className="home-product-category">{brand.searchLabel}</span>
+    </a>
   );
 }
 function BrandCard({
@@ -268,28 +212,19 @@ function Home() {
   return (
     <>
       <Hero />
-      <section className="section wrap home-products">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">OUR PRODUCTS</span>
-            <h2>
-              Made for a reason.
-              <br />
-              <em>Made to be used.</em>
-            </h2>
+      <section className="home-product-section">
+        <div className="wrap">
+          <div className="home-products-heading">
+            <div>
+              <span className="eyebrow">MADE FOR YOUR EVERYDAY</span>
+              <h2>A little less friction.<br /><em>A lot more possibility.</em></h2>
+            </div>
+            <p>Run a business. Follow an idea. Bring people together.
+              Find a product that gives you more room to do it.</p>
           </div>
-          <a className="text-link" href="/products/">
-            Explore all six brands <Arrow />
-          </a>
-        </div>
-        <div className="brand-grid home-brand-grid">
-          {[brands[0], brands[2], brands[4]].map((brand) => (
-            <BrandCard
-              key={brand.id}
-              brand={brand}
-              index={brands.indexOf(brand)}
-            />
-          ))}
+          <div className="home-product-grid">
+            {brands.map((brand) => <HomeProductCard key={brand.id} brand={brand} />)}
+          </div>
         </div>
       </section>
       <section className="company-section section">
