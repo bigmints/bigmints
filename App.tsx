@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ArrowUpRight, ArrowRight, Menu, X, Plus, Minus } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Menu, X, Plus, Minus, Pause, Play } from "lucide-react";
 import { brands, company, expertise, getPage } from "./src/company/content";
 import "./src/company/company.css";
 
@@ -113,8 +113,14 @@ function Header({ path }: { path: string }) {
   );
 }
 function Hero() {
+  const [motionPaused, setMotionPaused] = useState(false);
   return (
-    <section className="home-hero wrap">
+    <section className="home-hero wrap" data-motion={motionPaused ? "paused" : "playing"}>
+      <div className="hero-motion" aria-hidden="true">
+        <span className="hero-motion-shape hero-motion-violet" />
+        <span className="hero-motion-shape hero-motion-blue" />
+        <span className="hero-motion-shape hero-motion-peach" />
+      </div>
       <div className="home-hero-heading">
         <h1>
           Make work easier.
@@ -128,6 +134,14 @@ function Hero() {
           Find your next everyday essential <ArrowRight size={18} />
         </a>
       </div>
+      <button
+        className="hero-motion-control"
+        onClick={() => setMotionPaused(!motionPaused)}
+        aria-label={motionPaused ? "Play hero animation" : "Pause hero animation"}
+        title={motionPaused ? "Play hero animation" : "Pause hero animation"}
+      >
+        {motionPaused ? <Play size={14} aria-hidden="true" /> : <Pause size={14} aria-hidden="true" />}
+      </button>
       <div className="home-brand-family">
         <div className="home-family-caption">
           <span>Six brands. Everyday possibilities.</span>
