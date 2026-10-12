@@ -1,0 +1,46 @@
+id: kachu
+title: Kachu
+description: A private event companion that keeps the plan, live updates, shared photos, and memories together—from the first invite to everything people want to revisit afterwards.
+category: Product
+tags:
+  - Event Experience
+  - Flutter
+  - Private Sharing
+  - Mobile Product
+imageUrl: /kachu-cover.svg
+featured: true
+date: "2024–2026"
+status: Shipped product
+role: Product Architect, Designer & Engineer
+platform: iOS & Android
+
+links:
+  - label: Visit Kachu
+    url: https://kachu.app/
+  - label: App Store
+    url: https://apps.apple.com/us/app/kachu-plan-live-remember/id1507148368
+  - label: Google Play
+    url: https://play.google.com/store/apps/details?id=com.bigmints.catchup
+
+overview:
+  - Kachu gives every catchup one shared place for the plan, the people, the moments as they happen, and the memories that follow. It is designed for personal events, team gatherings, and shared trips without forcing the experience into a noisy group chat.
+  - "The product follows a simple lifecycle: plan together, share moments, and make memories. Secure invitations, private event feeds, updates, photos, comments, location details, and the final memory remain connected to the same event."
+
+objectives:
+  - Keep planning, participation, and memories in one understandable journey
+  - Make private invitations and event access dependable
+  - Give hosts useful controls without making the event feel administrative
+  - Preserve the original Catchup app identity while evolving the product as Kachu
+
+keyFeatures:
+  - "Shared event space: Plans, people, updates, photos, comments, and location details stay attached to one catchup."
+  - "Private invitations: Secure invite links and controlled join flows protect private events and feeds."
+  - "Live participation: Guests can follow changes, share moments, and interact while the event is happening."
+  - "Event memories: Photos and posts become a shared memory after the event instead of disappearing into separate chats and albums."
+  - "Plain lifecycle: Pre-event, Live, Post-event, and Memory states keep timing and actions consistent."
+
+outcomes:
+  - Shipped signed iOS and Android release artifacts under the existing app identity
+  - Reworked authentication, invitation recovery, event moderation, and private-feed access
+  - Simplified event creation and editing to the information hosts actually need
+  - Built a responsive product website with an interactive preview and direct store links

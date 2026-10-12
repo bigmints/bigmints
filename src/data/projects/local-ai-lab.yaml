@@ -1,0 +1,38 @@
+id: local-ai-lab
+title: Local AI Build Lab
+description: A private local-AI platform on NVIDIA DGX Spark, providing one OpenAI-compatible entry point for model inference, image generation, speech, and Factory execution.
+category: Engineering
+tags:
+  - Local AI
+  - NVIDIA DGX Spark
+  - vLLM
+  - Docker
+imageUrl: /local-ai-lab-cover.svg
+featured: true
+date: "2026"
+status: Private infrastructure
+role: AI Systems Architect & Engineer
+platform: Linux, Docker & Tailscale
+
+overview:
+  - The Local AI Build Lab is the private infrastructure behind model experiments and autonomous engineering workflows. It runs on NVIDIA DGX Spark with its GB10 Grace Blackwell Superchip and unified memory, exposing local models through familiar OpenAI-compatible APIs.
+  - A custom control plane starts and stops model services, reports health and logs, and routes clients through a stable model-aware endpoint. Factory uses the same local inference boundary for Pi delivery experiments.
+
+objectives:
+  - Run capable language and media models without depending on a public inference service
+  - Give applications one stable API while models and runtimes change underneath
+  - Make expensive local GPU resources observable and operationally manageable
+  - Connect private inference safely to development machines and product workflows
+
+keyFeatures:
+  - "Model control plane: Start, stop, inspect, and route local inference services from one operational surface."
+  - "OpenAI-compatible routing: Applications select a model without hardcoding its underlying runtime or port."
+  - "Multi-modal services: Local chat, embeddings, image generation, speech-to-text, and text-to-speech."
+  - "Private networking: Services remain on the private machine and trusted tailnet rather than the public internet."
+  - "Factory integration: Local models can power monitored coding and verification workflows through the same API boundary."
+
+outcomes:
+  - Deployed a Docker-managed local inference stack with shared model routing
+  - Integrated language, image, transcription, speech, and application-building services
+  - Established reusable operational documentation for model lifecycle and service recovery
+  - Created a practical test bed for private, locally executed agentic systems

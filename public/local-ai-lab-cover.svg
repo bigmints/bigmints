@@ -1,0 +1,30 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="48" fill="#071019"/>
+  <circle cx="1350" cy="160" r="360" fill="#123428" fill-opacity="0.7"/>
+  <circle cx="210" cy="900" r="350" fill="#142A43" fill-opacity="0.8"/>
+  <text x="110" y="150" fill="white" font-family="Arial, sans-serif" font-size="54" font-weight="800">Local AI Build Lab</text>
+  <text x="110" y="215" fill="#91A2B4" font-family="Arial, sans-serif" font-size="28">Private inference on NVIDIA DGX Spark</text>
+  <rect x="560" y="300" width="480" height="400" rx="44" fill="#0E1A24" stroke="#68E0A5" stroke-width="4"/>
+  <text x="800" y="385" fill="#68E0A5" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">OPENAI-COMPATIBLE API</text>
+  <rect x="650" y="455" width="300" height="130" rx="30" fill="#142A22"/>
+  <text x="800" y="515" fill="white" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="800">Model Router</text>
+  <text x="800" y="555" fill="#A7B7AC" text-anchor="middle" font-family="Arial, sans-serif" font-size="20">Health · routing · logs</text>
+  <rect x="115" y="350" width="300" height="130" rx="30" fill="#102334" stroke="#284963" stroke-width="3"/>
+  <text x="265" y="410" fill="white" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700">Language models</text>
+  <text x="265" y="449" fill="#8FA7BA" text-anchor="middle" font-family="Arial, sans-serif" font-size="19">vLLM · local inference</text>
+  <rect x="115" y="555" width="300" height="130" rx="30" fill="#102334" stroke="#284963" stroke-width="3"/>
+  <text x="265" y="615" fill="white" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700">Media models</text>
+  <text x="265" y="654" fill="#8FA7BA" text-anchor="middle" font-family="Arial, sans-serif" font-size="19">Image · speech · embeddings</text>
+  <rect x="1185" y="350" width="300" height="130" rx="30" fill="#18251F" stroke="#315440" stroke-width="3"/>
+  <text x="1335" y="410" fill="white" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700">Factory</text>
+  <text x="1335" y="449" fill="#94B5A1" text-anchor="middle" font-family="Arial, sans-serif" font-size="19">Monitored Pi execution</text>
+  <rect x="1185" y="555" width="300" height="130" rx="30" fill="#18251F" stroke="#315440" stroke-width="3"/>
+  <text x="1335" y="615" fill="white" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700">Private clients</text>
+  <text x="1335" y="654" fill="#94B5A1" text-anchor="middle" font-family="Arial, sans-serif" font-size="19">Apps · tools · experiments</text>
+  <path d="M415 415H560M415 620H560M1040 415H1185M1040 620H1185" stroke="#536D64" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="490" cy="415" r="8" fill="#68E0A5"/>
+  <circle cx="490" cy="620" r="8" fill="#68E0A5"/>
+  <circle cx="1110" cy="415" r="8" fill="#68E0A5"/>
+  <circle cx="1110" cy="620" r="8" fill="#68E0A5"/>
+  <text x="800" y="825" fill="#91A2B4" text-anchor="middle" font-family="Arial, sans-serif" font-size="23">Docker-managed · private network · one stable interface</text>
+</svg>

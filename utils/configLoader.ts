@@ -2,9 +2,12 @@ import yaml from 'js-yaml';
 import { SiteConfig } from '../types';
 
 import profileYAML from '/src/data/profile.yaml?raw';
-import spacecraftYAML from '/src/data/projects/spacecraft.yaml?raw';
-import xtaraYAML from '/src/data/projects/xtara.yaml?raw';
+import kachuYAML from '/src/data/projects/kachu.yaml?raw';
 import saveadayYAML from '/src/data/projects/saveaday.yaml?raw';
+import xtaraYAML from '/src/data/projects/xtara.yaml?raw';
+import spacecraftYAML from '/src/data/projects/spacecraft.yaml?raw';
+import factoryYAML from '/src/data/projects/factory.yaml?raw';
+import localAiLabYAML from '/src/data/projects/local-ai-lab.yaml?raw';
 import bappnowYAML from '/src/data/projects/bappnow.yaml?raw';
 import sonicYAML from '/src/data/projects/sonic.yaml?raw';
 import zcretYAML from '/src/data/projects/zcret.yaml?raw';
@@ -61,9 +64,12 @@ export async function loadConfig(): Promise<SiteConfig> {
 
     // Load all project files
     const projects = [
-      yaml.load(spacecraftYAML),
-      yaml.load(xtaraYAML),
+      yaml.load(kachuYAML),
       yaml.load(saveadayYAML),
+      yaml.load(xtaraYAML),
+      yaml.load(spacecraftYAML),
+      yaml.load(factoryYAML),
+      yaml.load(localAiLabYAML),
       yaml.load(bappnowYAML),
       yaml.load(sonicYAML),
       yaml.load(zcretYAML),

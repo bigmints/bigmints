@@ -12,12 +12,12 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
     title,
-    description = "Experience Design Leader and Technologist based in Dubai. Blending full-stack engineering with high-fidelity design.",
+    description = "Product architect, experience design leader, and technologist building shipped products, agentic systems, and private AI infrastructure.",
     image = "/og-image.jpg",
     url,
     type = 'website'
 }) => {
-    const siteTitle = "Pretheesh Thomas | Experience Design & Engineering";
+    const siteTitle = "Pretheesh Thomas | Product Architecture, Experience & AI";
     const fullTitle = title ? `${title} | Pretheesh Thomas` : siteTitle;
     const siteUrl = "https://pretheesh.com"; // User should probably configure this
     const fullUrl = url ? `${siteUrl}${url}` : siteUrl;

@@ -21,14 +21,14 @@ const Experiments: React.FC<ExperimentsProps> = ({ config }) => {
   return (
     <div className="animate-in fade-in duration-500">
       <SEO
-        title="Experiments"
-        description="A collection of products shipped, case studies written, and AI models tinkered with by Pretheesh Thomas."
+        title="Work"
+        description="Products, platforms, and engineering systems designed and built by Pretheesh Thomas."
         url="/experiments"
       />
       <div className="mb-16 max-w-2xl">
-        <h1 className="text-5xl font-bold text-zinc-900 dark:text-white mb-6 tracking-tight">Experiments</h1>
+        <h1 className="text-5xl font-bold text-zinc-900 dark:text-white mb-6 tracking-tight">Work</h1>
         <p className="text-xl text-zinc-500 dark:text-zinc-400 font-light leading-relaxed">
-          A collection of products shipped, case studies written, and AI models tinkered with.
+          Products, platforms, and engineering systems shaped from strategy through working software.
         </p>
       </div>
 

@@ -1,45 +1,42 @@
 id: xtara
-title: Xtara
-description: An AI-powered career guidance platform that helps students discover their perfect career path through personalized assessments, step-by-step learning plans, and location-based recommendations. Serves students, parents, schools, and enterprises with smart career mapping and development support.
+title: xTara
+description: A learner-owned career navigation product that turns assessment signals into Career Directions, Dream Careers, and small Learn–Try–Discuss steps without treating a score as destiny.
 category: Product
 tags:
-  - Career Guidance
-  - AI Assessment
+  - Career Navigation
+  - Learner Agency
   - EdTech
-  - Mobile App
-  - Learning Pathways
+  - Multilingual UX
 imageUrl: /xtara-cover.jpg
 logoUrl: /xtara-logo.png
 link: https://www.xtara.ai/
 featured: true
-date: "2024"
-role: Product Strategy & UX Lead
-platform: iOS & Android
+date: "2024–2026"
+status: Active development
+role: Product Strategy, Architecture & UX Lead
+platform: Web, iOS & Android
 
 overview:
-  - Xtara is an AI-powered career guidance platform designed to help students navigate career confusion and discover their true calling. The platform combines personalized assessments, interest-based suggestions, and real college or course options—all in one comprehensive mobile application.
-  - Built to serve multiple stakeholders, Xtara provides tailored experiences for students exploring career paths, parents seeking to guide their children with confidence, schools needing scalable career counseling, and enterprises looking to upskill their workforce with smart learning and development.
-  - The platform uses AI to analyze interests, personality traits, and subject strengths to recommend suitable career paths, generate step-by-step learning plans, and match students with appropriate colleges and courses. With support for Indian curriculums (CBSE, ICSE, state boards) and integration with job market trends, Xtara bridges the gap between education and career readiness.
+  - xTara helps learners understand themselves, explore credible options, compare possible routes, and decide what to do next. It is designed as an ongoing navigation system rather than a one-time test that declares a permanent answer.
+  - Learners move from assessment signals to a Career Direction, select a small set of Dream Careers, and build evidence by learning, trying activities, discussing options with trusted people, and revising the path over time.
+  - The product supports English, Malayalam, and Hindi journeys, a structured career and college catalogue, and consent-aware institution participation while keeping the learner's account and decisions their own.
 
 objectives:
-  - Help students discover careers aligned with their interests, personality, and strengths
-  - Provide parents with clear insights to guide their children's career decisions
-  - Enable schools to deliver scalable, personalized career counseling to every student
-  - Support enterprises in mapping employee growth paths and skill development
-  - Eliminate career confusion through structured assessments and data-driven recommendations
+  - Give learners understandable career areas worth exploring
+  - Replace unexplained fit scores with reasons and useful next actions
+  - Connect career exploration to subjects, courses, institutions, and real-world activities
+  - Let schools support guidance without owning or ranking the learner
 
 keyFeatures:
-  - "Career Fit Assessment: AI-powered assessments that discover careers based on interests, personality traits, and subject strengths with personalized recommendations."
-  - "Step-by-Step Learning Plans: Detailed roadmaps showing what to study, where to go, and how long it takes to become job-ready in chosen career paths."
-  - "College & Course Matching: Smart matching system that connects students with the right study paths and institutions based on their goals and location."
-  - "Parent Dashboard: Insights on job market trends, growth sectors, salary ranges, and student progress monitoring to support informed guidance."
-  - "School Management: Auto-generate career reports for every student, track progress by class or grade, and support stream and subject choice decisions."
-  - "Curriculum Alignment: Built specifically for Indian education system with support for CBSE, ICSE, and state board curriculums."
-  - "Enterprise L&D: AI-powered career mapping for employees, integrated learning pathways, and retention-focused career development support."
-  - "Location-Based Recommendations: Career and education suggestions tailored to local job markets and available institutions."
+  - "Career Direction: Plain-language areas derived from assessment signals, presented as choices to explore rather than verdicts."
+  - "Dream Careers: Learners choose a focused set of possibilities and can revise them as they gain evidence."
+  - "Learn, Try, Discuss: Small activities, content, and conversation guides turn an abstract career choice into something testable."
+  - "Career Path: Subjects, skills, courses, and institutions are organized into a path the learner can review over time."
+  - "Multilingual experience: Core learner journeys and career knowledge support English, Malayalam, and Hindi."
+  - "Consent-aware institutions: Educators receive scoped guidance views without raw answers, learner ranking, or ownership of the account."
 
 outcomes:
-  - Trusted by 2000+ customers worldwide including students, parents, schools, and enterprises
-  - Available on both iOS and Android platforms for maximum accessibility
-  - Comprehensive coverage of Indian education system and career landscape
-  - Scalable solution serving individual students to entire school systems
+  - Redesigned assessment discovery around plain explanations, learner choice, and progressive disclosure
+  - Built shared web and API career catalogues with structured source and publication boundaries
+  - Added multilingual learner journeys and localized career knowledge
+  - Designed institution guidance around consent, role scope, and privacy-thresholded cohort insights

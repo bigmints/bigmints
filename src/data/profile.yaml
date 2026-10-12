@@ -1,7 +1,7 @@
 name: Pretheesh Thomas
-role: Architecture, Experience & AI Leader | Associate Creative Director
+role: Product Architecture, Experience Design & AI Systems
 location: Dubai, UAE
-bio: Multi-disciplinary leader bridging Architecture, Experience Design, and AI to deliver transformative digital solutions.
+bio: Product architect and experience design leader turning complex ideas into shipped products, agentic systems, and private AI infrastructure.
 avatar: /profile.png
 email: pretheeshmt@gmail.com
 phone: +971-56-973-7344
@@ -19,8 +19,8 @@ socials:
 
 resume:
   summary:
-    - Multi-disciplinary leader bridging Architecture, Experience Design, and AI to deliver transformative digital solutions.
-    - Expert in product architecture, design systems, and AI-driven experiences with a strong foundation in full-stack development and cloud platforms.
+    - Product architect and experience design leader bridging strategy, systems thinking, interaction design, and full-stack engineering.
+    - Builds working products across multi-tenant SaaS, mobile experiences, agentic systems, prototyping platforms, and private AI infrastructure.
     - Leading enterprise-level digital transformation across telecommunications, financial services, travel & hospitality, and emerging technology sectors.
     - Passionate about building scalable, intelligent systems that institutionalize user experience best practices and leverage AI capabilities.
   
@@ -123,6 +123,9 @@ resume:
         - Angular
         - TypeScript
         - Tailwind CSS
+        - Next.js
+        - PostgreSQL
+        - Supabase
         - Dart/Flutter
         - Android Native
         - iOS Native
@@ -136,6 +139,8 @@ resume:
         - Google Analytics
         - Crazy Egg
         - AWS
+        - Google Cloud Run
+        - Docker
         - Firebase
         - Strapi
         - Contentful
@@ -145,6 +150,8 @@ resume:
         - Generative AI
         - Large Language Models (LLMs)
         - OpenAI
+        - Agentic Systems
+        - Local AI Inference
         - AI-driven UX
   
   education:

@@ -1,0 +1,42 @@
+id: factory
+title: Factory
+description: An autonomous build engine that turns structured product stories into monitored Pi SDK delivery runs, carrying project knowledge, validation rules, and review boundaries through the build.
+category: Engineering
+tags:
+  - Agentic Engineering
+  - Pi SDK
+  - Build Orchestration
+  - TypeScript
+imageUrl: /factory-cover.svg
+featured: true
+date: "2026"
+status: Active development
+role: Product Architect & Lead Engineer
+platform: CLI & Web Dashboard
+
+links:
+  - label: View on GitHub
+    url: https://github.com/Bigmints-com/factory
+
+overview:
+  - Factory is an autonomous build system organized around durable product stories rather than isolated prompts. A story carries intent, acceptance criteria, dependencies, and project context into a monitored execution session.
+  - Its project bridge keeps stories, knowledge, worklogs, build receipts, and a distilled chronicle beside the product repository. The dashboard provides a human-readable view of projects, story state, queues, history, and model configuration.
+
+objectives:
+  - Turn product intent into repeatable, inspectable engineering delivery
+  - Preserve architectural decisions and lessons between build sessions
+  - Separate generation progress from verified product-file delivery
+  - Keep final review and merge under human control
+
+keyFeatures:
+  - "Story-driven delivery: Structured stories define scope, dependencies, acceptance criteria, and evidence."
+  - "Pi SDK execution: Factory assembles a complete brief and runs it through a monitored coding session."
+  - "Project chronicle: Decisions, worklogs, failures, and build history become reusable context for later work."
+  - "Delivery controls: Isolated worktrees, product-file checks, change limits, verification evidence, and review-gated pull requests."
+  - "Operations dashboard: Manage projects, stories, queues, build history, skills, and providers from one surface."
+
+outcomes:
+  - Built a complete TypeScript execution engine and Next.js operations dashboard
+  - Added local-model preflight, session monitoring, deterministic delivery checks, and human review gates
+  - Connected Factory to multiple active product repositories through a shared project bridge
+  - Retained a strict distinction between a successful session and proven product-file delivery
