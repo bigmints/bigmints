@@ -143,8 +143,8 @@ p {
   object-fit: contain;
 }
 .footer-top .brand-mark {
-  width: 22px;
-  height: 22px;
+  width: 1.2em;
+  height: 1.2em;
   margin-right: 8px;
 }
 .navigation {
@@ -1174,17 +1174,13 @@ p {
   letter-spacing: -0.6px;
 }
 .header .brand-mark {
-  width: 22px;
-  height: 22px;
+  width: 1.2em;
+  height: 1.2em;
   margin-right: 8px;
 }
 @media (max-width: 760px) {
   .header .wordmark {
     font-size: 24px;
-  }
-  .header .brand-mark {
-    width: 20px;
-    height: 20px;
   }
 }
 .navigation {

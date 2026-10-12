@@ -6,6 +6,8 @@ font_style = '<style>@font-face{font-family:Syne;font-style:normal;font-weight:6
 # Preserve the exact woven geometry from the identity reference selected by the owner.
 woven_svg = Path("design/previous-identity/woven-mark.svg").read_text()
 woven_content = woven_svg.split(">", 1)[1].rsplit("</svg>", 1)[0]
+# Slightly stronger strokes, with the crossing gaps preserved for small display sizes.
+woven_content = woven_content.replace('stroke-width="10.5"', 'stroke-width="11.5"').replace('stroke-width="17"', 'stroke-width="18"')
 
 def mark(prefix, ink):
  return woven_content.replace("bigmints-mark", prefix).replace("#171717", ink)
@@ -19,8 +21,8 @@ board=f'''<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" vie
 <text x="1376" y="65" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#777">SELECTED IDENTITY / WOVEN</text>
 <line x1="64" y1="94" x2="1376" y2="94" stroke="#ddd"/>
 <g transform="translate(100 174) scale(3.7)">{mark('board-main','#171717')}</g>
-<g transform="translate(730 244) scale(.42)">{mark('board-word','#171717')}</g>
-<text x="800" y="288" font-family="Syne,Arial,sans-serif" font-weight="600" font-size="64" letter-spacing="-1.4" fill="#171717">Bigmints</text>
+<g transform="translate(730 230) scale(.6)">{mark('board-word','#171717')}</g>
+<text x="817" y="288" font-family="Syne,Arial,sans-serif" font-weight="600" font-size="64" letter-spacing="-1.4" fill="#171717">Bigmints</text>
 <text x="736" y="382" font-family="Georgia,serif" font-size="35" fill="#171717">Make work easier.</text><text x="736" y="427" font-family="Georgia,serif" font-size="35" fill="#777">Make room for life.</text>
 <text x="736" y="506" font-family="Arial,sans-serif" font-size="15" fill="#666">An open frame. A little more room for possibility.</text>
 <line x1="64" y1="710" x2="1376" y2="710" stroke="#ddd"/>
@@ -39,8 +41,8 @@ Path('src/company/public/brand/bigmints-identity.svg').write_text(board)
 # Editable social card source; rasterise at 1200 × 630 for social platforms.
 social = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">{font_style}
 <rect width="1200" height="630" fill="white"/>
-<g transform="translate(60 49) scale(.22)">{mark('social','#171717')}</g>
-<text x="97" y="74" font-family="Syne,Arial,sans-serif" font-weight="600" font-size="30" fill="#171717">Bigmints</text>
+<g transform="translate(60 44) scale(.28125)">{mark('social','#171717')}</g>
+<text x="108" y="74" font-family="Syne,Arial,sans-serif" font-weight="600" font-size="30" fill="#171717">Bigmints</text>
 <text x="60" y="264" font-family="Georgia" font-size="67" fill="#171717">Make work easier.</text>
 <text x="60" y="357" font-family="Georgia" font-size="67" fill="#777777">Make room for life.</text>
 <rect x="805" y="125" width="331" height="338" fill="#171717"/>
