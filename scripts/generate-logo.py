@@ -1,21 +1,22 @@
-"""Regenerate the approved Open frame Bigmints vector identity. Run from the repository root."""
+"""Regenerate the selected woven Bigmints vector identity. Run from the repository root."""
 from pathlib import Path
 import base64
 font_data = base64.b64encode(Path("src/company/public/fonts/syne-600.ttf").read_bytes()).decode()
 font_style = '<style>@font-face{font-family:Syne;font-style:normal;font-weight:600;src:url("data:font/ttf;base64,' + font_data + '") format("truetype");}</style>'
-# Approved Open frame direction, matching design/logo-options/open-frame.svg.
-OPEN_FRAME = "M106 20H49C32.98 20 20 32.98 20 49V108H79C95.02 108 108 95.02 108 79V48H57V79"
+# Preserve the exact woven geometry from the identity reference selected by the owner.
+woven_svg = Path("design/previous-identity/woven-mark.svg").read_text()
+woven_content = woven_svg.split(">", 1)[1].rsplit("</svg>", 1)[0]
 
 def mark(prefix, ink):
- return f'<path d="{OPEN_FRAME}" fill="none" stroke="{ink}" stroke-width="17" stroke-linejoin="round" stroke-linecap="butt"/>'
+ return woven_content.replace("bigmints-mark", prefix).replace("#171717", ink)
 
 for name,ink in [('bigmints-mark','#171717'),('bigmints-mark-white','#ffffff')]:
  svg=f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">{mark(name,ink)}</svg>'
  Path(f'src/company/public/brand/{name}.svg').write_text(svg)
 Path('src/company/public/favicon.svg').write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect width="128" height="128" rx="28" fill="#171717"/><g transform="translate(7 7) scale(.89)">{mark("icon","white")}</g></svg>')
 board=f'''<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1440 920">{font_style}<rect width="1440" height="920" fill="#f8f8f8"/>
-<text x="64" y="65" font-family="Arial,sans-serif" font-size="13" letter-spacing="2" fill="#777">BIGMINTS / OPEN FRAME</text>
-<text x="1376" y="65" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#777">SELECTED DIRECTION / 03</text>
+<text x="64" y="65" font-family="Arial,sans-serif" font-size="13" letter-spacing="2" fill="#777">BIGMINTS / A CONNECTED WHOLE</text>
+<text x="1376" y="65" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#777">SELECTED IDENTITY / WOVEN</text>
 <line x1="64" y1="94" x2="1376" y2="94" stroke="#ddd"/>
 <g transform="translate(100 174) scale(3.7)">{mark('board-main','#171717')}</g>
 <g transform="translate(730 244) scale(.42)">{mark('board-word','#171717')}</g>
