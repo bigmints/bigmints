@@ -13,7 +13,7 @@ Deploy the `dist/` directory. The GitHub Pages workflow builds and deploys pushe
 
 ## Content and design
 
-The visual direction is black and white, with editorial serif headlines and restrained sans-serif text, informed by Modo Energy’s typography and aesthetics rather than its layout. Instrument Serif and DM Sans provide an open font pairing. Bigmints creates and grows its own brands; the site does not offer agency or client-project services. Product discovery is the primary action, with company enquiries and partnerships secondary. Content leads with intended user outcomes, with AI, IoT and digital twins as supporting context. Product statements come from repository capabilities, not invented measured customer results.
+The visual direction is black and white, with editorial serif headlines and restrained sans-serif text, informed by Modo Energy’s typography and aesthetics rather than its layout. Instrument Serif and DM Sans provide an open font pairing. The Bigmints wordmark uses self-hosted Syne 600, with its SIL Open Font License in `src/company/public/fonts/OFL-Syne.txt`. The header symbol stays at 22px on desktop and 20px on mobile. Bigmints creates and grows its own brands; the site does not offer agency or client-project services. Product discovery is the primary action, with company enquiries and partnerships secondary. Content leads with intended user outcomes, with AI, IoT and digital twins as supporting context. Product statements come from repository capabilities, not invented measured customer results.
 
 - `src/company/content.ts` owns company copy, contact destination, brand descriptions, external URLs and capability pages.
 - `App.tsx` contains the company page, brand/capability page templates, navigation and interactions.
