@@ -1,13 +1,41 @@
 id: saveaday
 title: SaveADay
-description: Context-aware autonomous agents designed to reclaim cognitive bandwidth. Integrates with calendar and communication layers to automate complex scheduling and routine productivity tasks.
+description: A multi-tenant operating layer for small businesses, bringing customer relationships, bookings, catalogues, leads, public actions, and permission-bound assistance into one workspace.
 category: Product
 tags:
-  - Autonomous Agents
-  - Productivity
-  - Automation
-  - NLP
+  - Business Operations
+  - Multi-tenant SaaS
+  - Managed AI
+  - Customer Experience
 imageUrl: /saveaday-cover.jpg
 link: https://www.saveaday.ai/
 featured: true
-date: "2024"
+date: "2024–2026"
+status: Active development
+role: Founder, Product Architect & Lead Designer
+platform: Web, PWA & Telegram
+
+overview:
+  - "SaveADay is a business operating system for small and medium businesses. It connects customer-facing actions with the daily work behind them: CRM, bookings, catalogues, lead forms, waitlists, surveys, loyalty, tickets, follow-ups, and communications."
+  - The managed assistant works inside the same permissions, subscription limits, confirmations, and audit boundaries as the dashboard. Business owners can operate supported parts of their workspace through private chat and Telegram without exposing AI provider configuration or unrestricted automation.
+  - Public business profiles, catalogues, forms, booking journeys, and visitor assistance give customers clear ways to act while preserving tenant isolation and explicit publication controls.
+
+objectives:
+  - Help small businesses convert customer interest into completed actions
+  - Put customer context and operational work in one permission-aware workspace
+  - Make supported business operations available through direct, conversational requests
+  - Keep automation bounded, auditable, recoverable, and under owner control
+
+keyFeatures:
+  - "Business workspace: CRM, bookings, catalogues, leads, surveys, loyalty, waitlists, tickets, and follow-ups share one tenant boundary."
+  - "Managed assistance: Visitor, business, and platform assistants use separate, role-filtered tools and durable conversation history."
+  - "Customer actions: Publish business profiles, catalogues, lead forms, booking journeys, surveys, and visitor chat."
+  - "Operator access: Authorized business users can work through the dashboard or a linked Telegram conversation."
+  - "Platform control: Plans, entitlements, tenant lifecycle, AI configuration, communications, audit, and system tests remain centrally governed."
+  - "Extension protocol: Built-in and future modules use the same versioned manifest, action, permission, and verification contracts."
+
+outcomes:
+  - Built a greenfield TypeScript, Next.js, Fastify, PostgreSQL, and Supabase platform with forced tenant isolation
+  - Delivered end-to-end customer, business-owner, and platform-administrator journeys across public and private surfaces
+  - Established reusable module, connector, approval, audit, billing, and system-verification contracts
+  - Deployed the web, API, worker, and visitor-relay boundaries through Google Cloud Run workflows

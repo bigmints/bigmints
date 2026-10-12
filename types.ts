@@ -1,6 +1,11 @@
 
 export type ProjectCategory = 'UX' | 'AI' | 'Product' | 'Engineering';
 
+export interface ProjectLink {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -10,9 +15,11 @@ export interface Project {
   imageUrl?: string;
   logoUrl?: string; // Optional logo for branding
   link?: string;
+  links?: ProjectLink[];
   caseStudyLink?: string; // If it's a UX case study
   featured: boolean;
   date: string;
+  status?: string;
   // Rich content fields for detailed project pages
   overview?: string[];
   objectives?: string[];

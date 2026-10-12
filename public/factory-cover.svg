@@ -1,0 +1,31 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="48" fill="#101113"/>
+  <path d="M0 200H1600M0 400H1600M0 600H1600M0 800H1600M200 0V1000M400 0V1000M600 0V1000M800 0V1000M1000 0V1000M1200 0V1000M1400 0V1000" stroke="#1E2024" stroke-width="2"/>
+  <text x="110" y="150" fill="white" font-family="Arial, sans-serif" font-size="56" font-weight="800">Factory</text>
+  <text x="110" y="215" fill="#9DA3AE" font-family="Arial, sans-serif" font-size="28">Story → context → execution → evidence</text>
+  <rect x="105" y="310" width="360" height="500" rx="30" fill="#191B1F" stroke="#343840" stroke-width="3"/>
+  <text x="145" y="370" fill="#8E96A5" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">STORY</text>
+  <text x="145" y="435" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="700">Customer portal</text>
+  <rect x="145" y="485" width="260" height="15" rx="7.5" fill="#3A3E46"/>
+  <rect x="145" y="525" width="215" height="15" rx="7.5" fill="#3A3E46"/>
+  <rect x="145" y="565" width="245" height="15" rx="7.5" fill="#3A3E46"/>
+  <rect x="145" y="650" width="130" height="48" rx="24" fill="#2A2340"/>
+  <text x="210" y="681" fill="#BCA7FF" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700">QUEUED</text>
+  <path d="M500 560H615" stroke="#676E7B" stroke-width="4" stroke-linecap="round"/>
+  <path d="M590 535L615 560L590 585" stroke="#676E7B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="650" y="270" width="380" height="580" rx="30" fill="#F1EEE6"/>
+  <text x="690" y="335" fill="#6C675E" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">PI SESSION</text>
+  <circle cx="840" cy="475" r="92" fill="#111214"/>
+  <path d="M802 480L830 508L883 448" stroke="#BCA7FF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="705" y="625" width="270" height="16" rx="8" fill="#D0CBC0"/>
+  <rect x="735" y="669" width="210" height="16" rx="8" fill="#D0CBC0"/>
+  <text x="840" y="755" fill="#111214" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700">Monitored execution</text>
+  <path d="M1065 560H1180" stroke="#676E7B" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1155 535L1180 560L1155 585" stroke="#676E7B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1215" y="310" width="280" height="500" rx="30" fill="#191B1F" stroke="#343840" stroke-width="3"/>
+  <text x="1255" y="370" fill="#8E96A5" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">EVIDENCE</text>
+  <circle cx="1355" cy="500" r="70" fill="#173128"/>
+  <path d="M1325 503L1348 526L1388 478" stroke="#69D5A6" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1355" y="625" fill="white" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700">Review ready</text>
+  <text x="1355" y="670" fill="#9DA3AE" text-anchor="middle" font-family="Arial, sans-serif" font-size="18">Files · tests · receipt</text>
+</svg>

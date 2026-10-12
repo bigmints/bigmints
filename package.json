@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run sync-photos && vite build",
+    "build": "tsc --noEmit && vite build && vite build --ssr src/company/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
-    "sync-photos": "node sync-photos.mjs"
+    "sync-photos": "node sync-photos.mjs",
+    "check": "tsc --noEmit"
   },
   "dependencies": {
     "js-yaml": "^4.1.1",
@@ -20,6 +21,8 @@
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^5.0.0",
     "dotenv": "^17.2.3",
     "typescript": "~5.8.2",

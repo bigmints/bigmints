@@ -26,10 +26,19 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ config }) => {
     return (
       <div className="py-20 text-center">
         <h2 className="text-2xl font-bold text-zinc-900 dark:text-white">Project not found</h2>
-        <Link to="/experiments" className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white mt-4 inline-block">Back to experiments</Link>
+        <Link to="/experiments" className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white mt-4 inline-block">Back to work</Link>
       </div>
     );
   }
+
+  const projectLinks = project.links?.length
+    ? project.links
+    : [
+        ...(project.link ? [{ label: 'Visit Project', url: project.link }] : []),
+        ...(project.caseStudyLink && project.caseStudyLink !== project.link
+          ? [{ label: 'Read Case Study', url: project.caseStudyLink }]
+          : []),
+      ];
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -40,7 +49,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ config }) => {
         url={`/experiments/${project.id}`}
       />
       <Link to="/experiments" className="inline-flex items-center text-sm font-medium text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors mb-8 group">
-        <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to all experiments
+        <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to all work
       </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
@@ -60,10 +69,15 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ config }) => {
               </div>
             )}
 
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex flex-wrap items-center gap-3 mb-6">
               <span className="px-3 py-1 bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 text-xs font-bold uppercase tracking-wider rounded-full">
                 {project.category}
               </span>
+              {project.status && (
+                <span className="px-3 py-1 border border-zinc-200 dark:border-zinc-700 text-zinc-500 dark:text-zinc-400 text-xs font-medium rounded-full">
+                  {project.status}
+                </span>
+              )}
               <span className="text-zinc-400 dark:text-zinc-500 text-sm font-mono flex items-center gap-1">
                 <Calendar size={12} /> {project.date}
               </span>
@@ -81,7 +95,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ config }) => {
           <div className="space-y-8 border-t border-zinc-100 dark:border-zinc-800 pt-8">
             <div>
               <h3 className="text-xs font-bold uppercase tracking-widest text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
-                <Layers size={14} /> Tech Stack
+                <Layers size={14} /> Focus
               </h3>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map(tag => (
@@ -92,26 +106,22 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ config }) => {
               </div>
             </div>
 
-            {(project.link || project.caseStudyLink) && (
-              <div className="pt-4">
-                <a
-                  href={project.link || project.caseStudyLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 bg-zinc-900 hover:bg-black dark:bg-white dark:text-black dark:hover:bg-zinc-200 text-white rounded-xl font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-                >
-                  Visit Project <ExternalLink size={18} className="ml-2" />
-                </a>
-                {project.caseStudyLink && project.link !== project.caseStudyLink && (
+            {projectLinks.length > 0 && (
+              <div className="pt-4 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+                {projectLinks.map((item, index) => (
                   <a
-                    href={project.caseStudyLink}
+                    key={`${item.label}-${item.url}`}
+                    href={item.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="block mt-4 md:inline-block md:mt-0 md:ml-4 text-center px-6 py-4 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white font-medium transition-colors"
+                    className={index === 0
+                      ? "inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-zinc-900 hover:bg-black dark:bg-white dark:text-black dark:hover:bg-zinc-200 text-white rounded-xl font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                      : "inline-flex items-center justify-center w-full sm:w-auto px-6 py-4 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white hover:border-zinc-400 dark:hover:border-zinc-500 rounded-xl font-medium transition-colors"
+                    }
                   >
-                    Read Case Study
+                    {item.label} <ExternalLink size={16} className="ml-2" />
                   </a>
-                )}
+                ))}
               </div>
             )}
           </div>

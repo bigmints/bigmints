@@ -41,18 +41,18 @@ const Home: React.FC<HomeProps> = ({ config }) => {
                         Intelligence.
                     </h1>
                     <p className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 max-w-2xl leading-relaxed mb-8 font-light tracking-tight pointer-events-auto">
-                        I'm <span className="text-zinc-900 dark:text-white font-medium">Pretheesh Thomas</span>, an Experience Design Leader and Technologist based in Dubai.
-                        Blending full-stack engineering with high-fidelity design to build enterprise-grade systems and autonomous agents.
+                        I'm <span className="text-zinc-900 dark:text-white font-medium">Pretheesh Thomas</span>, a Product Architect, Experience Design Leader, and Technologist based in Dubai.
+                        I turn complex ideas into shipped products, agentic systems, and private AI infrastructure.
                     </p>
                 </div>
             </section>
 
-            {/* Selected Experiments */}
+            {/* Selected Work */}
             <section>
                 <div className="flex items-center justify-between mb-12">
-                    <h2 className="text-3xl font-bold text-zinc-900 dark:text-white tracking-tight">Selected Experiments</h2>
+                    <h2 className="text-3xl font-bold text-zinc-900 dark:text-white tracking-tight">Selected Work</h2>
                     <Link to="/experiments" className="hidden md:inline-flex items-center px-4 py-2 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-200 rounded-full text-xs font-semibold transition-colors">
-                        View all experiments <ChevronRight size={14} className="ml-1" />
+                        View all work <ChevronRight size={14} className="ml-1" />
                     </Link>
                 </div>
 
@@ -98,7 +98,7 @@ const Home: React.FC<HomeProps> = ({ config }) => {
 
                 <div className="mt-8 md:hidden text-center">
                     <Link to="/experiments" className="inline-flex items-center px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-black rounded-full text-sm font-bold shadow-lg">
-                        View all experiments
+                        View all work
                     </Link>
                 </div>
             </section>

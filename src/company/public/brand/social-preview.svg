@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="white"/>
+<g transform="translate(56 40) scale(.38)"><path d="M106 20H49C32.98 20 20 32.98 20 49V108H79C95.02 108 108 95.02 108 79V48H57V79" fill="none" stroke="#171717" stroke-width="17" stroke-linejoin="round" stroke-linecap="butt"/></g>
+<text x="115" y="74" font-family="Arial" font-size="30" fill="#171717">bigmints</text>
+<text x="60" y="264" font-family="Georgia" font-size="67" fill="#171717">Make work easier.</text>
+<text x="60" y="357" font-family="Georgia" font-size="67" fill="#777777">Make room for life.</text>
+<rect x="805" y="125" width="331" height="338" fill="#171717"/>
+<text x="832" y="167" font-family="Arial" font-size="15" fill="white">SAVEADAY</text>
+<text x="832" y="258" font-family="Georgia" font-size="36" fill="white">More time for</text>
+<text x="832" y="303" font-family="Georgia" font-size="36" fill="white">your business.</text>
+<path d="M832 365H1106" stroke="#555555"/>
+<text x="832" y="408" font-family="Arial" font-size="16" fill="#cccccc">Less busywork. More business.</text>
+<path d="M60 524H1136" stroke="#dddddd"/>
+<text x="60" y="572" font-family="Arial" font-size="20" fill="#171717">A technology product company.</text>
+<text x="942" y="572" font-family="Arial" font-size="20" fill="#171717">Bigmints FZE LLC</text>
+</svg>

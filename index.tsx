@@ -1,19 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-
-import { HelmetProvider } from 'react-helmet-async';
-
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
-}
-
-const root = ReactDOM.createRoot(rootElement);
-root.render(
+import React from "react";
+import { createRoot, hydrateRoot } from "react-dom/client";
+import App from "./App";
+const root = document.getElementById("root")!;
+const path = window.location.pathname.replace(/\/*$/, "/");
+// Preserve bookmarks from the earlier one-page preview.
+const formerSections: Record<string, string> = {
+  "#brands": "/products/",
+  "#company": "/company/",
+  "#expertise": "/innovation/",
+  "#contact": "/contact/",
+};
+const formerSection =
+  path === "/" ? formerSections[window.location.hash] : undefined;
+const application = (
   <React.StrictMode>
-    <HelmetProvider>
-      <App />
-    </HelmetProvider>
+    <App path={path} />
   </React.StrictMode>
 );
+if (formerSection) window.location.replace(formerSection);
+else if (root.children.length > 0) hydrateRoot(root, application);
+else createRoot(root).render(application);
