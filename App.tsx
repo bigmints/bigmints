@@ -58,7 +58,7 @@ function Header({ path }: { path: string }) {
     <header className="header">
       <a href="/" className="wordmark" aria-label="Bigmints home">
         <Mark />
-        bigmints
+        Bigmints
       </a>
       <button
         id="menu-toggle"
@@ -709,7 +709,7 @@ function Footer() {
       <div className="footer-top">
         <a href="/" className="wordmark">
           <Mark />
-          bigmints
+          Bigmints
         </a>
         <span>Ideas into impact.</span>
         <nav className="footer-navigation" aria-label="Footer navigation">

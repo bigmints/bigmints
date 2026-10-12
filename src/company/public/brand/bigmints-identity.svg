@@ -3,8 +3,8 @@
 <text x="1376" y="65" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#777">SELECTED DIRECTION / 03</text>
 <line x1="64" y1="94" x2="1376" y2="94" stroke="#ddd"/>
 <g transform="translate(100 174) scale(3.7)"><path d="M106 20H49C32.98 20 20 32.98 20 49V108H79C95.02 108 108 95.02 108 79V48H57V79" fill="none" stroke="#171717" stroke-width="17" stroke-linejoin="round" stroke-linecap="butt"/></g>
-<g transform="translate(730 230) scale(.6)"><path d="M106 20H49C32.98 20 20 32.98 20 49V108H79C95.02 108 108 95.02 108 79V48H57V79" fill="none" stroke="#171717" stroke-width="17" stroke-linejoin="round" stroke-linecap="butt"/></g>
-<text x="817" y="288" font-family="Arial,sans-serif" font-weight="600" font-size="64" letter-spacing="-3" fill="#171717">bigmints</text>
+<g transform="translate(730 244) scale(.42)"><path d="M106 20H49C32.98 20 20 32.98 20 49V108H79C95.02 108 108 95.02 108 79V48H57V79" fill="none" stroke="#171717" stroke-width="17" stroke-linejoin="round" stroke-linecap="butt"/></g>
+<text x="800" y="288" font-family="Arial,sans-serif" font-weight="500" font-size="64" letter-spacing="-1.4" fill="#171717">Bigmints</text>
 <text x="736" y="382" font-family="Georgia,serif" font-size="35" fill="#171717">Make work easier.</text><text x="736" y="427" font-family="Georgia,serif" font-size="35" fill="#777">Make room for life.</text>
 <text x="736" y="506" font-family="Arial,sans-serif" font-size="15" fill="#666">An open frame. A little more room for possibility.</text>
 <line x1="64" y1="710" x2="1376" y2="710" stroke="#ddd"/>
