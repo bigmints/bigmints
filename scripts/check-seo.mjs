@@ -33,7 +33,22 @@ for (const path of routes) {
   assert.equal(org.brand.length, 6);
   const page = graph.find((node) => node["@id"] === canonical(path));
   assert(page, `${path}: missing page entity`);
-  const { brand } = getPage(path);
+  const { brand, study } = getPage(path);
+  if (study) {
+    const article = graph.find((node) => node["@type"] === "Article");
+    assert.equal(page.mainEntity["@id"], article["@id"]);
+    assert.equal(article.headline, study.title);
+    assert.equal(article.mainEntityOfPage["@id"], canonical(path));
+    assert.equal(article.author["@id"], org["@id"]);
+    assert(llms.includes(canonical(path)), `${path}: missing agent index reference`);
+    for (const section of study.sections) {
+      for (const paragraph of section.paragraphs) {
+        const escaped = paragraph.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;");
+        assert(html.includes(escaped), `${path}: missing visible case study copy`);
+        assert(full.includes(paragraph) && article.articleBody.includes(paragraph), `${path}: case study references differ`);
+      }
+    }
+  }
   if (brand) {
     assert.equal(page.mainEntity["@id"], `${canonical(path)}#brand`);
     const entity = graph.find((node) => node["@id"] === page.mainEntity["@id"]);

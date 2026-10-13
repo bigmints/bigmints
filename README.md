@@ -66,7 +66,7 @@ The existing wildcard robots policy permits crawlers; no separate AI-training po
 
 For indexing measurement, the site owner can submit `https://www.bigmints.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools, inspect the home/company/product URLs and monitor impressions, queries and indexed pages. Console ownership and sitemap submission have not been verified from this repository. Do not invent verification tokens or report submissions without confirmation from those services.
 
-The production build generates fifteen pages plus a noindex 404. The completed output was checked for unique titles, one H1 per page, canonical URLs, valid structured breadcrumbs, internal links and anchors, sitemap coverage and no visible contact email. Browser checks covered top-level navigation, direct product-page loading, mobile navigation, contact presentation and the earlier `#brands` bookmark.
+The production build generates nineteen pages plus a noindex 404. The completed output was checked for unique titles, one H1 per page, canonical URLs, valid structured breadcrumbs, internal links and anchors, sitemap coverage and no visible contact email. Browser checks covered top-level navigation, direct product-page loading, mobile navigation, contact presentation and the earlier `#brands` bookmark.
 
 ## Brand identity
 
@@ -84,3 +84,11 @@ The site uses existing product artwork, stored locally in `src/company/public/br
 | PicoRunner | `../oven/picorunner-release-0.3.10/public/brand/symbol.svg` |
 | Fikr | `../fikr-workspace/fikr.one/public/fikr-logo.svg` |
 | Kachu | `../kir/catchup-website/public/kachu-icon.png` |
+
+## Product case studies
+
+The hero links to `/case-studies/`, with three own-product studies for Saveaday, Starcraft and PicoRunner. Copy is maintained in `src/company/content.ts`. These describe documented workflows and product intent, not customer deployments or measured results. Saveaday is explicitly labelled product development; no synthetic demo data is presented as customer evidence.
+
+Sources: Saveaday v2 README (customer, booking, follow-up and permission workflows), Starcraft's `pi-design/README.md` (preview, annotations, attachments and review loop), and `picorunner-release-0.3.10/README.md` (catalogue, launch controls, local imports and supported update recovery). Source paths are listed in the product evidence table above. Reviewed 2026-10-13.
+
+Each study is statically rendered with its own canonical URL, metadata, Article and breadcrumb entities, and entries in the sitemap and agent reference files. The SEO check verifies article copy against both rendered content and the full text reference.

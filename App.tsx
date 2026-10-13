@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, ArrowRight, Menu, X, Plus, Minus, Pause, Play } from "lucide-react";
-import { brands, company, expertise, getPage } from "./src/company/content";
+import { brands, company, expertise, caseStudies, getPage } from "./src/company/content";
 import "./src/company/company.css";
 
 const Arrow = () => <ArrowUpRight size={18} aria-hidden="true" />;
@@ -82,6 +82,7 @@ function Header({ path }: { path: string }) {
             active:
               path.startsWith("/products/") || path.startsWith("/brands/"),
           },
+          { href: "/case-studies/", label: "Case studies", active: path.startsWith("/case-studies/") },
           { href: "/company/", label: "Company", active: path === "/company/" },
           {
             href: "/innovation/",
@@ -166,8 +167,8 @@ function Hero() {
           Less busywork. More space for your business, your ideas
           and the people who matter.
         </p>
-        <a className="button dark" href="/products/">
-          Find your next everyday essential <ArrowRight size={18} />
+        <a className="button dark" href="/case-studies/">
+          Explore case studies <ArrowRight size={18} />
         </a>
       </div>
       <button
@@ -179,10 +180,6 @@ function Hero() {
         {motionPaused ? <Play size={14} aria-hidden="true" /> : <Pause size={14} aria-hidden="true" />}
       </button>
       <div className="home-brand-family">
-        <div className="home-family-caption">
-          <span>Six brands. Everyday possibilities.</span>
-          <a href="/company/">From Bigmints <Arrow /></a>
-        </div>
         <nav className="home-brand-strip" aria-label="Explore Bigmints products">
           {brands.map((brand) => (
             <a href={`/brands/${brand.id}/`} key={brand.id}>
@@ -305,6 +302,45 @@ function Home() {
     </>
   );
 }
+function CaseStudiesPage() {
+  return <>
+    <PageIntro eyebrow="BIGMINTS / CASE STUDIES" title="Everyday problems." emphasis="Different possibilities." description="Inside our own products: the work they make easier, the choices behind them and what those choices put within reach." />
+    <section className="wrap case-directory" aria-label="Product case studies">
+      {caseStudies.map((study, index) => {
+        const brand = brands.find((b) => b.id === study.brandId)!;
+        return <a className="case-card" href={`/case-studies/${study.id}/`} key={study.id}>
+          <div className="case-card-meta"><ProductIdentity brand={brand} /><span>0{index + 1} / {study.focus}</span></div>
+          <div className="case-card-copy"><h2>{study.title}</h2><p>{study.intro}</p></div>
+          <span className="case-read">Read the case study <ArrowRight size={20} aria-hidden="true" /></span>
+        </a>;
+      })}
+    </section>
+  </>;
+}
+function CaseStudyPage({ study }: { study: (typeof caseStudies)[number] }) {
+  const brand = brands.find((b) => b.id === study.brandId)!;
+  return <article className="case-study wrap">
+    <a className="text-link case-back" href="/case-studies/">All case studies <Arrow /></a>
+    <header className="case-intro">
+      <span className="eyebrow">{brand.name} / PRODUCT CASE STUDY</span>
+      <h1>{study.title}</h1>
+      <p>{study.intro}</p>
+      <div className="case-facts"><ProductIdentity brand={brand} /><span>{study.focus}</span><span>{study.stage}</span></div>
+    </header>
+    <div className="case-journey" aria-label={`${brand.name} product journey`}>
+      <span className="eyebrow">WHAT THIS PUTS WITHIN REACH</span>
+      <p>{study.outcome}</p>
+      <ol>{study.journey.map((step, i) => <li key={step}><span>0{i + 1}</span>{step}{i < study.journey.length - 1 && <ArrowRight aria-hidden="true" />}</li>)}</ol>
+    </div>
+    <div className="case-body">
+      <aside><span className="eyebrow">IN THIS STUDY</span><nav aria-label="In this case study">{study.sections.map((section, i) => <a key={section.title} href={`#section-${i + 1}`}>{section.title}</a>)}</nav></aside>
+      <div>{study.sections.map((section, i) => <section id={`section-${i + 1}`} key={section.title}><h2>{section.title}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}</div>
+    </div>
+    <footer className="case-end"><div><span className="eyebrow">A BIGMINTS PRODUCT</span><h2>Explore {brand.name}.</h2></div><a className="button dark" href={`/brands/${brand.id}/`}>Meet the product <Arrow /></a></footer>
+    <nav className="case-related" aria-label="More case studies"><span className="eyebrow">KEEP EXPLORING</span>{caseStudies.filter((item) => item.id !== study.id).map((item) => <a href={`/case-studies/${item.id}/`} key={item.id}>{item.title}<Arrow /></a>)}</nav>
+  </article>;
+}
+
 function ProductsPage() {
   return (
     <>
@@ -709,6 +745,7 @@ function Footer() {
         <span>Ideas into impact.</span>
         <nav className="footer-navigation" aria-label="Footer navigation">
           <a href="/products/">Products</a>
+          <a href="/case-studies/">Case studies</a>
           <a href="/company/">Company</a>
           <a href="/innovation/">Innovation</a>
           <a href="/contact/">Contact</a>
@@ -730,6 +767,7 @@ export default function App({ path = "/" }: { path?: string }) {
   useEffect(() => {
     document.title = getPage(path).title;
   }, [path]);
+  const study = getPage(path).study;
   return (
     <div id="top">
       <a className="skip-link" href="#main">
@@ -739,6 +777,10 @@ export default function App({ path = "/" }: { path?: string }) {
       <main id="main">
         {path === "/" ? (
           <Home />
+        ) : path === "/case-studies/" ? (
+          <CaseStudiesPage />
+        ) : study ? (
+          <CaseStudyPage study={study} />
         ) : path === "/products/" ? (
           <ProductsPage />
         ) : path === "/company/" ? (
@@ -750,7 +792,7 @@ export default function App({ path = "/" }: { path?: string }) {
         ) : (
           <Detail path={path} />
         )}
-        {path !== "/contact/" && path !== "/products/" && <ProductCallout />}
+        {path !== "/contact/" && path !== "/products/" && !path.startsWith("/case-studies/") && <ProductCallout />}
       </main>
       <Footer />
     </div>
