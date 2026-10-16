@@ -90,6 +90,11 @@ avatar = f'''<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" vi
 <g transform="translate(72 72) scale(2)">{mark('profile-avatar','#171717')}</g>
 </svg>'''
 Path('src/company/public/brand/profile-avatar.svg').write_text(avatar)
+color_avatar = f'''<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+<rect width="400" height="400" fill="white"/>
+<g transform="translate(72 72) scale(2)">{color_mark('profile-avatar-color')}</g>
+</svg>'''
+Path('src/company/public/brand/profile-avatar-color.svg').write_text(color_avatar)
 # Use the website hero palette and Instrument Serif without small supporting copy.
 serif_faces = "".join(
     '@font-face{font-family:Instrument Serif;font-style:' + style +

@@ -90,6 +90,8 @@ The selected Bigmints mark is the **woven, five-part emblem** from the “A conn
 
 Render `brand/profile-cover.svg` in a browser at exactly 1128 × 191 pixels, wait for its embedded fonts to load, and export `brand/profile-cover.png` for LinkedIn. Its regular and italic Instrument Serif font sources and SIL Open Font License are in `src/company/public/fonts/`. Browser rendering preserves the embedded typefaces reliably.
 
+LinkedIn now uses the colour edition of the approved woven symbol. `brand/profile-avatar-color.svg` and its 400 × 400 JPEG export, `brand/profile-avatar-color.jpg`, preserve the original avatar’s geometry and padding. The saved colour logo was checked in the member view on 16 October 2026.
+
 ### Product logos
 
 The site uses existing product artwork, stored locally in `src/company/public/brand/products/`. CSS presents the assets in monochrome without modifying the source artwork. Logos appear in product cards, the homepage brand strip, product detail pages, related products and contact links, and are included in Brand structured data.
