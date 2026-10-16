@@ -12,6 +12,33 @@ woven_content = woven_content.replace('stroke-width="10.5"', 'stroke-width="11.5
 def mark(prefix, ink):
  return woven_content.replace("bigmints-mark", prefix).replace("#171717", ink)
 
+def color_mark(prefix):
+ # A shared coordinate space keeps the gradient continuous over woven crossings.
+ gradient = f'<defs><linearGradient id="{prefix}-color" gradientUnits="userSpaceOnUse" x1="18" y1="16" x2="110" y2="112"><stop stop-color="#7842ed"/><stop offset=".32" stop-color="#4263ed"/><stop offset=".66" stop-color="#db459d"/><stop offset="1" stop-color="#f18b54"/></linearGradient></defs>'
+ return gradient + mark(prefix, f'url(#{prefix}-color)')
+
+Path('src/company/public/brand/bigmints-mark-color.svg').write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">{color_mark("color-mark")}</svg>')
+for suffix, ink in [('color', '#171717'), ('color-white', '#ffffff')]:
+ lockup = f'<svg xmlns="http://www.w3.org/2000/svg" width="384" height="88" viewBox="0 0 384 88">{font_style}<g transform="translate(0 5.6) scale(.6)">{color_mark("lockup-" + suffix)}</g><text x="87" y="63.6" font-family="Syne,Arial,sans-serif" font-weight="600" font-size="64" letter-spacing="-1.4" fill="{ink}">Bigmints</text></svg>'
+ Path(f'src/company/public/brand/bigmints-logo-{suffix}.svg').write_text(lockup)
+
+color_board = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">{font_style}
+<rect width="1200" height="720" fill="#fafafa"/>
+<text x="56" y="54" font-family="Arial,sans-serif" font-size="12" letter-spacing="2" fill="#666">BIGMINTS / COLOUR EDITION</text>
+<g transform="translate(80 130) scale(2.8)">{color_mark('color-board-main')}</g>
+<g transform="translate(628 230) scale(.6)">{color_mark('color-board-word')}</g>
+<text x="715" y="288" font-family="Syne,Arial,sans-serif" font-weight="600" font-size="64" letter-spacing="-1.4" fill="#171717">Bigmints</text>
+<text x="632" y="342" font-family="Arial,sans-serif" font-size="16" fill="#666">A little more room for possibility.</text>
+<rect x="0" y="530" width="1200" height="190" fill="#171717"/>
+<g transform="translate(68 584) scale(.55)">{color_mark('color-board-dark')}</g>
+<text x="148" y="637" font-family="Syne,Arial,sans-serif" font-weight="600" font-size="58" letter-spacing="-1.3" fill="white">Bigmints</text>
+<g transform="translate(630 605) scale(.24)">{color_mark('color-board-small')}</g>
+<g transform="translate(706 595) scale(.4)">{color_mark('color-board-medium')}</g>
+<g transform="translate(810 580) scale(.64)">{color_mark('color-board-large')}</g>
+<text x="1070" y="633" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#aaa">One woven form.</text>
+</svg>'''
+Path('src/company/public/brand/bigmints-identity-color.svg').write_text(color_board)
+
 for name,ink in [('bigmints-mark','#171717'),('bigmints-mark-white','#ffffff')]:
  svg=f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">{mark(name,ink)}</svg>'
  Path(f'src/company/public/brand/{name}.svg').write_text(svg)
@@ -63,16 +90,42 @@ avatar = f'''<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" vi
 <g transform="translate(72 72) scale(2)">{mark('profile-avatar','#171717')}</g>
 </svg>'''
 Path('src/company/public/brand/profile-avatar.svg').write_text(avatar)
-cover = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1128" height="191" viewBox="0 0 1128 191">{font_style}
-<rect width="1128" height="191" fill="white"/>
-<g transform="translate(290 28) scale(.27)">{mark('profile-cover','#171717')}</g>
-<text x="334" y="55" font-family="Syne,Arial,sans-serif" font-size="28" font-weight="600" fill="#171717">Bigmints</text>
-<text x="290" y="103" font-family="Georgia,serif" font-size="32" fill="#171717">Make work easier.</text>
-<text x="290" y="144" font-family="Georgia,serif" font-size="32" fill="#777">Make room for life.</text>
-<path d="M736 40V150" stroke="#ddd"/>
-<text x="770" y="64" font-family="Arial,sans-serif" font-size="13" fill="#171717">A technology product company.</text>
-<text x="770" y="98" font-family="Arial,sans-serif" font-size="12" fill="#555">Saveaday · Youbot · Starcraft</text>
-<text x="770" y="119" font-family="Arial,sans-serif" font-size="12" fill="#555">PicoRunner · Fikr · Kachu</text>
-<text x="770" y="151" font-family="Arial,sans-serif" font-size="12" fill="#171717">www.bigmints.com</text>
+# Use the website hero palette and Instrument Serif without small supporting copy.
+serif_faces = "".join(
+    '@font-face{font-family:Instrument Serif;font-style:' + style +
+    ';font-weight:400;src:url("data:font/ttf;base64,' +
+    base64.b64encode(Path('src/company/public/fonts/instrument-serif-' + filename + '.ttf').read_bytes()).decode() +
+    '") format("truetype");}'
+    for style, filename in [('normal', 'regular'), ('italic', 'italic')]
+)
+cover = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1128" height="191" viewBox="0 0 1128 191">
+<defs>
+<style>{serif_faces}</style>
+<linearGradient id="cover-paper" x1="0" y1="0" x2="1" y2=".4">
+  <stop stop-color="#f4eaff"/><stop offset=".52" stop-color="#fff2ed"/><stop offset="1" stop-color="#e6efff"/>
+</linearGradient>
+<linearGradient id="cover-violet" x1="0" y1="0" x2="1" y2="1">
+  <stop stop-color="#9276ff"/><stop offset=".55" stop-color="#d18ee9"/><stop offset="1" stop-color="#ff9c80"/>
+</linearGradient>
+<linearGradient id="cover-blue" x1="0" y1="0" x2="1" y2="1">
+  <stop stop-color="#527af5"/><stop offset=".55" stop-color="#8fc6ff"/><stop offset="1" stop-color="#a27bf5"/>
+</linearGradient>
+<radialGradient id="cover-light" cx=".53" cy=".3" r=".65">
+  <stop stop-color="#fff" stop-opacity=".98"/><stop offset=".47" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+</radialGradient>
+<filter id="cover-soft" x="-50%" y="-100%" width="200%" height="300%"><feGaussianBlur stdDeviation="24"/></filter>
+<clipPath id="cover-crop"><rect width="1128" height="191"/></clipPath>
+</defs>
+<g clip-path="url(#cover-crop)">
+<rect width="1128" height="191" fill="url(#cover-paper)"/>
+<g filter="url(#cover-soft)">
+  <ellipse cx="55" cy="65" rx="260" ry="180" transform="rotate(-28 55 65)" fill="url(#cover-violet)"/>
+  <ellipse cx="1175" cy="48" rx="265" ry="210" transform="rotate(24 1175 48)" fill="url(#cover-blue)"/>
+  <ellipse cx="660" cy="278" rx="480" ry="130" fill="#ffb48b" opacity=".8"/>
+</g>
+<rect width="1128" height="191" fill="url(#cover-light)"/>
+<text x="352" y="83" font-family="Instrument Serif,Georgia,serif" font-size="65" fill="#171717">Make work easier.</text>
+<text x="352" y="149" font-family="Instrument Serif,Georgia,serif" font-size="65" font-style="italic" fill="#171717">Make room for life.</text>
+</g>
 </svg>'''
 Path('src/company/public/brand/profile-cover.svg').write_text(cover)
