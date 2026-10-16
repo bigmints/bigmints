@@ -1727,7 +1727,7 @@ p {
   }
 }
 
-/* Existing product identities, presented in the site's monochrome palette. */
+/* Product identities with the approved Saveaday and Youbot family colours. */
 .product-logo {
   display: block;
   width: 36px;
@@ -1736,13 +1736,16 @@ p {
   object-fit: contain;
   filter: grayscale(1);
 }
-.product-logo-youbot,
 .product-logo-picorunner,
 .product-logo-fikr {
   filter: grayscale(1) brightness(0);
 }
 .product-logo-kachu {
   border-radius: 22%;
+}
+.product-logo-saveaday,
+.product-logo-youbot {
+  filter: none;
 }
 .product-identity {
   display: inline-flex;

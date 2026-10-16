@@ -1,17 +1,1 @@
-<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_405_484)">
-<rect width="800" height="800" fill="#3CA6A6"/>
-<mask id="mask0_405_484" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="800" height="800">
-<rect width="800" height="800" fill="#FFB400"/>
-</mask>
-<g mask="url(#mask0_405_484)">
-<path d="M400 151V178.667M178.667 400H151M242.691 242.691L220.167 220.167M557.31 242.691L579.833 220.167M649 400H621.333M510.667 400C510.667 461.118 461.118 510.667 400 510.667C338.88 510.667 289.333 461.118 289.333 400C289.333 338.88 338.88 289.333 400 289.333C461.118 289.333 510.667 338.88 510.667 400Z" stroke="white" stroke-width="66.6667" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="400" cy="1173" r="565" fill="#74EFC3"/>
-</g>
-</g>
-<defs>
-<clipPath id="clip0_405_484">
-<rect width="800" height="800" rx="240" fill="white"/>
-</clipPath>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none"><defs><linearGradient id="saveadaycolor-gradient" gradientUnits="userSpaceOnUse" x1="20" y1="18" x2="105" y2="111"><stop stop-color="#a848d6"/><stop offset=".5" stop-color="#ed5a76"/><stop offset="1" stop-color="#f69a39"/></linearGradient><mask id="saveadaycolor-cross-0" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128"><rect width="128" height="128" fill="white"/><path d="M19.190,71.924L19.442,71.415L19.723,70.911L20.031,70.411L20.367,69.917L20.732,69.429L21.126,68.946L21.548,68.470L22.000,68.000L22.579,67.440L23.181,66.892L23.808,66.357L24.456,65.834L25.128,65.324L25.820,64.827L26.535,64.342L27.269,63.870L28.024,63.410L28.798,62.963L29.592,62.529L30.404,62.107L31.233,61.697L32.080,61.301L32.944,60.917L33.825,60.545L34.721,60.186L35.632,59.840L36.558,59.506L37.498,59.185L38.452,58.877L39.418,58.581L40.397,58.297L41.388,58.027L42.391,57.769L43.404,57.523" fill="none" stroke="black" stroke-width="18"/></mask><mask id="saveadaycolor-cross-1" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128"><rect width="128" height="128" fill="white"/><path d="M98.436,47.709L98.542,48.323L98.637,48.941L98.721,49.562L98.795,50.186L98.857,50.814L98.908,51.445L98.948,52.080L98.977,52.717L98.994,53.357L99.000,54.000L98.994,54.643L98.977,55.283L98.948,55.920L98.908,56.555L98.857,57.186L98.795,57.814L98.721,58.438L98.637,59.059L98.542,59.677L98.436,60.291L98.320,60.902L98.193,61.508L98.055,62.111L97.908,62.710L97.750,63.304L97.582,63.895L97.404,64.481L97.216,65.063L97.018,65.640L96.810,66.213L96.593,66.781L96.366,67.344L96.130,67.902L95.885,68.455L95.630,69.004L95.366,69.547L95.093,70.085L94.812,70.617L94.521,71.144L94.221,71.665L93.913,72.181L93.597,72.691L93.272,73.195L92.938,73.693L92.597,74.185L92.247,74.671L91.889,75.150" fill="none" stroke="black" stroke-width="18"/></mask></defs><g transform="" fill="none" stroke="url(#saveadaycolor-gradient)" stroke-width="11.5" stroke-linecap="round" stroke-linejoin="round"><path d="M64,19C83.33,19 99,34.67 99,54C99,73.33 83.33,89 64,89C44.67,89 29,73.33 29,54C29,34.67 44.67,19 64,19Z" mask="url(#saveadaycolor-cross-0)"/><path d="M22,68C39,51 89,51 106,68C120,82 94,105 64,105C34,105 8,82 22,68Z" mask="url(#saveadaycolor-cross-1)"/></g></svg>

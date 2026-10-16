@@ -15,7 +15,7 @@ export const company = {
 export const brands = [
   {
     id: "saveaday",
-    logo: "/brand/products/saveaday.svg",
+    logo: "/brand/products/saveaday-woven-color.svg",
     name: "Saveaday",
     searchLabel: "Customer & Booking Management",
     summary: "Saveaday is a Bigmints business platform for managing customer enquiries, bookings and follow-ups in one place.",
@@ -35,7 +35,7 @@ export const brands = [
   },
   {
     id: "youbot",
-    logo: "/brand/products/youbot.svg",
+    logo: "/brand/products/youbot-woven-color.svg",
     name: "Youbot",
     searchLabel: "Self-hosted AI Concierge",
     summary: "Youbot is a self-hosted AI concierge by Bigmints that helps visitors find answers and connects them with you when needed.",
