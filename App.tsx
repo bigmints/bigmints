@@ -286,7 +286,7 @@ function Home() {
           </div>
           <div>
             <p className="large-copy">
-              Bigmints FZE LLC creates, owns and grows products for better ways
+              Bigmints FZE creates, owns and grows products for better ways
               to work, create and connect.
             </p>
             <p>
@@ -462,7 +462,7 @@ function CompanyPage() {
   return (
     <>
       <PageIntro
-        eyebrow="BIGMINTS FZE LLC"
+        eyebrow="BIGMINTS FZE"
         title="A product company."
         emphasis="A family of possibilities."
         description="We create, own and grow our own brands. Each starts with an everyday need and becomes a product with a purpose of its own."
@@ -480,7 +480,8 @@ function CompanyPage() {
             </h2>
             <div>
               <p className="large-copy">
-                Bigmints FZE LLC is a technology product company. We create, own
+                Bigmints is the brand name of Bigmints FZE, a technology product
+                company. We create, own
                 and grow a family of brands for better ways to work, create and
                 connect.
               </p>
@@ -507,6 +508,29 @@ function CompanyPage() {
               </a>
             </div>
           </div>
+          <section className="company-facts" aria-labelledby="company-facts-heading">
+            <h2 id="company-facts-heading">Bigmints at a glance</h2>
+            <dl>
+              <div>
+                <dt>Company name</dt><dd>{company.name}</dd>
+              </div>
+              <div>
+                <dt>What we do</dt><dd>{company.category}</dd>
+              </div>
+              <div>
+                <dt>Official website</dt>
+                <dd><a href={company.url}>www.bigmints.com</a></dd>
+              </div>
+              <div>
+                <dt>Find us online</dt>
+                <dd>{company.profiles.map((profile) => (
+                  <a key={profile.name} href={profile.url}>
+                    {company.displayName} on {profile.name} <Arrow />
+                  </a>
+                ))}</dd>
+              </div>
+            </dl>
+          </section>
           <div className="principles">
             {[
               [
@@ -564,7 +588,7 @@ function ContactPage() {
         eyebrow="CONTACT BIGMINTS"
         title="A conversation about"
         emphasis="what comes next."
-        description="For company enquiries, product conversations and partnerships, get in touch with Bigmints FZE LLC."
+        description="For company enquiries, product conversations and partnerships, get in touch with Bigmints FZE."
       />
       <section className="wrap contact-options">
         <div className="contact-company">
@@ -749,6 +773,9 @@ function Footer() {
           <a href="/company/">Company</a>
           <a href="/innovation/">Innovation</a>
           <a href="/contact/">Contact</a>
+          {company.profiles.map((profile) => (
+            <a key={profile.name} href={profile.url}>{profile.name}</a>
+          ))}
           <a href="/llms.txt">Company &amp; product index</a>
         </nav>
         <a href="/products/">
@@ -756,7 +783,7 @@ function Footer() {
         </a>
       </div>
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Bigmints FZE LLC</span>
+        <span>© {new Date().getFullYear()} Bigmints FZE</span>
         <span>Technology innovation. Human possibility.</span>
         <a href="#top">Back to top ↑</a>
       </div>
