@@ -314,6 +314,18 @@ export const caseStudies = [
 ];
 
 export const sitePages = {
+  "/whatsapp/privacy/": {
+    label: "WhatsApp privacy",
+    title: "WhatsApp Connection Privacy | Bigmints FZE",
+    description: "How Bigmints FZE handles account information, connection credentials and messaging data for authorized WhatsApp Business connections.",
+    schemaType: "WebPage",
+  },
+  "/whatsapp/data-deletion/": {
+    label: "WhatsApp data deletion",
+    title: "WhatsApp Data Deletion Instructions | Bigmints FZE",
+    description: "Disconnect a WhatsApp Business connection and request deletion of records held by Bigmints FZE, with account verification and clear deletion limits.",
+    schemaType: "WebPage",
+  },
   "/case-studies/": {
     label: "Case studies",
     title: "Product Case Studies | Bigmints",

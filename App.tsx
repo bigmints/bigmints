@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, ArrowRight, Menu, X, Plus, Minus, Pause, Play } from "lucide-react";
 import { brands, company, expertise, caseStudies, getPage } from "./src/company/content";
 import "./src/company/company.css";
+import WhatsAppPolicy from "./src/company/WhatsAppPolicy";
 
 const Arrow = () => <ArrowUpRight size={18} aria-hidden="true" />;
 function Mark() {
@@ -773,6 +774,8 @@ function Footer() {
           <a href="/company/">Company</a>
           <a href="/innovation/">Innovation</a>
           <a href="/contact/">Contact</a>
+          <a href="/whatsapp/privacy/">WhatsApp privacy</a>
+          <a href="/whatsapp/data-deletion/">Data deletion</a>
           {company.profiles.map((profile) => (
             <a key={profile.name} href={profile.url}>{profile.name}</a>
           ))}
@@ -802,7 +805,9 @@ export default function App({ path = "/" }: { path?: string }) {
       </a>
       <Header path={path} />
       <main id="main">
-        {path === "/" ? (
+        {path === "/whatsapp/privacy/" || path === "/whatsapp/data-deletion/" ? (
+          <WhatsAppPolicy deletion={path === "/whatsapp/data-deletion/"} />
+        ) : path === "/" ? (
           <Home />
         ) : path === "/case-studies/" ? (
           <CaseStudiesPage />
@@ -819,7 +824,7 @@ export default function App({ path = "/" }: { path?: string }) {
         ) : (
           <Detail path={path} />
         )}
-        {path !== "/contact/" && path !== "/products/" && !path.startsWith("/case-studies/") && <ProductCallout />}
+        {path !== "/contact/" && path !== "/products/" && !path.startsWith("/case-studies/") && !path.startsWith("/whatsapp/") && <ProductCallout />}
       </main>
       <Footer />
     </div>
