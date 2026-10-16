@@ -29,8 +29,19 @@ for (const path of routes) {
   const ids = graph.map((node) => node["@id"]);
   assert.equal(new Set(ids).size, ids.length, `${path}: duplicate entity IDs`);
   const org = graph.find((node) => node["@type"] === "Organization");
-  assert.equal(org.legalName, "Bigmints FZE LLC");
+  assert.equal(org.legalName, "Bigmints FZE");
   assert.equal(org.brand.length, 6);
+  // Identity signals must agree across the rendered site and public references.
+  assert.deepEqual(org.alternateName, company.alternateNames);
+  assert.equal(org.mainEntityOfPage["@id"], canonical("/company/"));
+  assert.deepEqual(org.sameAs, company.profiles.map((profile) => profile.url));
+  for (const profile of company.profiles) {
+    assert(html.includes(`href="${profile.url}"`), `${path}: profile must be visible`);
+    assert(llms.includes(profile.url) && full.includes(profile.url), `${path}: missing profile reference`);
+  }
+  if (path === "/company/") {
+    assert(html.includes("Bigmints is the brand name of Bigmints FZE"), "Company identity must be visible");
+  }
   const page = graph.find((node) => node["@id"] === canonical(path));
   assert(page, `${path}: missing page entity`);
   const { brand, study } = getPage(path);

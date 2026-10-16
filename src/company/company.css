@@ -534,6 +534,42 @@ p {
   margin-top: 76px;
   padding-top: 32px;
 }
+.company-facts {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid #5a5a5a;
+}
+.company-facts h2 {
+  font-size: 26px;
+}
+.company-facts dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 48px;
+  margin-top: 28px;
+}
+.company-facts dt {
+  color: #bfbfbf;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.company-facts dd {
+  margin: 0;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+.company-facts dd a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 600px) {
+  .company-facts dl {
+    grid-template-columns: 1fr;
+  }
+}
 .principles > div {
   position: relative;
   padding-left: 29px;

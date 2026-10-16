@@ -53,6 +53,26 @@ social = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" v
 <text x="832" y="408" font-family="Arial" font-size="16" fill="#cccccc">Less busywork. More business.</text>
 <path d="M60 524H1136" stroke="#dddddd"/>
 <text x="60" y="572" font-family="Arial" font-size="20" fill="#171717">A technology product company.</text>
-<text x="942" y="572" font-family="Arial" font-size="20" fill="#171717">Bigmints FZE LLC</text>
+<text x="942" y="572" font-family="Arial" font-size="20" fill="#171717">Bigmints FZE</text>
 </svg>'''
 Path('src/company/public/brand/social-preview.svg').write_text(social)
+
+# Social profiles use the same approved mark and wordmark as the website.
+avatar = f'''<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+<rect width="400" height="400" fill="white"/>
+<g transform="translate(72 72) scale(2)">{mark('profile-avatar','#171717')}</g>
+</svg>'''
+Path('src/company/public/brand/profile-avatar.svg').write_text(avatar)
+cover = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1128" height="191" viewBox="0 0 1128 191">{font_style}
+<rect width="1128" height="191" fill="white"/>
+<g transform="translate(290 28) scale(.27)">{mark('profile-cover','#171717')}</g>
+<text x="334" y="55" font-family="Syne,Arial,sans-serif" font-size="28" font-weight="600" fill="#171717">Bigmints</text>
+<text x="290" y="103" font-family="Georgia,serif" font-size="32" fill="#171717">Make work easier.</text>
+<text x="290" y="144" font-family="Georgia,serif" font-size="32" fill="#777">Make room for life.</text>
+<path d="M736 40V150" stroke="#ddd"/>
+<text x="770" y="64" font-family="Arial,sans-serif" font-size="13" fill="#171717">A technology product company.</text>
+<text x="770" y="98" font-family="Arial,sans-serif" font-size="12" fill="#555">Saveaday · Youbot · Starcraft</text>
+<text x="770" y="119" font-family="Arial,sans-serif" font-size="12" fill="#555">PicoRunner · Fikr · Kachu</text>
+<text x="770" y="151" font-family="Arial,sans-serif" font-size="12" fill="#171717">www.bigmints.com</text>
+</svg>'''
+Path('src/company/public/brand/profile-cover.svg').write_text(cover)

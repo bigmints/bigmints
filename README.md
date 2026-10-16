@@ -1,4 +1,4 @@
-# Bigmints FZE LLC
+# Bigmints FZE
 
 Product-company website for Bigmints, with Home, Products, Company, Innovation and Contact pages, plus six brand pages and four technology focus pages. React + Vite, pre-rendered to static HTML for GitHub Pages at https://www.bigmints.com.
 
@@ -68,9 +68,23 @@ For indexing measurement, the site owner can submit `https://www.bigmints.com/si
 
 The production build generates nineteen pages plus a noindex 404. The completed output was checked for unique titles, one H1 per page, canonical URLs, valid structured breadcrumbs, internal links and anchors, sitemap coverage and no visible contact email. Browser checks covered top-level navigation, direct product-page loading, mobile navigation, contact presentation and the earlier `#brands` bookmark.
 
+## Online presence
+
+Bigmints is the brand name of Bigmints FZE. Keep that identity and the description “technology product company” consistent across the website and company profiles. Public copy should connect the company to Saveaday, Youbot, Starcraft, PicoRunner, Fikr and Kachu.
+
+The confirmed company profile is [BigMints on LinkedIn](https://www.linkedin.com/company/bigmints/), which links back to the company domain. Its URL is maintained in `company.profiles` in `src/company/content.ts`; the site renders it on the Company page and footer and includes it in Organization `sameAs` and both generated agent reference files. Add further profiles only after verifying company ownership. The Organization also includes the public brand and legal-name variants and identifies `/company/` as its main page. See [Google’s organization guidance](https://developers.google.com/search/docs/appearance/structured-data/organization).
+
+Search Console was checked on 16 October 2026 using the existing `bigmints.com` domain property. At that time its overview reported one indexed page, and URL inspection reported `/company/` as unknown to Google. The live sitemap was submitted successfully at `https://www.bigmints.com/sitemap.xml`; Search Console reported **Success** and **19 discovered pages**. Discovery is not confirmation of indexing. A separate manual indexing request for `/company/` failed because Search Console could not connect to its reCAPTCHA service. Retry from URL Inspection when that service is available; the accepted sitemap remains in place.
+
+The LinkedIn tagline and About description were updated on 16 October 2026 to identify the legal company and explain all six products. The About copy retains “Make work easier. Make room for life.” as its opening. LinkedIn rejected the secondary website, industry and specialties edits with a concurrent-edit error; those changes were discarded. Remaining profile updates are the HTTPS website URL, Software Development industry, and specialties: Product Development, Artificial Intelligence, Product Design, Software Development, Internet of Things and Digital Twins.
+
+The owner confirmed that Bigmints operates online only. It is therefore ineligible for a Google Business Profile under [Google’s eligibility rules](https://support.google.com/business/answer/3038177); do not create a Maps listing using its registration address. The signed-in Google account also manages an unverified Bapp profile, which is a separate product profile.
+
+Meta’s Authorizations and verifications workflow reported **Bigmints FZE — In review** on 16 October 2026. This is the organization verification offered through the business portfolio’s advertiser authorizations; it is not confirmation of a paid Meta Verified badge or approval of every Meta verification program. Legal verification documents remain outside this public repository.
+
 ## Brand identity
 
-The selected Bigmints mark is the **woven, five-part emblem** from the “A connected whole” identity reference. Its path geometry is preserved in `design/previous-identity/woven-mark.svg` and reused by the generator, with slightly stronger strokes and adjusted crossing gaps for clarity at small sizes. The emblem-to-text ratio matches the selected reference; the Syne wordmark is retained. This is the approved design direction; formal trademark clearance remains pending. Black and white SVG versions and an identity sheet are in `src/company/public/brand/`. The mark is used in the header, footer, favicon, Organization metadata and social preview. Run `python3 scripts/generate-logo.py` from the repository root to regenerate the SVG geometry. The script also generates `brand/social-preview.svg`; render it in a browser at exactly 1200 × 630 pixels and export a PNG to update `og-image.png` (the local ImageMagick SVG renderer drops the stroked mark). The earlier woven concept is archived in `design/previous-identity/`, and the three-option comparison remains in `design/logo-options/`.
+The selected Bigmints mark is the **woven, five-part emblem** from the “A connected whole” identity reference. Its path geometry is preserved in `design/previous-identity/woven-mark.svg` and reused by the generator, with slightly stronger strokes and adjusted crossing gaps for clarity at small sizes. The emblem-to-text ratio matches the selected reference; the Syne wordmark is retained. This is the approved design direction; formal trademark clearance remains pending. Black and white SVG versions and an identity sheet are in `src/company/public/brand/`. The mark is used in the header, footer, favicon, Organization metadata and social preview. Run `python3 scripts/generate-logo.py` from the repository root to regenerate the SVG geometry. The script also generates the editable `brand/profile-avatar.svg`, `brand/profile-cover.svg` and `brand/social-preview.svg`; render it in a browser at exactly 1200 × 630 pixels and export a PNG to update `og-image.png` (the local ImageMagick SVG renderer drops the stroked mark). The earlier woven concept is archived in `design/previous-identity/`, and the three-option comparison remains in `design/logo-options/`.
 
 ### Product logos
 

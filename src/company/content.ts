@@ -1,9 +1,15 @@
 export const company = {
-  name: "Bigmints FZE LLC",
+  name: "Bigmints FZE",
+  displayName: "Bigmints",
+  alternateNames: ["BigMints", "Bigmints FZE"],
+  category: "Technology product company",
+  profiles: [
+    { name: "LinkedIn", url: "https://www.linkedin.com/company/bigmints/" },
+  ],
   url: "https://www.bigmints.com",
-  title: "Bigmints — Technology Product Company | AI, IoT & Digital Twins",
+  title: "Bigmints FZE — Technology Product Company",
   description:
-    "Bigmints FZE LLC is the technology product company behind Saveaday, Youbot, Starcraft, PicoRunner, Fikr and Kachu. Products for work, ideas and everyday life.",
+    "Bigmints FZE is the technology product company behind Saveaday, Youbot, Starcraft, PicoRunner, Fikr and Kachu. Products for work, ideas and everyday life.",
   contact: "mailto:me@bigmints.com?subject=Bigmints%20company%20enquiry",
 };
 export const brands = [
@@ -323,9 +329,9 @@ export const sitePages = {
   },
   "/company/": {
     label: "Company",
-    title: "About Bigmints FZE LLC | A Technology Product Company",
+    title: "About Bigmints FZE | A Technology Product Company",
     description:
-      "Bigmints FZE LLC creates, owns and grows its own family of technology products. Meet the company behind Saveaday, Youbot, Starcraft, PicoRunner, Fikr and Kachu.",
+      "Bigmints FZE creates, owns and grows its own family of technology products. Meet the company behind Saveaday, Youbot, Starcraft, PicoRunner, Fikr and Kachu.",
     schemaType: "AboutPage",
   },
   "/innovation/": {
@@ -337,9 +343,9 @@ export const sitePages = {
   },
   "/contact/": {
     label: "Contact",
-    title: "Contact Bigmints FZE LLC | Company & Partnerships",
+    title: "Contact Bigmints FZE | Company & Partnerships",
     description:
-      "Contact Bigmints FZE LLC for company enquiries and partnerships, or find the website for each of our six product brands.",
+      "Contact Bigmints FZE for company enquiries and partnerships, or find the website for each of our six product brands.",
     schemaType: "ContactPage",
   },
 };
@@ -373,7 +379,7 @@ export function getPage(path: string) {
       : brand
       ? `${brand.name} — ${brand.searchLabel} | Bigmints`
       : capability
-        ? `${capability.name} | Bigmints FZE LLC`
+        ? `${capability.name} | Bigmints FZE`
         : page?.title ||
           (path === "/" ? company.title : "Page not found | Bigmints"),
     description:
