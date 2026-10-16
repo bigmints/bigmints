@@ -8,7 +8,7 @@ function Mark() {
   return (
     <img
       className="brand-mark"
-      src="/brand/bigmints-mark.svg"
+      src="/brand/bigmints-mark-color.svg"
       width="40"
       height="40"
       alt=""
