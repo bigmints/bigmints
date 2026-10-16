@@ -90,42 +90,16 @@ avatar = f'''<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" vi
 <g transform="translate(72 72) scale(2)">{mark('profile-avatar','#171717')}</g>
 </svg>'''
 Path('src/company/public/brand/profile-avatar.svg').write_text(avatar)
-# Use the website hero palette and Instrument Serif without small supporting copy.
-serif_faces = "".join(
-    '@font-face{font-family:Instrument Serif;font-style:' + style +
-    ';font-weight:400;src:url("data:font/ttf;base64,' +
-    base64.b64encode(Path('src/company/public/fonts/instrument-serif-' + filename + '.ttf').read_bytes()).decode() +
-    '") format("truetype");}'
-    for style, filename in [('normal', 'regular'), ('italic', 'italic')]
-)
-cover = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1128" height="191" viewBox="0 0 1128 191">
-<defs>
-<style>{serif_faces}</style>
-<linearGradient id="cover-paper" x1="0" y1="0" x2="1" y2=".4">
-  <stop stop-color="#f4eaff"/><stop offset=".52" stop-color="#fff2ed"/><stop offset="1" stop-color="#e6efff"/>
-</linearGradient>
-<linearGradient id="cover-violet" x1="0" y1="0" x2="1" y2="1">
-  <stop stop-color="#9276ff"/><stop offset=".55" stop-color="#d18ee9"/><stop offset="1" stop-color="#ff9c80"/>
-</linearGradient>
-<linearGradient id="cover-blue" x1="0" y1="0" x2="1" y2="1">
-  <stop stop-color="#527af5"/><stop offset=".55" stop-color="#8fc6ff"/><stop offset="1" stop-color="#a27bf5"/>
-</linearGradient>
-<radialGradient id="cover-light" cx=".53" cy=".3" r=".65">
-  <stop stop-color="#fff" stop-opacity=".98"/><stop offset=".47" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
-</radialGradient>
-<filter id="cover-soft" x="-50%" y="-100%" width="200%" height="300%"><feGaussianBlur stdDeviation="24"/></filter>
-<clipPath id="cover-crop"><rect width="1128" height="191"/></clipPath>
-</defs>
-<g clip-path="url(#cover-crop)">
-<rect width="1128" height="191" fill="url(#cover-paper)"/>
-<g filter="url(#cover-soft)">
-  <ellipse cx="55" cy="65" rx="260" ry="180" transform="rotate(-28 55 65)" fill="url(#cover-violet)"/>
-  <ellipse cx="1175" cy="48" rx="265" ry="210" transform="rotate(24 1175 48)" fill="url(#cover-blue)"/>
-  <ellipse cx="660" cy="278" rx="480" ry="130" fill="#ffb48b" opacity=".8"/>
-</g>
-<rect width="1128" height="191" fill="url(#cover-light)"/>
-<text x="352" y="83" font-family="Instrument Serif,Georgia,serif" font-size="65" fill="#171717">Make work easier.</text>
-<text x="352" y="149" font-family="Instrument Serif,Georgia,serif" font-size="65" font-style="italic" fill="#171717">Make room for life.</text>
-</g>
+cover = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1128" height="191" viewBox="0 0 1128 191">{font_style}
+<rect width="1128" height="191" fill="white"/>
+<g transform="translate(290 28) scale(.27)">{mark('profile-cover','#171717')}</g>
+<text x="334" y="55" font-family="Syne,Arial,sans-serif" font-size="28" font-weight="600" fill="#171717">Bigmints</text>
+<text x="290" y="103" font-family="Georgia,serif" font-size="32" fill="#171717">Make work easier.</text>
+<text x="290" y="144" font-family="Georgia,serif" font-size="32" fill="#777">Make room for life.</text>
+<path d="M736 40V150" stroke="#ddd"/>
+<text x="770" y="64" font-family="Arial,sans-serif" font-size="13" fill="#171717">A technology product company.</text>
+<text x="770" y="98" font-family="Arial,sans-serif" font-size="12" fill="#555">Saveaday · Youbot · Starcraft</text>
+<text x="770" y="119" font-family="Arial,sans-serif" font-size="12" fill="#555">PicoRunner · Fikr · Kachu</text>
+<text x="770" y="151" font-family="Arial,sans-serif" font-size="12" fill="#171717">www.bigmints.com</text>
 </svg>'''
 Path('src/company/public/brand/profile-cover.svg').write_text(cover)
