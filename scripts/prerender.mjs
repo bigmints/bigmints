@@ -15,7 +15,7 @@ const organization = {
   alternateName: company.alternateNames,
   sameAs: company.profiles.map((profile) => profile.url),
   mainEntityOfPage: reference(absolute("/company/")),
-  logo: absolute("/brand/bigmints-mark.svg"),
+  logo: absolute("/brand/bigmints-mark-color.svg"),
   description: company.description,
   brand: brands.map((brand) => reference(brandId(brand))),
 };

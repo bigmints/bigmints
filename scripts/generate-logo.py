@@ -42,7 +42,7 @@ Path('src/company/public/brand/bigmints-identity-color.svg').write_text(color_bo
 for name,ink in [('bigmints-mark','#171717'),('bigmints-mark-white','#ffffff')]:
  svg=f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">{mark(name,ink)}</svg>'
  Path(f'src/company/public/brand/{name}.svg').write_text(svg)
-Path('src/company/public/favicon.svg').write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect width="128" height="128" rx="28" fill="#171717"/><g transform="translate(7 7) scale(.89)">{mark("icon","white")}</g></svg>')
+Path('src/company/public/favicon.svg').write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect width="128" height="128" rx="28" fill="white"/><g transform="translate(7 7) scale(.89)">{color_mark("icon")}</g></svg>')
 board=f'''<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1440 920">{font_style}<rect width="1440" height="920" fill="#f8f8f8"/>
 <text x="64" y="65" font-family="Arial,sans-serif" font-size="13" letter-spacing="2" fill="#777">BIGMINTS / A CONNECTED WHOLE</text>
 <text x="1376" y="65" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#777">SELECTED IDENTITY / WOVEN</text>
@@ -68,7 +68,7 @@ Path('src/company/public/brand/bigmints-identity.svg').write_text(board)
 # Editable social card source; rasterise at 1200 × 630 for social platforms.
 social = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">{font_style}
 <rect width="1200" height="630" fill="white"/>
-<g transform="translate(60 44) scale(.28125)">{mark('social','#171717')}</g>
+<g transform="translate(60 44) scale(.28125)">{color_mark('social')}</g>
 <text x="108" y="74" font-family="Syne,Arial,sans-serif" font-weight="600" font-size="30" fill="#171717">Bigmints</text>
 <text x="60" y="264" font-family="Georgia" font-size="67" fill="#171717">Make work easier.</text>
 <text x="60" y="357" font-family="Georgia" font-size="67" fill="#777777">Make room for life.</text>
