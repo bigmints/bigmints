@@ -1,6 +1,6 @@
 # Bigmints FZE
 
-Product-company website for Bigmints, with Home, Products, Company, Innovation and Contact pages, plus six brand pages and four technology focus pages. React + Vite, pre-rendered to static HTML for GitHub Pages at https://www.bigmints.com.
+Product-company website for Bigmints, with Home, Products, Company, Innovation and Contact pages, plus three brand pages and four technology focus pages. React + Vite, pre-rendered to static HTML for GitHub Pages at https://www.bigmints.com.
 
 ## Work locally
 
@@ -19,11 +19,11 @@ The visual direction is black and white outside the homepage hero. The full-widt
 - `App.tsx` contains the company page, brand/capability page templates, navigation and interactions.
 - `src/company/company.css` contains responsive styles and reduced-motion support.
 - `src/company/public/` contains the company favicon, social preview and CNAME. Legacy personal-site assets are deliberately excluded from the company build.
-- `scripts/prerender.mjs` renders fifteen crawlable pages, their canonical/social metadata, Organization/Brand/WebSite/WebPage/BreadcrumbList structured data, a noindex 404, sitemap and robots.txt.
+- `scripts/prerender.mjs` renders the published pages, their canonical/social metadata, Organization/Brand/WebSite/WebPage/BreadcrumbList structured data, a noindex 404, sitemap and robots.txt.
 
 The dedicated Contact page offers a company contact CTA that opens an email draft to the approved company address. The address is not displayed as page text; as with any mailto link, it remains discoverable in HTML. No contact form submission service or analytics has been added.
 
-Primary navigation uses `/products/`, `/company/`, `/innovation/` and `/contact/`. Each has its own content, active navigation state, canonical metadata and structured breadcrumbs. The homepage leads with a centered sans-serif headline and italic serif accent, introduces all six identities in a compact brand strip, and presents their outcomes in a consistent product grid. Earlier company-preview bookmarks (`#brands`, `#company`, `#expertise`, `#contact`) redirect in the browser to their corresponding pages. The old personal-site hash router is no longer part of the active site. Brand pages use `/brands/{brand}/`; capability pages use `/expertise/{field}/`. Each URL has an actual HTML document and can be indexed without JavaScript. The personal blog and photography are retained in source and in the backup, but are not part of the company deployment. Historic personal hash URLs are not represented as company content; choose a future personal-site destination before adding any content-specific redirects.
+Primary navigation uses `/products/`, `/company/`, `/innovation/` and `/contact/`. Each has its own content, active navigation state, canonical metadata and structured breadcrumbs. The homepage leads with a centered sans-serif headline and italic serif accent, introduces all three identities in a compact brand strip, and presents their outcomes in a consistent product grid. Earlier company-preview bookmarks (`#brands`, `#company`, `#expertise`, `#contact`) redirect in the browser to their corresponding pages. The old personal-site hash router is no longer part of the active site. Brand pages use `/brands/{brand}/`; capability pages use `/expertise/{field}/`. Each URL has an actual HTML document and can be indexed without JavaScript. The personal blog and photography are retained in source and in the backup, but are not part of the company deployment. Historic personal hash URLs are not represented as company content; choose a future personal-site destination before adding any content-specific redirects.
 
 ## Personal website backup
 
@@ -45,10 +45,7 @@ Brand positioning was checked against local project sources on 12 October 2026:
 | --- | --- |
 | Saveaday | `../saveaday-v2/README.md` and the existing Saveaday project record |
 | Youbot | `../youbot/README.md` |
-| Starcraft | `/Users/pretheesh/experiments/pi-design/README.md` — distinct from the older Spacecraft / AutoM8 project |
-| PicoRunner | `../oven/picorunner-release-0.3.10/README.md` |
 | Fikr | `../fikr-workspace/fikr/README.md` and the Fikr website source |
-| Kachu | Existing Kachu project record with its product website URL |
 
 AI, IoT and digital twins are company focus areas supplied by the owner. The digital-twin prototype provides supporting context, but its simulated telemetry is not presented as a live customer deployment. The site makes no invented customer, revenue, performance or scale claims.
 
@@ -66,11 +63,11 @@ The existing wildcard robots policy permits crawlers; no separate AI-training po
 
 For indexing measurement, the site owner can submit `https://www.bigmints.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools, inspect the home/company/product URLs and monitor impressions, queries and indexed pages. Console ownership and sitemap submission have not been verified from this repository. Do not invent verification tokens or report submissions without confirmation from those services.
 
-The production build generates nineteen pages plus a noindex 404. The completed output was checked for unique titles, one H1 per page, canonical URLs, valid structured breadcrumbs, internal links and anchors, sitemap coverage and no visible contact email. Browser checks covered top-level navigation, direct product-page loading, mobile navigation, contact presentation and the earlier `#brands` bookmark.
+The production build generates sixteen pages plus a noindex 404. The completed output was checked for unique titles, one H1 per page, canonical URLs, valid structured breadcrumbs, internal links and anchors, sitemap coverage and no visible contact email. Browser checks covered top-level navigation, direct product-page loading, mobile navigation, contact presentation and the earlier `#brands` bookmark.
 
 ## Online presence
 
-Bigmints is the brand name of Bigmints FZE. Keep that identity and the description “technology product company” consistent across the website and company profiles. Public copy should connect the company to Saveaday, Youbot, Starcraft, PicoRunner, Fikr and Kachu.
+Bigmints is the brand name of Bigmints FZE. Keep that identity and the description “technology product company” consistent across the website and company profiles. Public copy should connect the company to Saveaday, Youbot and Fikr.
 
 The confirmed company profile is [BigMints on LinkedIn](https://www.linkedin.com/company/bigmints/), which links back to the company domain. Its URL is maintained in `company.profiles` in `src/company/content.ts`; the site renders it on the Company page and footer and includes it in Organization `sameAs` and both generated agent reference files. Add further profiles only after verifying company ownership. The Organization also includes the public brand and legal-name variants and identifies `/company/` as its main page. See [Google’s organization guidance](https://developers.google.com/search/docs/appearance/structured-data/organization).
 
@@ -100,15 +97,12 @@ The site uses existing product artwork, stored locally in `src/company/public/br
 | --- | --- |
 | Saveaday | `../saveaday-v2/apps/web/public/logo.svg` |
 | Youbot | `../youbot/youbot-core/branding/youbot.svg` |
-| Starcraft | SVG geometry exported from `/Users/pretheesh/experiments/pi-design/apps/desktop/src/renderer/StarcraftLogo.tsx` |
-| PicoRunner | `../oven/picorunner-release-0.3.10/public/brand/symbol.svg` |
 | Fikr | `../fikr-workspace/fikr.one/public/fikr-logo.svg` |
-| Kachu | `../kir/catchup-website/public/kachu-icon.png` |
 
 ## Product case studies
 
-The hero links to `/case-studies/`, with three own-product studies for Saveaday, Starcraft and PicoRunner. Copy is maintained in `src/company/content.ts`. These describe documented workflows and product intent, not customer deployments or measured results. Saveaday is explicitly labelled product development; no synthetic demo data is presented as customer evidence.
+The hero links to `/case-studies/`, with a product study for Saveaday. Copy is maintained in `src/company/content.ts`. These describe documented workflows and product intent, not customer deployments or measured results. Saveaday is explicitly labelled product development; no synthetic demo data is presented as customer evidence.
 
-Sources: Saveaday v2 README (customer, booking, follow-up and permission workflows), Starcraft's `pi-design/README.md` (preview, annotations, attachments and review loop), and `picorunner-release-0.3.10/README.md` (catalogue, launch controls, local imports and supported update recovery). Source paths are listed in the product evidence table above. Reviewed 2026-10-13.
+Source: Saveaday v2 README (customer, booking, follow-up and permission workflows). Its source path is listed in the product evidence table above.
 
 Each study is statically rendered with its own canonical URL, metadata, Article and breadcrumb entities, and entries in the sitemap and agent reference files. The SEO check verifies article copy against both rendered content and the full text reference.

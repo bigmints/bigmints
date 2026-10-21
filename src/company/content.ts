@@ -9,7 +9,7 @@ export const company = {
   url: "https://www.bigmints.com",
   title: "Bigmints FZE — Technology Product Company",
   description:
-    "Bigmints FZE is the technology product company behind Saveaday, Youbot, Starcraft, PicoRunner, Fikr and Kachu. Products for work, ideas and everyday life.",
+    "Bigmints FZE is the technology product company behind Saveaday, Youbot and Fikr. Products for work, ideas and everyday life.",
   contact: "mailto:me@bigmints.com?subject=Bigmints%20company%20enquiry",
 };
 export const brands = [
@@ -54,46 +54,6 @@ export const brands = [
     ],
   },
   {
-    id: "starcraft",
-    logo: "/brand/products/starcraft.svg",
-    name: "Starcraft",
-    searchLabel: "AI Design Workspace",
-    summary: "Starcraft is a Bigmints AI design workspace for turning ideas into working previews and refining them with visual feedback.",
-    category: "Design meets intelligence",
-    color: "lavender",
-    url: "https://starcraft.design",
-    headline: "See your ideas take shape.",
-    description:
-      "Turn an idea into something you can see, try and refine, with feedback tied directly to the work.",
-    detail:
-      "Make your intent easier to communicate. Starcraft lets you see the work as it develops, point to what needs changing and review the result in the same place. Your design context stays close, so feedback can become a concrete next step.",
-    features: [
-      "See a working version of your idea",
-      "Point to a change instead of describing it from scratch",
-      "Keep design intent connected to the work",
-    ],
-  },
-  {
-    id: "picorunner",
-    logo: "/brand/products/picorunner.svg",
-    name: "PicoRunner",
-    searchLabel: "Local App Launcher for Mac",
-    summary: "PicoRunner is a Bigmints app for Mac that brings discovery, installation, launching and updates for supported local web apps into one place.",
-    category: "Local software, made simple",
-    color: "blue",
-    url: "https://picorunner.com",
-    headline: "Open the app. Get on with it.",
-    description:
-      "Use useful web apps on your Mac without turning setup and maintenance into another project.",
-    detail:
-      "Spend your attention on what an app helps you do. PicoRunner brings discovery, installation, launching and updates into one place on your Mac, so using supported local apps does not depend on working through a terminal.",
-    features: [
-      "Find useful apps in a reviewed catalogue",
-      "Launch and manage apps from one place",
-      "Keep using your existing projects and files",
-    ],
-  },
-  {
     id: "fikr",
     logo: "/brand/products/fikr.svg",
     name: "Fikr",
@@ -111,26 +71,6 @@ export const brands = [
       "Catch ideas in the moment with Fikr Go",
       "See related thoughts together in Fikr Studio",
       "Keep your work and its context together in Fikr Cowork",
-    ],
-  },
-  {
-    id: "kachu",
-    logo: "/brand/products/kachu.png",
-    name: "Kachu",
-    searchLabel: "Gatherings & Shared Memories",
-    summary: "Kachu is a Bigmints app for planning gatherings, sharing updates and keeping photos and memories together with the people involved.",
-    category: "Real life, together",
-    color: "pink",
-    url: "https://kachu.app/",
-    headline: "Plan it. Live it. Remember it.",
-    description:
-      "Spend less effort coordinating a gathering and keep the plans, shared moments and memories together.",
-    detail:
-      "Bring people together without spreading the occasion across separate chats and albums. Kachu gives everyone a shared place to find the plan, follow updates and return to the photos afterwards.",
-    features: [
-      "Help everyone find the plan and their invitation",
-      "Keep people in the loop as the occasion unfolds",
-      "Keep the shared memories with the gathering",
     ],
   },
 ];
@@ -205,7 +145,7 @@ export const expertise = [
       "Learn from a working experience people can try",
       "Bring the experience to the devices people use",
     ],
-    related: ["starcraft", "picorunner", "kachu"],
+    related: ["saveaday", "youbot", "fikr"],
   },
 ];
 export const caseStudies = [
@@ -243,74 +183,6 @@ export const caseStudies = [
       }
     ]
   },
-  {
-    id: "starcraft-visual-feedback",
-    brandId: "starcraft",
-    title: "Point to the change. Keep the idea moving.",
-    description: "A Starcraft product case study: bringing working previews, visual annotations and AI conversations into one design feedback loop.",
-    intro: "Good feedback starts with a shared view. Starcraft keeps the working preview beside the conversation, so a design decision can refer to the exact thing that needs to change.",
-    focus: "Clearer design feedback",
-    stage: "Product workspace",
-    journey: ["See it", "Point to it", "Review it"],
-    outcome: "Feedback that stays attached to the work.",
-    sections: [
-      {
-        title: "When words lose the detail",
-        paragraphs: [
-          "Describing a visual change in chat can take more effort than spotting it. Which heading? Which gap? Which version of the page? A screenshot helps, but a detached image still leaves someone to find the element and understand the surrounding design.",
-          "Starcraft is our macOS-first design workspace for bringing that context together. A local project, its working preview and an AI conversation share one place to review and refine the experience."
-        ]
-      },
-      {
-        title: "Make the reference part of the request",
-        paragraphs: [
-          "A designer can navigate the preview, select an element and leave a numbered comment. Annotations can be edited and reordered before sending. Viewport and element screenshots provide visual context, and attachments remain visible and removable in the conversation.",
-          "That makes a request such as tightening a navigation bar concrete: the selected element and the comment travel together. The next review happens against the working preview, so the designer can judge the result in context and continue from there. Supported Figma connections can bring selected design context into the same conversation."
-        ]
-      },
-      {
-        title: "A shorter distance from intent to review",
-        paragraphs: [
-          "The useful change is in the feedback loop. Instead of repeatedly describing where to look, the designer can point, explain and review. The conversation carries visual references alongside the words.",
-          "Starcraft keeps project sessions and annotations so work can be picked up again. Explicit preview controls and permission requests keep the person involved as changes are made. The designer can return to the work with its conversation and visual references together."
-        ]
-      }
-    ]
-  },
-  {
-    id: "picorunner-local-apps",
-    brandId: "picorunner",
-    title: "Useful software. Less setup between you and it.",
-    description: "A PicoRunner product case study: making supported local web apps easier to discover, launch and maintain on a Mac.",
-    intro: "Finding a useful app should lead to using it. PicoRunner brings discovery, installation, launching and updates into a Mac app, with everyday controls for software that runs locally.",
-    focus: "Local apps, within reach",
-    stage: "Mac app",
-    journey: ["Discover", "Launch", "Keep up to date"],
-    outcome: "A place to manage the app, so you can focus on using it.",
-    sections: [
-      {
-        title: "The setup becomes its own project",
-        paragraphs: [
-          "A web app can solve a useful problem and still be difficult to run on your own computer. Installation instructions, runtime requirements and terminal commands can become the first task, before the actual task has even begun.",
-          "PicoRunner brings supported local web apps into a familiar Mac experience. A reviewed catalogue helps people discover apps, while an installed-app library gives them a place to start, stop and open what they already have."
-        ]
-      },
-      {
-        title: "Keep the ordinary actions ordinary",
-        paragraphs: [
-          "From the library, a person can launch an app and open its local address without reading the terminal output. Details such as storage and launch settings stay available when needed. Existing local projects can also be added without moving their files into PicoRunner's ownership.",
-          "Maintenance belongs in the same experience. An Updates view checks installed apps and identifies which managed GitHub apps can be updated. For supported managed updates, PicoRunner prepares the new version before stopping the app, preserves designated data folders and keeps a rollback copy until the restart succeeds."
-        ]
-      },
-      {
-        title: "More attention for the app itself",
-        paragraphs: [
-          "Discovery, launching and maintenance become parts of one experience. The person has a visible place to manage their apps, rather than a collection of commands to remember between sessions.",
-          "The scope remains specific: PicoRunner runs on supported Macs and works with supported app types. Some apps still require their own accounts, credentials or services. The catalogue and app details help make those requirements visible."
-        ]
-      }
-    ]
-  }
 ];
 
 export const sitePages = {
@@ -329,21 +201,21 @@ export const sitePages = {
   "/case-studies/": {
     label: "Case studies",
     title: "Product Case Studies | Bigmints",
-    description: "Inside Saveaday, Starcraft and PicoRunner: Bigmints product case studies on connected customer work, clearer design feedback and simpler local apps.",
+    description: "Inside Saveaday: a Bigmints product case study on connecting customer enquiries, bookings and follow-ups in one business workspace.",
     schemaType: "CollectionPage",
   },
   "/products/": {
     label: "Products",
     title: "Our Products & Brands | Bigmints",
     description:
-      "Explore Saveaday, Youbot, Starcraft, PicoRunner, Fikr and Kachu: six Bigmints brands that make work easier and help people create and connect.",
+      "Explore Saveaday, Youbot and Fikr: three Bigmints brands that make work easier and help people create and connect.",
     schemaType: "CollectionPage",
   },
   "/company/": {
     label: "Company",
     title: "About Bigmints FZE | A Technology Product Company",
     description:
-      "Bigmints FZE creates, owns and grows its own family of technology products. Meet the company behind Saveaday, Youbot, Starcraft, PicoRunner, Fikr and Kachu.",
+      "Bigmints FZE creates, owns and grows its own family of technology products. Meet the company behind Saveaday, Youbot and Fikr.",
     schemaType: "AboutPage",
   },
   "/innovation/": {
@@ -357,7 +229,7 @@ export const sitePages = {
     label: "Contact",
     title: "Contact Bigmints FZE | Company & Partnerships",
     description:
-      "Contact Bigmints FZE for company enquiries and partnerships, or find the website for each of our six product brands.",
+      "Contact Bigmints FZE for company enquiries and partnerships, or find the website for each of our three product brands.",
     schemaType: "ContactPage",
   },
 };

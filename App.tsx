@@ -338,7 +338,7 @@ function CaseStudyPage({ study }: { study: (typeof caseStudies)[number] }) {
       <div>{study.sections.map((section, i) => <section id={`section-${i + 1}`} key={section.title}><h2>{section.title}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}</div>
     </div>
     <footer className="case-end"><div><span className="eyebrow">A BIGMINTS PRODUCT</span><h2>Explore {brand.name}.</h2></div><a className="button dark" href={`/brands/${brand.id}/`}>Meet the product <Arrow /></a></footer>
-    <nav className="case-related" aria-label="More case studies"><span className="eyebrow">KEEP EXPLORING</span>{caseStudies.filter((item) => item.id !== study.id).map((item) => <a href={`/case-studies/${item.id}/`} key={item.id}>{item.title}<Arrow /></a>)}</nav>
+    {caseStudies.length > 1 && (<nav className="case-related" aria-label="More case studies"><span className="eyebrow">KEEP EXPLORING</span>{caseStudies.filter((item) => item.id !== study.id).map((item) => <a href={`/case-studies/${item.id}/`} key={item.id}>{item.title}<Arrow /></a>)}</nav>)}
   </article>;
 }
 
@@ -349,14 +349,14 @@ function ProductsPage() {
         eyebrow="THE BIGMINTS FAMILY"
         title="Real things to use."
         emphasis="Everyday reasons to use them."
-        description="Products for running a business, creating something new, finding a thought and bringing people together. Find the one that fits your day."
+        description="Products for running a business, helping your visitors and developing your ideas. Find the one that fits your day."
       />
       <section
         className="wrap product-directory"
-        aria-label="Our six product brands"
+        aria-label="Our three product brands"
       >
         <div className="directory-caption">
-          <span>SIX BRANDS / ONE PRODUCT COMPANY</span>
+          <span>THREE BRANDS / ONE PRODUCT COMPANY</span>
           <a href="/company/">
             Meet the company <Arrow />
           </a>
@@ -562,7 +562,7 @@ function CompanyPage() {
         <div className="related-links">
           <a href="/products/">
             <h3>Our products</h3>
-            <p>Meet the six brands and find what each makes easier.</p>
+            <p>Meet our brands and find what each makes easier.</p>
             <Arrow />
           </a>
           <a href="/innovation/">
@@ -724,7 +724,7 @@ function Detail({ path }: { path: string }) {
       )}
       <section className="wrap detail-back">
         <a className="text-link" href="/products/">
-          Explore all six brands <ArrowRight size={18} />
+          Explore all brands <ArrowRight size={18} />
         </a>
       </section>
     </>

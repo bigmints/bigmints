@@ -30,7 +30,7 @@ for (const path of routes) {
   assert.equal(new Set(ids).size, ids.length, `${path}: duplicate entity IDs`);
   const org = graph.find((node) => node["@type"] === "Organization");
   assert.equal(org.legalName, "Bigmints FZE");
-  assert.equal(org.brand.length, 6);
+  assert.equal(org.brand.length, 3);
   // Identity signals must agree across the rendered site and public references.
   assert.deepEqual(org.alternateName, company.alternateNames);
   assert.equal(org.mainEntityOfPage["@id"], canonical("/company/"));
@@ -95,4 +95,4 @@ for (const text of [llms, full]) {
 }
 assert.match(await read("/404.html"), /name="robots" content="noindex, follow"/);
 assert(!(await read("/404.html")).includes('rel="canonical"'));
-console.log(`SEO checks passed: ${routes.length} pages, six brand entities, crawlable links, sitemap and agent references.`);
+console.log(`SEO checks passed: ${routes.length} pages, three brand entities, crawlable links, sitemap and agent references.`);

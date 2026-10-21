@@ -481,20 +481,10 @@ p {
 .symbol-youbot {
   color: #4e4e4e;
 }
-.symbol-starcraft {
-  color: #656565;
-  font-size: 100px;
-}
-.symbol-picorunner {
-  color: #666666;
-}
 .symbol-fikr {
   font-family: Georgia, serif;
   font-style: italic;
   color: #6e6e6e;
-}
-.symbol-kachu {
-  color: #6a6a6a;
 }
 .company-section {
   background: #171717;
@@ -1736,12 +1726,8 @@ p {
   object-fit: contain;
   filter: grayscale(1);
 }
-.product-logo-picorunner,
 .product-logo-fikr {
   filter: grayscale(1) brightness(0);
-}
-.product-logo-kachu {
-  border-radius: 22%;
 }
 .product-logo-saveaday,
 .product-logo-youbot {
@@ -1755,9 +1741,6 @@ p {
 .outcome-brand .product-logo {
   width: 40px;
   height: 40px;
-}
-.outcome-brand .product-logo-starcraft {
-  filter: invert(1);
 }
 .product-logo-large {
   width: 72px;
@@ -1818,7 +1801,7 @@ p {
 }
 .home-brand-strip {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 16px;
 }
 .home-brand-strip > a {
