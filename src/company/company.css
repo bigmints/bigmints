@@ -1753,6 +1753,71 @@ p {
   height: 28px;
 }
 
+/* The company story connects customer experience with the work behind it. */
+.story-pillars {
+  padding-top: 82px;
+  padding-bottom: 82px;
+}
+.story-pillars-heading {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: end;
+  gap: 64px;
+  margin-bottom: 42px;
+}
+.story-pillars-heading h2 {
+  font-size: clamp(34px, 3.7vw, 50px);
+}
+.story-pillars-heading > p {
+  max-width: 380px;
+  color: #60605d;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.story-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 36px;
+}
+.story-pillars-grid article {
+  border-top: 1px solid #cfcfcb;
+  padding-top: 24px;
+}
+.story-pillar-label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: #656561;
+}
+.story-pillars-grid h3 {
+  font-family: inherit;
+  font-size: clamp(23px, 2.2vw, 29px);
+  font-weight: 500;
+  letter-spacing: -.04em;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+.story-pillars-grid p {
+  color: #60605d;
+  font-size: 15px;
+  line-height: 1.8;
+}
+@media (max-width: 900px) {
+  .story-pillars-heading { gap: 32px; grid-template-columns: 1.2fr 1fr; }
+  .story-pillars-grid { gap: 24px; }
+}
+@media (max-width: 650px) {
+  .story-pillars { padding-top: 52px; padding-bottom: 52px; }
+  .story-pillars-heading { grid-template-columns: 1fr; gap: 22px; margin-bottom: 32px; }
+  .story-pillars-heading > p { max-width: none; }
+  .story-pillars-grid { grid-template-columns: 1fr; gap: 30px; }
+  .story-pillar-label { margin-bottom: 12px; }
+  .story-pillars-grid h3 { font-size: 27px; margin-bottom: 12px; }
+}
+
 /* Home: a single editorial headline and a direct introduction to the products. */
 .home-hero {
   padding-top: clamp(58px, 7vw, 104px);

@@ -9,9 +9,32 @@ export const company = {
   url: "https://www.bigmints.com",
   title: "Bigmints FZE — Technology Product Company",
   description:
-    "Bigmints FZE is the technology product company behind Saveaday, Youbot and Fikr. Products for work, ideas and everyday life.",
+    "Bigmints FZE builds technology products for better service, happier customers and more room for life. The company behind Saveaday, Youbot and Fikr.",
   contact: "mailto:me@bigmints.com?subject=Bigmints%20company%20enquiry",
 };
+export const pillars = [
+  {
+    id: "service-excellence",
+    name: "Service excellence",
+    title: "Better service.",
+    description: "Help people find useful answers, understand the next step and reach the right person when they need help.",
+    detail: "Good service needs clear information and a reliable way forward. We design products to keep context close to the conversation and make it easier for people to step in when their judgement matters.",
+  },
+  {
+    id: "customer-happiness",
+    name: "Customer happiness",
+    title: "Happier customers.",
+    description: "Make it easier to get help, with less waiting, less repetition and a conversation that feels connected.",
+    detail: "A customer should be able to get help without repeating their story. We design for clear replies, useful next steps and continuity when a conversation passes to a person. The aim is an experience where people feel heard and know where they stand.",
+  },
+  {
+    id: "operational-efficiency",
+    name: "Operational efficiency",
+    title: "More room for life.",
+    description: "Reduce repetitive work and everyday chasing, so people have time to focus, switch off and enjoy life beyond work.",
+    detail: "A smoother operation should mean a lighter day for the people running it. We build to reduce repetitive tasks, scattered information and the pressure of keeping everything in your head. The purpose is to give people time and headspace back, with more room for rest, relationships and life beyond work.",
+  },
+];
 export const brands = [
   {
     id: "saveaday",
@@ -208,21 +231,21 @@ export const sitePages = {
     label: "Products",
     title: "Our Products & Brands | Bigmints",
     description:
-      "Explore Saveaday, Youbot and Fikr: three Bigmints brands that make work easier and help people create and connect.",
+      "Explore Saveaday, Youbot and Fikr: Bigmints products for customer conversations, everyday operations, knowledge and ideas.",
     schemaType: "CollectionPage",
   },
   "/company/": {
     label: "Company",
     title: "About Bigmints FZE | A Technology Product Company",
     description:
-      "Bigmints FZE creates, owns and grows its own family of technology products. Meet the company behind Saveaday, Youbot and Fikr.",
+      "Meet Bigmints FZE, the product company guided by service excellence, customer happiness and operational efficiency. Behind Saveaday, Youbot and Fikr.",
     schemaType: "AboutPage",
   },
   "/innovation/": {
     label: "Innovation",
     title: "Product Innovation — AI, IoT & Digital Twins | Bigmints",
     description:
-      "Explore the outcomes that guide Bigmints products and research across artificial intelligence, connected environments, digital twins and product development.",
+      "How Bigmints explores AI, IoT and digital twins to support better service and clearer operations through its own products and research.",
     schemaType: "CollectionPage",
   },
   "/contact/": {

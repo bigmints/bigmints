@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, ArrowRight, Menu, X, Plus, Minus, Pause, Play } from "lucide-react";
-import { brands, company, expertise, caseStudies, getPage } from "./src/company/content";
+import { brands, company, expertise, caseStudies, pillars, getPage } from "./src/company/content";
 import "./src/company/company.css";
 import WhatsAppPolicy from "./src/company/WhatsAppPolicy";
 
@@ -165,8 +165,8 @@ function Hero() {
           <em>Make room for life.</em>
         </h1>
         <p>
-          Less busywork. More space for your business, your ideas
-          and the people who matter.
+          Products for better service, happier customers and more room for life.
+          Less chasing. More time for what matters.
         </p>
         <a className="button dark" href="/case-studies/">
           Explore case studies <ArrowRight size={18} />
@@ -256,19 +256,46 @@ function PageIntro({
     </section>
   );
 }
+function StoryPillars({ detailed = false }: { detailed?: boolean }) {
+  return (
+    <section className="story-pillars wrap" aria-labelledby="pillars-heading">
+      <div className="story-pillars-heading">
+        <div>
+          <span className="eyebrow">WHAT BETTER MEANS TO US</span>
+          <h2 id="pillars-heading">
+            {detailed ? "Three outcomes." : "Better for your customers."}<br />
+            <em>{detailed ? "One human purpose." : "Better for your people."}</em>
+          </h2>
+        </div>
+        <p>These three pillars guide our product decisions: a better experience
+          for customers and a lighter working day for the people behind it.</p>
+      </div>
+      <div className="story-pillars-grid">
+        {pillars.map((pillar, index) => (
+          <article key={pillar.id} id={pillar.id}>
+            <span className="story-pillar-label">0{index + 1} / {pillar.name}</span>
+            <h3>{pillar.title}</h3>
+            <p>{detailed ? pillar.detail : pillar.description}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
 function Home() {
   return (
     <>
       <Hero />
+      <StoryPillars />
       <section className="home-product-section">
         <div className="wrap">
           <div className="home-products-heading">
             <div>
-              <span className="eyebrow">MADE FOR YOUR EVERYDAY</span>
-              <h2>A little less friction.<br /><em>A lot more possibility.</em></h2>
+              <span className="eyebrow">THE PRODUCTS BEHIND THE PROMISE</span>
+              <h2>Different products.<br /><em>A shared purpose.</em></h2>
             </div>
-            <p>Run a business. Follow an idea. Bring people together.
-              Find a product that gives you more room to do it.</p>
+            <p>Saveaday and Youbot support everyday service and conversations.
+              Fikr gives knowledge and ideas a place to develop.</p>
           </div>
           <div className="home-product-grid">
             {brands.map((brand) => <HomeProductCard key={brand.id} brand={brand} />)}
@@ -280,19 +307,21 @@ function Home() {
           <div>
             <span className="eyebrow">THE COMPANY BEHIND THE BRANDS</span>
             <h2>
-              One company.
+              Useful technology.
               <br />
-              <em>Everyday possibilities.</em>
+              <em>A human purpose.</em>
             </h2>
           </div>
           <div>
             <p className="large-copy">
-              Bigmints FZE creates, owns and grows products for better ways
-              to work, create and connect.
+              Bigmints FZE builds its own technology products to help people
+              deliver better service and make everyday work easier.
             </p>
             <p>
-              Different brands, each with a clear purpose. A shared belief that
-              technology earns its place through what it makes possible.
+              From the first customer question to the work that follows,
+              useful technology should help people feel supported and teams
+              stay on top of what needs attention. The time people get back
+              should make life better beyond work, too.
             </p>
             <a className="text-link" href="/company/">
               Get to know Bigmints <Arrow />
@@ -347,9 +376,9 @@ function ProductsPage() {
     <>
       <PageIntro
         eyebrow="THE BIGMINTS FAMILY"
-        title="Real things to use."
-        emphasis="Everyday reasons to use them."
-        description="Products for running a business, helping your visitors and developing your ideas. Find the one that fits your day."
+        title="Help people."
+        emphasis="Keep work moving."
+        description="Saveaday connects customer enquiries and everyday business work. Youbot helps visitors find answers. Fikr brings knowledge and ideas together. Each product supports a different part of a better working day."
       />
       <section
         className="wrap product-directory"
@@ -376,23 +405,23 @@ function InnovationPage() {
     <>
       <PageIntro
         eyebrow="INNOVATION AT BIGMINTS"
-        title="Better possibilities."
-        emphasis="A purpose behind each one."
-        description="We explore technology through the difference it can make in our own products. Useful AI, connected environments and clearer ways to understand the world."
+        title="Innovation with"
+        emphasis="a job to do."
+        description="Our starting point is a human outcome: better service, less effort or time back for life. We explore AI, IoT and digital twins through the part they can play in our own products."
       />
       <section id="expertise" className="expertise section">
         <div className="wrap expertise-layout">
           <div className="section-intro">
             <span className="eyebrow">OUR PRODUCT FOCUS</span>
             <h2>
-              Less friction.
+              Start with the work.
               <br />
-              <em>More forward motion.</em>
+              <em>Find a better way.</em>
             </h2>
             <p>
-              A business that is easier to manage. An idea you can finally try.
-              A clearer view of what needs your attention. These are the
-              outcomes that guide our products and explorations.
+              An enquiry that needs an answer. A team that needs clearer context.
+              Equipment that needs attention. We explore where technology can
+              help people understand the situation and act with confidence.
             </p>
             <a className="text-link" href="/products/">
               Find a product for you <Arrow />
@@ -464,36 +493,42 @@ function CompanyPage() {
     <>
       <PageIntro
         eyebrow="BIGMINTS FZE"
-        title="A product company."
-        emphasis="A family of possibilities."
-        description="We create, own and grow our own brands. Each starts with an everyday need and becomes a product with a purpose of its own."
+        title="Make work easier."
+        emphasis="Make service better."
+        description="Bigmints is a technology product company. We build and grow our own brands around three pillars: service excellence, customer happiness and operational efficiency."
       />
       <section id="company" className="company-section section">
         <div className="wrap">
           <span className="eyebrow">WHAT CONNECTS OUR BRANDS</span>
           <div className="company-grid">
             <h2>
-              One company.
+              Good service takes
               <br />
-              A family of products.
-              <br />
-              <em>Everyday possibilities.</em>
+              <em>good work behind it.</em>
             </h2>
             <div>
               <p className="large-copy">
                 Bigmints is the brand name of Bigmints FZE, a technology product
-                company. We create, own
-                and grow a family of brands for better ways to work, create and
-                connect.
+                company. We create, own and grow products that connect customer
+                conversations, useful knowledge and the work that follows.
               </p>
               <p>
-                Our brands start with everyday needs: keeping a business moving,
-                making an idea tangible, remembering a thought or getting people
-                together.
+                A customer asks a question. Someone needs the right information.
+                A team needs to pick up the next step. When that context is
+                scattered, customers repeat themselves and teams spend time
+                piecing the story together. That effort takes time and energy
+                away from the work and the people they care about.
               </p>
               <p>
-                AI, IoT, digital twins and thoughtful product design support
-                that work. Their value is in what they help someone do.
+                Saveaday and Youbot address the conversations and coordination
+                around everyday service. Fikr supports the thinking behind the
+                work: capturing ideas, connecting knowledge and keeping context
+                close. Each has a distinct role in making a working day easier.
+              </p>
+              <p>
+                Operational efficiency has a human purpose here: less pressure,
+                more headspace and time people can spend on the parts of life
+                that matter to them.
               </p>
               <p>
                 Our brands are {brands.map((brand, index) => (
@@ -532,31 +567,9 @@ function CompanyPage() {
               </div>
             </dl>
           </section>
-          <div className="principles">
-            {[
-              [
-                "Time for what matters",
-                "Less coordination between you and the work you care about.",
-              ],
-              [
-                "Clarity to move forward",
-                "Useful context when you need to choose the next step.",
-              ],
-              [
-                "Room to connect",
-                "Keep people, ideas and shared experiences closer together.",
-              ],
-            ].map(([title, text], i) => (
-              <div key={title}>
-                <span>0{i + 1}</span>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
-
+      <StoryPillars detailed />
       <section className="wrap section company-next">
         <span className="eyebrow">GET TO KNOW BIGMINTS</span>
         <div className="related-links">

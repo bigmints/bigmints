@@ -99,6 +99,12 @@ The site uses existing product artwork, stored locally in `src/company/public/br
 | Youbot | `../youbot/youbot-core/branding/youbot.svg` |
 | Fikr | `../fikr-workspace/fikr.one/public/fikr-logo.svg` |
 
+## Company story and pillars
+
+The story centres on service excellence, customer happiness and operational efficiency. Public outcome headings are **Better service. Happier customers. More room for life.** Operational efficiency means giving people time and headspace back, reducing pressure and improving life beyond work. Keep that human purpose explicit when editing the copy.
+
+Pillar copy is maintained once in `pillars` in `src/company/content.ts`, rendered on the homepage and Company page, and included in both generated agent reference files. The hero tagline remains “Make work easier. Make room for life.” Product introductions explain the role of Saveaday, Youbot and Fikr; Innovation starts with human outcomes before describing technology. Pillars are product design aims, not verified customer results or performance guarantees. Customer case studies need observed evidence before claiming time saved, satisfaction improvements or other measured outcomes.
+
 ## Product case studies
 
 The hero links to `/case-studies/`, with a product study for Saveaday. Copy is maintained in `src/company/content.ts`. These describe documented workflows and product intent, not customer deployments or measured results. Saveaday is explicitly labelled product development; no synthetic demo data is presented as customer evidence.
