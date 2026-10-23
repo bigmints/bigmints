@@ -101,9 +101,9 @@ The site uses existing product artwork, stored locally in `src/company/public/br
 
 ## Company story and pillars
 
-The story centres on service excellence, customer happiness and operational efficiency. Public outcome headings are **Better service. Happier customers. More room for life.** Operational efficiency means giving people time and headspace back, reducing pressure and improving life beyond work. Keep that human purpose explicit when editing the copy.
+The story centres on service excellence, customer happiness and operational efficiency. The public copy explains those priorities as **Help customers get answers. Keep customers informed. Give people time back.** Operational efficiency means giving people time and headspace back, reducing pressure and improving life beyond work. Keep that human purpose explicit when editing the copy.
 
-Pillar copy is maintained once in `pillars` in `src/company/content.ts`, rendered on the homepage and Company page, and included in both generated agent reference files. The hero tagline remains “Make work easier. Make room for life.” Product introductions explain the role of Saveaday, Youbot and Fikr; Innovation starts with human outcomes before describing technology. Pillars are product design aims, not verified customer results or performance guarantees. Customer case studies need observed evidence before claiming time saved, satisfaction improvements or other measured outcomes.
+Pillar copy is maintained once in `pillars` in `src/company/content.ts`, rendered on the homepage and Company page, and included in both generated agent reference files. The hero tagline remains “Make work easier. Make room for life.” Other headings and descriptions should state what a product does or what we intend it to do, using ordinary language. Avoid extra slogans, abstract claims and claims of customer results without evidence. Product introductions explain the role of Saveaday, Youbot and Fikr; Innovation starts with human outcomes before describing technology. Pillars are product design aims, not verified customer results or performance guarantees. Customer case studies need observed evidence before claiming time saved, satisfaction improvements or other measured outcomes.
 
 ## Product case studies
 

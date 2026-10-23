@@ -165,11 +165,11 @@ function Hero() {
           <em>Make room for life.</em>
         </h1>
         <p>
-          Products for better service, happier customers and more room for life.
-          Less chasing. More time for what matters.
+          We build software for customer enquiries, bookings, follow-ups and notes.
+          We want these tasks to take less of your day.
         </p>
         <a className="button dark" href="/case-studies/">
-          Explore case studies <ArrowRight size={18} />
+          See a product example <ArrowRight size={18} />
         </a>
       </div>
       <button
@@ -261,14 +261,14 @@ function StoryPillars({ detailed = false }: { detailed?: boolean }) {
     <section className="story-pillars wrap" aria-labelledby="pillars-heading">
       <div className="story-pillars-heading">
         <div>
-          <span className="eyebrow">WHAT BETTER MEANS TO US</span>
+          <span className="eyebrow">OUR PRIORITIES</span>
           <h2 id="pillars-heading">
-            {detailed ? "Three outcomes." : "Better for your customers."}<br />
-            <em>{detailed ? "One human purpose." : "Better for your people."}</em>
+            What we want<br />
+            <em>our software to do.</em>
           </h2>
         </div>
-        <p>These three pillars guide our product decisions: a better experience
-          for customers and a lighter working day for the people behind it.</p>
+        <p>These are our aims when deciding what to build and improve.
+          They apply to customers and the people running a business.</p>
       </div>
       <div className="story-pillars-grid">
         {pillars.map((pillar, index) => (
@@ -291,11 +291,11 @@ function Home() {
         <div className="wrap">
           <div className="home-products-heading">
             <div>
-              <span className="eyebrow">THE PRODUCTS BEHIND THE PROMISE</span>
-              <h2>Different products.<br /><em>A shared purpose.</em></h2>
+              <span className="eyebrow">SAVEADAY, YOUBOT AND FIKR</span>
+              <h2>Our products.</h2>
             </div>
-            <p>Saveaday and Youbot support everyday service and conversations.
-              Fikr gives knowledge and ideas a place to develop.</p>
+            <p>Tools for managing enquiries and bookings, answering questions
+              and keeping notes.</p>
           </div>
           <div className="home-product-grid">
             {brands.map((brand) => <HomeProductCard key={brand.id} brand={brand} />)}
@@ -305,23 +305,22 @@ function Home() {
       <section className="company-section section">
         <div className="wrap home-company">
           <div>
-            <span className="eyebrow">THE COMPANY BEHIND THE BRANDS</span>
+            <span className="eyebrow">ABOUT BIGMINTS</span>
             <h2>
-              Useful technology.
+              The company
               <br />
-              <em>A human purpose.</em>
+              <em>behind the products.</em>
             </h2>
           </div>
           <div>
             <p className="large-copy">
-              Bigmints FZE builds its own technology products to help people
-              deliver better service and make everyday work easier.
+              Bigmints FZE is a technology product company. We build and
+              maintain our own software.
             </p>
             <p>
-              From the first customer question to the work that follows,
-              useful technology should help people feel supported and teams
-              stay on top of what needs attention. The time people get back
-              should make life better beyond work, too.
+              We want our products to help businesses look after their
+              customers and reduce the repeated tasks people have to do.
+              The time saved should be time they can use outside work, too.
             </p>
             <a className="text-link" href="/company/">
               Get to know Bigmints <Arrow />
@@ -334,14 +333,14 @@ function Home() {
 }
 function CaseStudiesPage() {
   return <>
-    <PageIntro eyebrow="BIGMINTS / CASE STUDIES" title="Everyday problems." emphasis="Different possibilities." description="Inside our own products: the work they make easier, the choices behind them and what those choices put within reach." />
+    <PageIntro eyebrow="BIGMINTS / CASE STUDIES" title="How the products work." emphasis="A closer look at Saveaday." description="A walkthrough of how Saveaday is designed to handle enquiries, bookings and follow-ups. It describes the product workflow and its development stage." />
     <section className="wrap case-directory" aria-label="Product case studies">
       {caseStudies.map((study, index) => {
         const brand = brands.find((b) => b.id === study.brandId)!;
         return <a className="case-card" href={`/case-studies/${study.id}/`} key={study.id}>
           <div className="case-card-meta"><ProductIdentity brand={brand} /><span>0{index + 1} / {study.focus}</span></div>
           <div className="case-card-copy"><h2>{study.title}</h2><p>{study.intro}</p></div>
-          <span className="case-read">Read the case study <ArrowRight size={20} aria-hidden="true" /></span>
+          <span className="case-read">Read the walkthrough <ArrowRight size={20} aria-hidden="true" /></span>
         </a>;
       })}
     </section>
@@ -352,13 +351,13 @@ function CaseStudyPage({ study }: { study: (typeof caseStudies)[number] }) {
   return <article className="case-study wrap">
     <a className="text-link case-back" href="/case-studies/">All case studies <Arrow /></a>
     <header className="case-intro">
-      <span className="eyebrow">{brand.name} / PRODUCT CASE STUDY</span>
+      <span className="eyebrow">{brand.name} / PRODUCT WALKTHROUGH</span>
       <h1>{study.title}</h1>
       <p>{study.intro}</p>
       <div className="case-facts"><ProductIdentity brand={brand} /><span>{study.focus}</span><span>{study.stage}</span></div>
     </header>
     <div className="case-journey" aria-label={`${brand.name} product journey`}>
-      <span className="eyebrow">WHAT THIS PUTS WITHIN REACH</span>
+      <span className="eyebrow">THE WORKFLOW</span>
       <p>{study.outcome}</p>
       <ol>{study.journey.map((step, i) => <li key={step}><span>0{i + 1}</span>{step}{i < study.journey.length - 1 && <ArrowRight aria-hidden="true" />}</li>)}</ol>
     </div>
@@ -376,9 +375,9 @@ function ProductsPage() {
     <>
       <PageIntro
         eyebrow="THE BIGMINTS FAMILY"
-        title="Help people."
-        emphasis="Keep work moving."
-        description="Saveaday connects customer enquiries and everyday business work. Youbot helps visitors find answers. Fikr brings knowledge and ideas together. Each product supports a different part of a better working day."
+        title="Our products."
+        emphasis="Saveaday, Youbot and Fikr."
+        description="Saveaday helps businesses manage enquiries and bookings. Youbot answers visitors' questions. Fikr is for notes and ideas. Each has its own website with more details."
       />
       <section
         className="wrap product-directory"
@@ -405,23 +404,23 @@ function InnovationPage() {
     <>
       <PageIntro
         eyebrow="INNOVATION AT BIGMINTS"
-        title="Innovation with"
-        emphasis="a job to do."
-        description="Our starting point is a human outcome: better service, less effort or time back for life. We explore AI, IoT and digital twins through the part they can play in our own products."
+        title="What we work on."
+        emphasis="What we are still testing."
+        description="We use AI in our products and research connected devices and digital twins. The IoT and digital-twin work includes prototypes that we are still testing."
       />
       <section id="expertise" className="expertise section">
         <div className="wrap expertise-layout">
           <div className="section-intro">
-            <span className="eyebrow">OUR PRODUCT FOCUS</span>
+            <span className="eyebrow">AI, IOT AND DIGITAL TWINS</span>
             <h2>
-              Start with the work.
+              Where we use
               <br />
-              <em>Find a better way.</em>
+              <em>these technologies.</em>
             </h2>
             <p>
-              An enquiry that needs an answer. A team that needs clearer context.
-              Equipment that needs attention. We explore where technology can
-              help people understand the situation and act with confidence.
+              Our AI work includes answering questions and helping with routine
+              tasks. Our research into connected devices and digital twins looks
+              at how to show information about equipment and its location.
             </p>
             <a className="text-link" href="/products/">
               Find a product for you <Arrow />
@@ -470,16 +469,16 @@ function InnovationPage() {
       </section>
 
       <section className="wrap section research-note">
-        <span className="eyebrow">PRODUCTS AND EXPLORATIONS</span>
+        <span className="eyebrow">RESEARCH AND DEVELOPMENT</span>
         <h2>
-          Some ideas are ready to use.
+          Work in progress.
           <br />
-          <em>Others are still taking shape.</em>
+          <em>Prototypes and testing.</em>
         </h2>
         <p>
-          Our brands give you products to explore today. Our work in connected
-          environments and digital twins also includes prototypes and product
-          research. We keep that distinction clear as ideas develop.
+          The connected-device and digital-twin work described here includes
+          prototypes and product research. We are testing these ideas before
+          deciding how they might be used in a product.
         </p>
         <a className="text-link" href="/products/">
           Explore our brands <Arrow />
@@ -493,42 +492,39 @@ function CompanyPage() {
     <>
       <PageIntro
         eyebrow="BIGMINTS FZE"
-        title="Make work easier."
-        emphasis="Make service better."
-        description="Bigmints is a technology product company. We build and grow our own brands around three pillars: service excellence, customer happiness and operational efficiency."
+        title="About Bigmints."
+        emphasis="Why we build software."
+        description="Bigmints FZE is the company behind Saveaday, Youbot and Fikr. We develop our own products for customer enquiries, business tasks, notes and ideas."
       />
       <section id="company" className="company-section section">
         <div className="wrap">
-          <span className="eyebrow">WHAT CONNECTS OUR BRANDS</span>
+          <span className="eyebrow">WHY WE DO THIS</span>
           <div className="company-grid">
             <h2>
-              Good service takes
+              The work behind
               <br />
-              <em>good work behind it.</em>
+              <em>customer service.</em>
             </h2>
             <div>
               <p className="large-copy">
                 Bigmints is the brand name of Bigmints FZE, a technology product
-                company. We create, own and grow products that connect customer
-                conversations, useful knowledge and the work that follows.
+                company. We develop and maintain our own software.
               </p>
               <p>
-                A customer asks a question. Someone needs the right information.
-                A team needs to pick up the next step. When that context is
-                scattered, customers repeat themselves and teams spend time
-                piecing the story together. That effort takes time and energy
-                away from the work and the people they care about.
+                Answering questions, handling bookings and following up with
+                customers takes time. When the details are spread across
+                messages and separate systems, people end up copying
+                information and asking the same questions again.
               </p>
               <p>
-                Saveaday and Youbot address the conversations and coordination
-                around everyday service. Fikr supports the thinking behind the
-                work: capturing ideas, connecting knowledge and keeping context
-                close. Each has a distinct role in making a working day easier.
+                Saveaday brings enquiries, bookings and follow-ups into one
+                application. Youbot answers questions using information you
+                provide. Fikr helps you record ideas and organise notes.
               </p>
               <p>
-                Operational efficiency has a human purpose here: less pressure,
-                more headspace and time people can spend on the parts of life
-                that matter to them.
+                We want people to spend less of their day on repeated tasks.
+                Time saved should leave them with more energy for the work
+                they want to do, and more time for themselves, family and friends.
               </p>
               <p>
                 Our brands are {brands.map((brand, index) => (
@@ -571,16 +567,16 @@ function CompanyPage() {
       </section>
       <StoryPillars detailed />
       <section className="wrap section company-next">
-        <span className="eyebrow">GET TO KNOW BIGMINTS</span>
+        <span className="eyebrow">MORE ABOUT BIGMINTS</span>
         <div className="related-links">
           <a href="/products/">
             <h3>Our products</h3>
-            <p>Meet our brands and find what each makes easier.</p>
+            <p>See what Saveaday, Youbot and Fikr do.</p>
             <Arrow />
           </a>
           <a href="/innovation/">
             <h3>Our innovation</h3>
-            <p>Explore the thinking behind our products and research.</p>
+            <p>Read about our AI, IoT and digital-twin work.</p>
             <Arrow />
           </a>
           <a href="/contact/">
@@ -600,9 +596,9 @@ function ContactPage() {
     <>
       <PageIntro
         eyebrow="CONTACT BIGMINTS"
-        title="A conversation about"
-        emphasis="what comes next."
-        description="For company enquiries, product conversations and partnerships, get in touch with Bigmints FZE."
+        title="Contact Bigmints."
+        emphasis="How to reach us."
+        description="For questions about the company or working together, contact Bigmints FZE. For product help, use the links below."
       />
       <section className="wrap contact-options">
         <div className="contact-company">
@@ -619,10 +615,10 @@ function ContactPage() {
         </div>
         <div className="contact-products">
           <span className="eyebrow">LOOKING FOR A PRODUCT?</span>
-          <h2>Go straight to the source.</h2>
+          <h2>Contact a product.</h2>
           <p>
-            Visit each product’s website for product-specific information and
-            available ways to get help.
+            Each product’s website has information about the product and how
+            to get help.
           </p>
           <div className="product-contact-list">
             {brands.map((brand) => (
@@ -697,8 +693,8 @@ function Detail({ path }: { path: string }) {
         <div className="wrap detail-grid">
           <h2>
             {brand
-              ? "What this makes easier."
-              : "The difference we aim to make."}
+              ? "What it does."
+              : "What we are working on."}
           </h2>
           <div>
             {brand && <p>{brand.summary}</p>}
@@ -750,13 +746,12 @@ function ProductCallout() {
         <div>
           <span className="eyebrow">THE BIGMINTS FAMILY</span>
           <h2>
-            Find your next
+            Read more about
             <br />
-            <em>everyday essential.</em>
+            <em>our products.</em>
           </h2>
           <p>
-            Explore products for your business, your ideas and your everyday
-            life.
+            Visit the product pages for details on Saveaday, Youbot and Fikr.
             <br />
             For company enquiries and partnerships,{" "}
             <a className="text-link" href="/contact/">
@@ -780,7 +775,7 @@ function Footer() {
           <Mark />
           Bigmints
         </a>
-        <span>Ideas into impact.</span>
+        <span>Saveaday · Youbot · Fikr</span>
         <nav className="footer-navigation" aria-label="Footer navigation">
           <a href="/products/">Products</a>
           <a href="/case-studies/">Case studies</a>
@@ -800,7 +795,7 @@ function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Bigmints FZE</span>
-        <span>Technology innovation. Human possibility.</span>
+        <span>Technology product company</span>
         <a href="#top">Back to top ↑</a>
       </div>
     </footer>
